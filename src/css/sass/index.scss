@@ -34,13 +34,17 @@ body {
 // // 6. Page-specific styles
 @import
   'pages/home',
-  'pages/category',
-  'pages/career-job-listing',
-  'pages/survey';
+  'pages/ldtv',
+  'pages/career',
+  'pages/survey',
+  'pages/thankyou';
+  // 'pages/survey';
+  // 'pages/survey';
+  // 'pages/survey';
+  // 'pages/survey';
+  // 'pages/survey';
   // ,
-  // 'pages/_category'
 
 // // 7. Themes
 @import
   'themes/default';
-  
