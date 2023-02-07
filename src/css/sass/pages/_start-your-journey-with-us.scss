@@ -1,0 +1,177 @@
+
+/* Start your journey with us start */
+.journey{padding: 20px 0;}
+.journey .browse { font-size: 16px; color: #007BB6; margin-top: 20px; margin-bottom: 10px; text-transform: uppercase; display: block;}
+.journey .browse img { display: inline-block; font-size: initial; vertical-align: middle; margin-right: 8px;}
+.journey-form{max-width: 1190px; margin: 0 auto; box-sizing: border-box;}
+.journey-form .jny-txt{font-weight: 600;font-size: 32px;line-height: 44px;letter-spacing: -0.01em;color: #202025; margin-bottom: 5px;}
+.journey-form .sub-txt{font-style: normal;font-weight: 500;font-size: 16px;line-height: 140%;letter-spacing: -0.01em;color: #888891; margin: 0 auto; margin-bottom: 40px;}
+.journey-form .form{padding: 50px; background: #FFFFFF;box-shadow: 0px 4px 44px rgba(32, 32, 37, 0.08);border-radius: 0px 0px 8px 8px;}
+.journey-form .form input{max-width: 525px;width: 100%; height: auto;font-weight: 400;font-size: 16px;line-height: 100%; letter-spacing: -0.01em; color: #888891; padding: 22px 16px; border: 1px solid #BDBDC2;border-radius: 8px; }
+.journey-form .form ul li{padding-bottom:22px;position: relative;}
+.journey-form .form ul li:nth-child(odd) {
+  padding-right: 20px;
+}
+.journey-form .form ul li:nth-child(even) {
+  padding-left: 20px;
+}
+.journey-form .form select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  max-width: 525px;width: 100%; height: auto;font-weight: 400;font-size: 16px;line-height: 100%; letter-spacing: -0.01em; color: #888891; padding: 22px 16px; border: 1px solid #BDBDC2;border-radius: 8px; 
+background: #fff url(../img/expand_more.png) scroll no-repeat right top; background-position: 95% 50%;}
+.journey-form .form .valdi-txt{margin: 0 auto;color: red;font-size: 14px; position: absolute;}
+.journey-form .form li label{display: block; margin-bottom: 8px; font-weight: 500;font-size: 16px;line-height: 140%;letter-spacing: -0.01em;color: #202025;}
+.journey-btn{padding: 24px;gap: 8px;max-width: 524px;width: calc(50% - 16px);height: 64px;background: #034EA2;border-radius: 8px;border: 0;font-weight: 600;font-size: 16px;line-height: 100%;letter-spacing: 0.06em;text-transform: uppercase;color: #FFFFFF;margin-top: 20px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  border: 1px dashed #BDBDC2;
+  -webkit-border-radius: 8px;  
+  border-radius: 8px;  
+  padding: 32px 0;
+  height: 175px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+.upload-btn-wrapper img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.upload-btn-wrapper .text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #202025;
+  margin: 16px 0 8px;
+  position: relative;
+}
+
+.upload-btn-wrapper .btn {
+  border: none;
+  color: #007BB6;
+  font-family: 'Inter';
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.upload-btn-wrapper input[type=file]:not(.input-file) {
+  opacity: 0;
+  padding: 0;
+  font-weight: 400;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  top: 0;
+  opacity: 0;
+  padding: 74px 0px;
+  max-width: 100%;
+  font-weight: 400;  
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  margin-top: -14px;
+}
+
+.upload-btn-wrapper .support {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  color: #888891;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+
+/* Start your journey with us end */
+
+@media screen and (max-width: 1298px) {
+	.maincnt{max-width: 100%;padding: 0 20px;}
+  .journey-form .form ul li {/*padding: 14px 0 5px 16px;*/}
+  .journey-form .form li label {font-size: 14px;}
+}
+
+@media screen and (max-width: 991px) {
+	.maincnt{max-width: 100%;padding: 0 20px;}
+	// .first-part .Fbcreator {font-size: 40px; line-height: 45px;}
+	// .first-part .watch-txt {font-size: 18px;margin-bottom: 90px;}
+	// .thumbTxt .thumbsmltxt {font-size: 16px;}
+	// .allcategories .cate-box .cat-txt {font-size: 14px;}
+	// .ldtvinsigh .second-part .ldtv-txt {font-size: 16px;padding-left: 46px;}
+	// .thindustry .industry .industry-first .indtxt {font-size: 24px;line-height: 32px;}
+	// .thindustry .industry .industry-first .indbtmtxt {font-size: 16px;line-height: 16px;margin-bottom: 80px;}
+	// .slider .thumbnail .sub-txt {padding: 4px;margin: 0 auto;font-size: 12px;top: 3px;right: 4px;}
+  .journey-form .form ul li { /*padding: 14px 0 5px 16px;*/}
+  .journey-form .form ul li:nth-child(odd) {
+    padding-right: 16px;
+  }
+  .journey-form .form ul li:nth-child(even) {
+    padding-left: 16px;
+  }
+}
+
+@media screen and (max-width: 907px){
+   .web-category .Categories { padding: 10px 0 0 0;margin-bottom: 60px;overflow-x: auto;}
+  .w-33 {width: 100%;}
+  .popup-content {padding: 7px;width: 88%;margin-top: 40px;margin-top: -180px; top: 50%;}
+  .journey-form .form .w-50{width: 50%;}
+
+}
+@media screen and (max-width: 768px){
+    // .w-50:not(.journey-form .form .w-50) {width: 100%;}
+    //   .thumbTxt .thumbsmltxt {font-size: 12px;}
+    //   .allcategories .cate-box {padding: 12px 32px;min-height: 36px;margin-bottom: 12px;margin-right: 12px;}
+      /* .second-part {border-left: 1px solid rgb(217 217 217 / 80%);} */  
+  }
+
+
+@media screen and (max-width: 767px){
+
+/* Start your journey with us start */
+.journey-form .form .w-50 {width: 100%;}
+.journey-form .form li label {font-size: 14px;}
+.journey-form .form ul li {/*padding: 6px 0 6px 0;*/}
+.journey-form .form {padding: 32px 16px;}
+.journey-form .form input { padding: 16px;}
+.journey-form .form select {padding: 16px;}
+.journey-form .form ul li {
+    padding-bottom: 22px;
+    position: relative;
+    width: 100%;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .journey-form .form input, .journey-form .form select{
+    max-width: 100%;
+  }
+  .journey-btn{ max-width: 100%; width: 100%;}
+/* Start your journey with us end */
+}
