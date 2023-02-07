@@ -1,0 +1,73 @@
+/* Creative_portfolio start */
+.featurcmp {margin-bottom: 36px;}
+.creptfo{background-color: #fbfbfb;}
+.creptfo h1{font-weight: 700;font-size: 48px;line-height: 62px;letter-spacing: -0.01em; color: #202025;}
+.creative-box{ box-sizing: border-box;align-items: flex-start;}
+.creative{padding-right: 10px;}
+.creative-box img{ border-radius: 8px; }
+.featurcmp .creative{position: relative; }
+.upbox{position: absolute;top: 25px;right: 40px;background: #FFFFFF;border-radius: 8px;max-width: 170px; height: auto;padding: 8px;}
+.featurcmp .crdmo{position: relative;padding-left: 10px; }
+.creative-box .creative-txt{min-height: 84px;font-weight: 700;font-size: 32px; line-height: 42px;letter-spacing: -0.01em;color: #202025; margin: 0 auto;margin-top: 18px;}
+.cre-smbox .e-com {margin-right: 26px;}
+.cre-smbox .e-com p{font-weight: 500;font-size: 16px;line-height: 22px;color: #888891;}
+.cre-smbox .e-com p span {vertical-align: top;position: relative;top: -4px; right: 9px;}
+/* .new-audiance{margin-bottom: 40px;} */
+.audiance-img {position: relative;margin-bottom: 60px;}
+.new-audiance .upbox{position: absolute;top: 18px;right: 18px;background: #FFFFFF;border-radius: 8px;max-width: 148px; height: auto;padding: 10px 21px;}
+.new-audiance .audiance-txt{font-weight: 700;font-size: 32px;line-height: 42px;letter-spacing: -0.01em;color: #202025; margin: 0 auto; margin-top: 24px; margin-bottom: 14px;}
+.calu {margin-bottom: 70px;}
+.new-audiance .audiance-smt{font-weight: 500;font-size: 16px;line-height: 22px;color: #888891; margin: 0 auto;}
+.new-audiance .txt-box{max-width: 410px;width: 100%;min-height: 268px;background: #F2F2F3; border-radius: 8px;padding: 72px 104px 72px 42px; margin-right: 14px;    margin-bottom: 14px; }
+.new-audiance .txt-box .hed{font-weight: 700;font-size: 72px;line-height: 91px;letter-spacing: -0.01em;color: #034EA2;margin: 0 auto;}
+.new-audiance .txt-box .sub-txt{font-weight: 400;font-size: 22px;line-height: 120%;letter-spacing: -0.01em;color: #202025;margin: 0 auto;min-height: 58px;}
+.social-mediacrea{margin-bottom: 60px;}
+.social-mediacrea h2{font-weight: 700;font-size: 32px;line-height: 130%;letter-spacing: -0.01em;color: #202025;}
+.social-mediacrea ul li{margin-right: 10px;}
+.short-films{margin-bottom: 60px;}
+.short-film .thmb img{background: rgba(0, 0, 0, 1); border-radius: 8px}
+.short-film .thmb{position: relative;    margin-right: 12px;}
+.short-film .thumb-icon {position: absolute;  top: 40%;right: 43%;}
+.short-films h2{font-weight: 700;font-size: 32px;line-height: 130%;letter-spacing: -0.01em;color: #202025;}
+.Workbybrands .work-box{max-width: 307px;width: 100%; min-height: 157px;background: #F2F2F3;  border-radius: 8px;padding: 24px 32px;     margin-right: 10px; margin-bottom: 10px;}
+.work-boximg{ min-height: 72px; margin-bottom: 30px;}
+.work-box .work-smbox p{margin: 0 auto; font-weight: 500;font-size: 14px;line-height: 120%;letter-spacing: -0.01em;text-transform: uppercase; color: #6E6E77;}
+.work-box .e-com p span {position: relative;top: 0px;right: -2px;}
+.Workbrands{    align-items: inherit;justify-content: center;}
+.audiance-img .thumb-icon{position: absolute; top: 38%;right: 48%; bottom: 0;}
+.di-flex.short-film {justify-content: center;}
+
+/* Creative_portfolio end */
+
+
+@media screen and (max-width: 1298px) {
+	.maincnt{max-width: 100%;padding: 0 20px;}
+ 
+}
+@media screen and (max-width: 991px) {
+	.maincnt{max-width: 100%;padding: 0 20px;}
+    .socmdcr {    justify-content: center;}
+  .short-film {justify-content: center;}
+  .work-smbox {flex-direction: row;}
+  .upbox { right: 29%;}
+  .cre-smbox { flex-direction: row;}
+  .upbox {right: 40px;}
+}
+
+@media screen and (max-width: 767px){
+
+/* Creative_portfolio start */
+  .Workbrands {  align-items: center;}
+  .socmdcr {    justify-content: center;}
+  .short-film {justify-content: center;}
+  .work-smbox {flex-direction: row;}
+  .short-films h2 {text-align: center;}
+  .cre-smbox {flex-direction: row;}
+  .upbox {right: 8%;}
+  .upbox {max-width: 107px;}
+  .creptfo h1 {font-size: 24px;line-height: 9px;}
+  .new-audiance .upbox { top: 6px;right: 6px;max-width: 87px;padding: 4px 4px;}
+
+/* Creative_portfolio end */
+
+}
