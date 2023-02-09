@@ -1,0 +1,173 @@
+ul.cat-list {
+    @include di-block();
+    @include valign-top();
+    width: 30%;
+    border-right: 1px solid $white-light-color;
+
+    li {
+        display: block;
+        cursor: pointer;
+        background: $white-color;
+        padding: 35px 18px;
+        margin-bottom: 8px;
+        @include border-box();
+
+        a {
+            color: $neutral-black;
+            font-size: $semilarge-font-size;
+            font-weight: $font-weight-medium;
+            line-height: 1;
+            padding: 0;
+            border: none;
+            outline: none;
+            text-align: left;
+            @include cf();
+
+            &::after {
+                display: none;
+            }
+            a:focus{ outline: none !important;}
+
+            img {
+                float: left;
+                margin: 0 11px 0 0;
+                &.act {
+                    display: none;
+                }              
+            }
+            
+
+
+
+
+
+        }
+
+        &.current {
+            background: $neutral-black;
+
+            a {
+                color: $white-light-color;
+                img{ 
+                    display: none;
+                    &.act{ 
+                        display: unset;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tab-content {
+    display: none;
+    width: 70%;
+    padding: 0 0 0 86px;
+    @include border-box();
+
+    &.current {
+        @include di-block();
+        @include valign-top();
+        font-size: 0;
+        @include border-box();
+    }
+
+    .submenu-cols{
+        padding-right: 110px;
+        width: 50%;
+
+        &:last-child{
+            padding: 30px 100px 0 0;
+        }
+
+        .article-card{
+            border-top: 1px solid $d9-color;
+            padding: 16px 0 16px 24px;
+            min-height: 184px;
+
+            a.heading {
+                cursor: pointer;
+                display: block;
+                color: $neutral-black;                
+                font-size: $base-font-size;
+                font-weight: $font-weight-medium;
+                line-height: 22.4px;
+                text-transform: capitalize;
+                padding: 0;
+                margin-bottom: 8px;
+        
+                &::after {
+                    display: none;
+                }
+        
+                &::before {
+                    content: "";
+                    background: $accent-orange;
+                    position: absolute;
+                    left: -24px;
+                    top: 0;
+                    width: 10px;
+                    height: 10px;
+                    margin-top: 5px;
+                }
+
+                &:hover{
+                    color: $primary-blue;
+                }
+            }
+            
+            p {
+                color: $neutral-black50;
+                font-size: $xsmall-font-size;
+                font-weight: $font-weight-medium;
+                line-height: 18px;
+                text-align: left;                
+                margin: 8px 0 14px;
+            }
+
+            ul{
+                li{
+                    display: block;
+                    color: $neutral-black50;
+                    font-family: $base-font;
+                    font-size: $xsmall-font-size;
+                    font-style: normal;
+                    font-weight: $font-weight-medium;
+                    text-transform: capitalize;
+                    text-align: left;
+                    margin-bottom: 12px;
+                }
+                
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .tab-content {
+        padding-left: 70px;
+    
+        .submenu-cols{
+            padding-right: 80px;
+    
+            &:last-child{
+                padding-right:70px;
+            }
+        }
+    }    
+}
+
+@media screen and (max-width:1140px) {
+    .tab-content {
+        padding-left: 50px;
+    
+        .submenu-cols{
+            padding-right: 60px;
+    
+            &:last-child{
+                padding-right:50px;
+            }
+        }
+    }    
+}

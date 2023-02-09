@@ -1,15 +1,335 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+// footer{
+//   background-color: #1f1f23;
+//   padding: 40px 0;
+//   p{
+//     font-size: 12px;
+//     line-height: 29px;
+//     color: #c2c2c3;
+//     font-weight: 500;
+//     font-family: "Montserrat";
+//     text-align: center;
+//   }
+// }
+
 footer{
-  background-color: #1f1f23;
-  padding: 40px 0;
-  p{
-    font-size: 12px;
-    line-height: 29px;
-    color: #c2c2c3;
-    font-weight: 500;
-    font-family: "Montserrat";
-    text-align: center;
+  border-bottom: 1px solid $primary-blue70;
+  margin-top: 76px;
+
+  .top-footer{
+      padding: 48px 0;
+      background: $safa-blue;
+
+      .container{
+          @include f-0();
+      }        
+
+      .foot-col{
+          width: 16.666%;
+          @include di-block();
+          @include valign-top();
+
+          &.vis-mob-600{ display: none;}
+
+          p{
+              color: $white-color;
+              font-size: $large-font-size;
+              font-weight: $font-weight-SemiBold;
+              line-height: 1;
+              text-align: left;
+              text-transform: uppercase;
+              margin: 0 0 35px;
+              
+          }
+  
+          ul{
+  
+              li{
+                  margin: 0 0 23px;
+                  line-height: 1;
+  
+                  a{
+                      @include di-block();
+                      @include valign-top();
+                      color: $primary-blue70;
+                      font-family: $base-font-family;
+                      font-size: $base-font-size;
+                      font-weight: $font-weight-normal;
+                      line-height: 1;
+                      text-align: left;
+                      opacity: 0.6
+                  }
+  
+              }
+          }
+      }
+
+
+  }
+  
+  .bottom-footer{
+      background: $primary-blueDark;
+      padding: 24px 0 30px;
+
+      .container{
+          @include cf();
+      }
+      .left-col{
+          float: left;
+          width: 50%;
+          text-align: left;
+
+      }
+      .right-col{
+          float: right;
+          width: 50%;
+          text-align: right;
+      }
+
+      .logo-thumbnail{
+          a{
+              display: table;
+          }
+          img {
+              @include di-block();
+              @include valign-top();
+          }
+      }
+      
+      .copyright{
+          @include di-block();
+          @include valign-top();
+          color: $primary-blue70;
+          font-family: $base-font-family;
+          font-size: $base-font-size;
+          font-weight: $font-weight-normal;            
+          text-align: left;
+          margin-top: 21px;
+      }
+
+      .social-icons{ 
+          text-align: right;
+
+          p{
+              display: none;
+          }
+
+          ul{
+              @include f-0();
+              
+              li{
+                  @include di-block();
+                  @include valign-top();
+                  margin: 21px 0 15px;
+                  width: 24px;
+                  height: 24px;
+
+                  &:not(:last-child){
+                      margin-right: 20px;
+                  }
+                  a{
+                      display: block;
+
+                      img{
+                          border: 0;
+                      }
+                  }
+                  
+              }
+          }
+      }
+
+      .footer-links{
+          @include f-0();
+          padding-top: 21px;
+
+          li {
+              @include di-block();
+              @include valign-top();
+
+              &:not(:last-child){
+                  margin-right: 28px;
+              }
+
+                  a {
+                      color: $primary-blue70;
+                      font-family: $base-font-family;
+                      font-size: $base-font-size;
+                      font-weight: $font-weight-normal;
+                      line-height: 1;
+                      letter-spacing: -0.01em;
+                      text-align: right;
+                  }
+              }
+      }
+
+  }
+}
+
+
+@media screen and (max-width:991px) {
+  footer {
+      .top-footer {
+          padding-bottom: 0;
+
+          .foot-col{
+              width: 33.333%;
+              margin-bottom: 30px;               
+
+              &.invis-mob-600{ display: none;}
+              &.vis-mob-600{ display: inline-block;}
+              
+
+              p{
+                  font-size: $small-font-size;
+                  margin-bottom: 10px;
+              }
+              
+              ul {
+                  li {
+                      margin-bottom: 10px;
+                      a{
+                          color: $white-color;
+                          opacity: 0.6;
+                          font-size: 14px;
+                          line-height: 20px;
+
+                      }
+                  }
+
+              }
+
+              .has-sublist{
+                  margin-bottom: 10px;
+                  li {
+                      padding-left: 14px;                        
+                      @include pos-relative();                            
+
+                          &::after{
+                              content: "";
+                              background: transparent url("../img/icons/foot-arrow-right.png") scroll no-repeat top left;
+                              position: absolute;
+                              left: 0;
+                              top: 0;
+                              width: 8px;
+                              height: 12px;
+                              margin-top: 5px;
+                          }
+                      a{
+                          cursor: default;
+                          color: $white-color;
+                          opacity: 0.6;
+                          font-weight: $font-weight-normal;
+                          font-size: $xsmall-font-size;
+                          letter-spacing: 0.03em;
+                          line-height: 20px;
+                          margin-bottom: 5px;
+                          
+                      }
+                  }
+                  .list{
+                      list-style: disc inside;
+                      margin-left: -10px;
+                      ::marker{
+                          color: rgba(255, 255, 255, 0.6);
+                      }
+                      li{
+                          list-style: disc inside;
+                          margin-bottom: 0;
+                          ::marker{
+                              color: rgba(255, 255, 255, 0.6);
+                          }
+                          &::after{
+                              display: none;
+                          }
+                          padding-left: 0px;
+                          a {
+                              cursor: pointer;
+                              display: inline-block;
+                              margin-left: -4px;
+                              color: rgba(255, 255, 255, 0.6);
+                              font-weight: $font-weight-normal;
+                              font-size: $xsmall-font-size;
+                              letter-spacing: 0.03em;
+                              line-height: 18px;
+                              text-align: left;
+                              margin-bottom: 0;
+                                  
+                              }
+                      }
+                  }
+              }
+
+          }
+
+      }
+
+
+      .bottom-footer{
+
+          .copyright{
+              font-size: $small-font-size;
+              margin-top: 11px;
+          }
+          
+          .social-icons{ 
+              p{
+                  display: block;
+                  color: $white-color;
+                  font-size: 13px;
+                  font-weight: $font-weight-normal;
+                  line-height: 20px;
+                  text-align: right;
+                  margin-top: 29px;
+              }
+
+              ul{
+                  li{
+                      margin: 11px 0 11px;
+                      a{
+                          img{
+                              
+                          }
+                      }
+                  }
+              }
+          }
+  
+          .footer-links{
+              display: none;
+          }
+      }
+
+
+  }
+
+  
+}
+
+
+@media screen and (max-width:600px) {
+  footer {
+      .top-footer {
+          padding-bottom: 14px;
+
+          .foot-col{
+              width: 50%;
+
+              p{ 
+                  font-size: $small-font-size;
+              }
+          }
+      }
+      
+      .bottom-footer{
+
+          .copyright{
+              font-size: $xsmall-font-size;                    
+          }
+      }
+
+
   }
 }

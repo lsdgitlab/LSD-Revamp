@@ -176,80 +176,113 @@
 	/* .second-part {border-left: 1px solid rgb(217 217 217 / 80%);} */
 }
 @media screen and (max-width: 767px){
-  .w-60{ width: 100%;}
-.w-40{ width: 100%;}
-  .card {width:100%;height: 223px;}
-	.w-50 {width: 100%;}
-	.first-part .watch-txt {font-size: 14px;}
-	.di-flex {flex-direction: column;}
-	.Ytsld{flex-direction: row;}
-	.slid{ flex-direction: row; }
-  .web-category .Ytsld .slid{ flex-direction: column; }
-  .web-category .Ytsld .slid{overflow-x:inherit;}
-	.thumbnail .icon-txt {	flex-direction: row;}
-	.first-part {text-align: center;}
-	.Ytsld .thumbnail {position: relative;margin-right: 10px;flex: none;max-width: 100%;width: 100%;}
-  .web-category .Ytsld .thumbnail {margin-right: 0;}
-	.ldtvinsigh .second-part .ldtv-txt {font-size: 16px;padding-left: 0;text-align: center;padding: 0 20px;line-height: 22px;margin: 0 auto;}
-	.first-part .Fbcreator {font-size: 32px;line-height: 41px;text-align: center;}
-	.second-part {border-left: none;}
-	.Categories .di-flex {flex-direction: row;}
-  .web-category .Categories {padding: 10px 0 0 0;margin-bottom: 60px; overflow-x: auto;}
-  .web-category .Categories .di-flex {flex-wrap: inherit;justify-content: inherit;}
-	.di-flex.fs {	flex-direction: row;}
-	.thindustry .btm-img {display: block;text-align: center;padding: 27px 0;}
-	.thindustry {position: relative;}
-	.thindustry .btm-img {/* display: block; */text-align: center;padding: 27px 0;position: absolute;top: 212px;}
-	.first-fold {background-image: linear-gradient(273deg, rgba(0, 0, 0, 0) 0%, #000000 60.82%);padding: 40px 0 0 0;}
-	.thindustry .industry .industry-first .indtxt {font-size: 24px;line-height: 32px;}
-	.ldtvinsights {padding: 24px 0;}
-  .Social .social-txt {font-size: 32px;line-height: 32px;text-align: center;}
-  .insta-first .insta-heding { font-size: 24px;line-height: 36px;}
-  .insta-first .insta-txt { font-size: 16px;line-height: 24px;}
-  .inst-scnd .insa-btn {position: absolute;top: 70%; left: 39%;}
-  .Social {margin-bottom: 74px;}
-  .vieo-sec {padding: 10px 0;}
-  .Ytsld .thumbnail { align-self: auto;}
-  .insta-first .insta-heding {font-size: 26px;line-height: 36px;}
-  .popup-content {padding: 7px;width: 88%;margin-top: 40px;margin-top: -180px; top: 50%;}
-  .clsbtn {right: -18px; top: -25px;}
-  .second {padding: 40px 0 0 0;}
-  .load-more {position: relative;top: -33px;}
-  .rd-btn {justify-content: flex-start;margin-bottom: 10px;flex-direction: column;    align-items: baseline;}
-.di-flex .top-sec{margin-bottom: 16px;flex-direction: row;}
-.di-flex .top-img{flex-direction: row;}
-.di-flex .top-sec{flex-direction: row;}
-.srvsecnd {position: initial;padding: 36px 16px;}
-.srvsecnd .promotional-wht .promotional-heading {font-size: 24px;line-height: 32px;}
-.surveybox .srvbox {max-width: 416px;height: auto;margin-right: 0;margin-bottom: 20px;}
-.readysecnd {padding-left: 16px;    margin-bottom: 20px;}
-.readyfst .ready-txt {line-height: 38px;}
-.rady { background-size: auto;}
-.readyfst {padding: 28px 26px;}
-.rd-btn .radiobtn {border: 1px solid #F2F2F3;padding: 16px; margin-right: 0; margin-bottom: 26px;}
-.survey-heading { font-size: 32px; line-height: 48px;}
-.btm-sec .doyou-txt {font-weight: 700;font-size: 24px;line-height: 34px;padding: 0px 0 11px 0;}
-.btm-sec {padding: 0 22px;}
-.top-sec {padding: 0 22px;}
-.surveybox {padding: 0px 0;}
-.survey {margin-bottom: 20px;}
-.thank-container .tnk-txt h2 { font-size: 24px;line-height: 32px; }
-.tnk-txt {padding: 0 0 50px 0;}
-.thank-container .back-home { padding: 0 0 66px 0;}
-/* career details start */
-.career-detail .job-detail .browse {
-  margin-top: 90px;
-}
-.career-detail {
-  padding: 20px 0 0 0;
-}
+//   .w-60{ width: 100%;}
+// .w-40{ width: 100%;}
+//   .card {width:100%;height: 223px;}
+// 	.w-50 {width: 100%;}
+// 	.first-part .watch-txt {font-size: 14px;}
+// 	.di-flex {flex-direction: column;}
+// 	.Ytsld{flex-direction: row;}
+// 	.slid{ flex-direction: row; }
+//   .web-category .Ytsld .slid{ flex-direction: column; }
+//   .web-category .Ytsld .slid{overflow-x:inherit;}
+// 	.thumbnail .icon-txt {	flex-direction: row;}
+// 	.first-part {text-align: center;}
+// 	.Ytsld .thumbnail {position: relative;margin-right: 10px;flex: none;max-width: 100%;width: 100%;}
+//   .web-category .Ytsld .thumbnail {margin-right: 0;}
+// 	.ldtvinsigh .second-part .ldtv-txt {font-size: 16px;padding-left: 0;text-align: center;padding: 0 20px;line-height: 22px;margin: 0 auto;}
+// 	.first-part .Fbcreator {font-size: 32px;line-height: 41px;text-align: center;}
+// 	.second-part {border-left: none;}
+// 	.Categories .di-flex {flex-direction: row;}
+//   .web-category .Categories {padding: 10px 0 0 0;margin-bottom: 60px; overflow-x: auto;}
+//   .web-category .Categories .di-flex {flex-wrap: inherit;justify-content: inherit;}
+// 	.di-flex.fs {	flex-direction: row;}
+// 	.thindustry .btm-img {display: block;text-align: center;padding: 27px 0;}
+// 	.thindustry {position: relative;}
+// 	.thindustry .btm-img {/* display: block; */text-align: center;padding: 27px 0;position: absolute;top: 212px;}
+// 	.first-fold {background-image: linear-gradient(273deg, rgba(0, 0, 0, 0) 0%, #000000 60.82%);padding: 40px 0 0 0;}
+// 	.thindustry .industry .industry-first .indtxt {font-size: 24px;line-height: 32px;}
+// 	.ldtvinsights {padding: 24px 0;}
+//   .Social .social-txt {font-size: 32px;line-height: 32px;text-align: center;}
+//   .insta-first .insta-heding { font-size: 24px;line-height: 36px;}
+//   .insta-first .insta-txt { font-size: 16px;line-height: 24px;}
+//   .inst-scnd .insa-btn {position: absolute;top: 70%; left: 39%;}
+//   .Social {margin-bottom: 74px;}
+//   .vieo-sec {padding: 10px 0;}
+//   .Ytsld .thumbnail { align-self: auto;}
+//   .insta-first .insta-heding {font-size: 26px;line-height: 36px;}
+//   .popup-content {padding: 7px;width: 88%;margin-top: 40px;margin-top: -180px; top: 50%;}
+//   .clsbtn {right: -18px; top: -25px;}
+//   .second {padding: 40px 0 0 0;}
+//   .load-more {position: relative;top: -33px;}
+//   .rd-btn {justify-content: flex-start;margin-bottom: 10px;flex-direction: column;    align-items: baseline;}
+// .di-flex .top-sec{margin-bottom: 16px;flex-direction: row;}
+// .di-flex .top-img{flex-direction: row;}
+// .di-flex .top-sec{flex-direction: row;}
+// .srvsecnd {position: initial;padding: 36px 16px;}
+// .srvsecnd .promotional-wht .promotional-heading {font-size: 24px;line-height: 32px;}
+// .surveybox .srvbox {max-width: 416px;height: auto;margin-right: 0;margin-bottom: 20px;}
+// .readysecnd {padding-left: 16px;    margin-bottom: 20px;}
+// .readyfst .ready-txt {line-height: 38px;}
+// .rady { background-size: auto;}
+// .readyfst {padding: 28px 26px;}
+// .rd-btn .radiobtn {border: 1px solid #F2F2F3;padding: 16px; margin-right: 0; margin-bottom: 26px;}
+// .survey-heading { font-size: 32px; line-height: 48px;}
+// .btm-sec .doyou-txt {font-weight: 700;font-size: 24px;line-height: 34px;padding: 0px 0 11px 0;}
+// .btm-sec {padding: 0 22px;}
+// .top-sec {padding: 0 22px;}
+// .surveybox {padding: 0px 0;}
+// .survey {margin-bottom: 20px;}
+// .thank-container .tnk-txt h2 { font-size: 24px;line-height: 32px; }
+// .tnk-txt {padding: 0 0 50px 0;}
+// .thank-container .back-home { padding: 0 0 66px 0;}
+// /* career details start */
+// .career-detail .job-detail .browse {
+//   margin-top: 90px;
+// }
+// .career-detail {
+//   padding: 20px 0 0 0;
+// }
 /* career details end */
-.journey-form .form li label {font-size: 14px;}
-.journey-form .form ul li {padding: 6px 0 6px 0;}
-.journey-form .form {padding: 16px;}
-.journey-form .form input { padding: 16px;}
-.journey-form .form select {padding: 16px;}
+// .journey-form .form li label {font-size: 14px;}
+// .journey-form .form ul li {padding: 6px 0 6px 0;}
+// .journey-form .form {padding: 16px;}
+// .journey-form .form input { padding: 16px;}
+// .journey-form .form select {padding: 16px;}
 
+
+/* LDTV start  */
+.card {width:100%;height: 223px;}
+.maincnt .first .w-50 {width: 100%;}
+.space-ld .w-50 {width: 100%;}
+.industry .w-50 {width: 100%;}
+.recentsrv .w-50 {width: 100%;}
+.reaysec .w-50 {width: 100%;}
+.creative-box .w-50 {width: 100%;}
+.first-part .watch-txt {font-size: 14px;}
+.di-flex {flex-direction: column;}
+.Ytsld{flex-direction: row;}
+.slid{ flex-direction: row; }
+.web-category .Ytsld .slid{ flex-direction: column; }
+.web-category .Ytsld .slid{overflow-x:inherit;}
+.thumbnail .icon-txt {	flex-direction: row;}
+.first-part {text-align: center;}
+.Ytsld .thumbnail {position: relative;margin-right: 10px;flex: none;max-width: 100%;width: 100%;}
+ .web-category .Ytsld .thumbnail {margin-right: 0;}
+.ldtvinsigh .second-part .ldtv-txt {font-size: 16px;padding-left: 0;text-align: center;padding: 0 20px;line-height: 22px;margin: 0 auto;}
+.first-part .Fbcreator {font-size: 32px;line-height: 41px;text-align: center;}
+.second-part {border-left: none;}
+.Categories .di-flex {flex-direction: row;}
+ .web-category .Categories {padding: 10px 0 0 0;margin-bottom: 60px; overflow-x: auto;}
+ .web-category .Categories .di-flex {flex-wrap: inherit;justify-content: inherit;}
+.di-flex.fs {	flex-direction: row;}
+.thindustry .btm-img {display: block;text-align: center;padding: 27px 0;}
+.thindustry {position: relative;}
+.thindustry .btm-img {/* display: block; */text-align: center;padding: 27px 0;position: absolute;top: 212px;}
+.first-fold {background-image: linear-gradient(273deg, rgba(0, 0, 0, 0) 0%, #000000 60.82%);padding: 40px 0 0 0;}
+.thindustry .industry .industry-first .indtxt {font-size: 24px;line-height: 32px;}
+.ldtvinsights {padding: 24px 0;}
+/* LDTV end */
 
 
 
