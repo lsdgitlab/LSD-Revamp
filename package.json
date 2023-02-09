@@ -1,10 +1,10 @@
 {
-  "name": "barba-starter-template",
+  "name": "ls-digital",
   "version": "1.0.0",
-  "description": "A simple starter template for setting up a ECMAScript 6 project with barba.js and webpack.",
+  "description": "ls digital revamp",
   "main": "app.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development",
+    "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "license": "MIT",
