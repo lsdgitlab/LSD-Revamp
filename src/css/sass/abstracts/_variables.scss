@@ -74,3 +74,77 @@ $base-url: '/img' !default;
 // ============================
 $white: #ffffff;
 $base: 0.3rem;
+
+
+
+
+$prefix: ls- !default;
+$primary-command-blue: #007BB6;
+$primary-blue-70: #B3E6FF;
+$primary-blue-10: #009BE6;
+$primary-blue-dark: #034289; 
+$accent-orange-aerospace: #F15A22;
+$supportive-selective-yellow: #FDB913;
+$supportive-teal: #00AAAD;
+$supportive-safa-blue: #034EA2;
+$supportive-blue-light: #13538A;
+$neutral-raisin-black : #202025;
+$neutral-high-emphasis-black-50: #6E6E77;
+$alert-yellow: #FEB811;
+$alert-red: #AD0101;
+$alert-success: #007C00;
+$white-color: #fff;
+$white-light-color: #F2F2F3;
+$black-color: #000;
+$gray: #EEEEEE;
+$gray-E1E1E1: #E1E1E1;
+$gray-E9EAED: #E9EAED;
+$dark-F3F4F7:#F3F4F7;
+$d9-color:#D9D9D9;
+
+$primary-blue: var(--#{$prefix}primary-blue-color);
+$primary-blue70: var(--#{$prefix}primary-blue70-color);
+$primary-blue10: var(--#{$prefix}primary-blue10-color);
+$primary-blueDark: var(--#{$prefix}primary-blueDark-color);
+$accent-orange: var(--#{$prefix}accent-orange-color);
+$selective-yellow: var(--#{$prefix}selective-yellow-color);
+$teal-color: var(--#{$prefix}supportive-teal-color);
+$safa-blue: var(--#{$prefix}supportive-safa-blue-color);
+$bluelight: var(--#{$prefix}supportive-blue-lightcolor);
+$neutral-black: var(--#{$prefix}neutral-black-color);
+$neutral-black50: var(--#{$prefix}neutral-black50-color);
+$alertYellow: var(--#{$prefix}alert-yellow-color);
+$alertRed: var(--#{$prefix}alert-red-color);
+$alertSuccess: var(--#{$prefix}alert-success-color);
+
+$base-font-family: 'Inter';
+$base-font: var(--#{$prefix}base-fontfamily);
+
+//Font Sizes
+$base-font-size: 16px;
+$h1-font-size: 56px;
+$h2-font-size: 48px;
+$h3-font-size: 40px;
+$h4-font-size: 32px;
+$h5-font-size: 24px;
+$h6-font-size: $base-font-size;
+
+$large-font-size: 20px;
+$semilarge-font-size: 18px;
+$medium-font-size: $base-font-size;
+$small-font-size: 14px;
+$xsmall-font-size: 12px;
+
+$base-line-height: 1.5 !default;
+
+$font-weight-thin: 100;
+$font-weight-Extralight: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-SemiBold: 600;
+$font-weight-bold: 700;
+$font-weight-ExtraBold: 800;
+$font-weight-black: 900;
+$base-font-weight: $font-weight-normal;
+

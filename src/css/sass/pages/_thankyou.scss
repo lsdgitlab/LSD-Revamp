@@ -14,3 +14,19 @@
 .thank-container .back-home .browse { font-size: 16px; color: #007BB6;text-transform: uppercase; display: block;font-weight: 600;margin: 0 auto;}
 .thank-container .back-home .browse img { display: inline-block; font-size: initial; vertical-align: middle; margin-right: 8px;}
 /* thankyou end */
+
+@media screen and (max-width: 1298px) {
+	.maincnt{max-width: 100%;padding: 0 20px;}
+ 
+}
+@media screen and (max-width: 991px) {
+	.maincnt{max-width: 100%;padding: 0 20px;}
+}
+
+@media screen and (max-width: 767px){
+  /* Thankyou start */
+  .thank-container .tnk-txt h2 { font-size: 24px;line-height: 32px; }
+  .tnk-txt {padding: 0 0 50px 0;}
+  .thank-container .back-home { padding: 0 0 66px 0;}
+  /* Thankyou end */
+ }

@@ -1,0 +1,17 @@
+:root{
+    --#{$prefix}primary-blue-color: #{inspect($primary-command-blue)};
+    --#{$prefix}primary-blue70-color: #{inspect($primary-blue-70)};
+    --#{$prefix}primary-blue10-color: #{inspect($primary-blue-10)};
+    --#{$prefix}primary-blueDark-color: #{inspect($primary-blue-dark)};
+    --#{$prefix}accent-orange-color: #{inspect($accent-orange-aerospace)};
+    --#{$prefix}selective-yellow-color: #{inspect($supportive-selective-yellow)};
+    --#{$prefix}supportive-teal-color: #{inspect($supportive-teal)};
+    --#{$prefix}supportive-safa-blue-color: #{inspect($supportive-safa-blue)};
+    --#{$prefix}supportive-blue-lightcolor: #{inspect($supportive-blue-light)};    
+    --#{$prefix}neutral-black-color: #{inspect($neutral-raisin-black)};
+    --#{$prefix}neutral-black50-color: #{inspect($neutral-high-emphasis-black-50)};
+    --#{$prefix}alert-yellow-color: #{inspect($alert-yellow)};
+    --#{$prefix}alert-red-color: #{inspect($alert-red)};
+    --#{$prefix}alert-success-color: #{inspect($alert-success)};
+    --#{$prefix}base-fontfamily: #{inspect($base-font-family)};
+}

@@ -1,17 +1,23 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Work+Sans:wght@300&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
-  --easing: cubic-bezier(0.5, 0.7, 0.4, 1);
+  --easing: cubic-bezier(0.5, 0.7, 0.4, 1);  
 }
 body {
-  --page-background: #404046;
+  // --page-background: #404046;
+  --page-background: #fff;
   background-color: var(--page-background);
 }
 // // 1. Configuration and helpers
 @import
   'abstracts/variables',
   'abstracts/functions',
-  'abstracts/mixins';
+  'abstracts/mixins',
+  'abstracts/root',
+  'abstracts/reusable';
+  
+  
 
 
 
@@ -37,7 +43,10 @@ body {
   'pages/ldtv',
   'pages/career',
   'pages/survey',
-  'pages/thankyou';
+  'pages/thankyou',
+  'pages/start-your-journey-with-us',
+  'pages/career-details',
+  'pages/creative-portfolio';
   // 'pages/survey';
   // 'pages/survey';
   // 'pages/survey';

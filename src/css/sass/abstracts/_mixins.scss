@@ -34,3 +34,76 @@
   }
 }
 
+
+
+
+@mixin appearance {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;    
+}
+
+@mixin transition {
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+@mixin cf() {
+  &::after {
+      display: block;
+      clear: both;
+      content: "";
+  }
+}
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin unordered-list {
+  padding: 0;
+  margin: 0;
+  list-style: outside none none;
+}
+
+@mixin f-0{ 
+  font-size: 0;
+}
+@mixin di-block {
+  display: inline-block;    
+  // vertical-align: top;
+  font-size: initial;
+}
+@mixin valign-top {
+  vertical-align: top;
+}
+@mixin valign-middle {
+  vertical-align: middle;
+}
+@mixin vertical-center{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin pos-relative {
+  position: relative;
+}
+
+
+

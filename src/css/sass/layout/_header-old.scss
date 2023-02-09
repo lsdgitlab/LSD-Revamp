@@ -1,0 +1,31 @@
+.clear{clear:both;height:0;font-size:0;line-height:0;}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap');
+body{
+	margin:0;
+	font-family: 'Inter', sans-serif;
+	padding: 0;
+	margin: 0;
+  background: #fff;
+  line-height: 1.5;
+}
+*{
+	box-sizing: border-box;
+}
+.maincnt{
+	max-width: 1280px;
+	width: 100%;
+	margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+.w-50{
+    width: 50%;
+}
+.w-33{
+    width: 33%;
+}
+.w-60{ width: 60%;}
+.w-40{ width: 40%;}
+.w-25{width: 50%;}
+img{max-width: 100%;height: auto;border: 0;}

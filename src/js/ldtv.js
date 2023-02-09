@@ -60,6 +60,7 @@ function init() {
 
   for (var i = 0; i < videoButtons.length; i++) {
     videoButtons[i].onclick = function (eve) {
+      console.log("check");
       var videoId = this.getAttribute('data-video-id')
       var videoPopup = document.getElementById('video-popup')
 
@@ -255,7 +256,7 @@ function init() {
         <p class="sub-txt">${ytviditem[i].sharePlatform}</p>
         <div class="di-flex icon-txt">
             <div class="thumb-icon">
-                <a href='#' class="playBut sm video-button" data-video-id="${ytviditem[i].datavideoid}">
+                <a href="javascript:void(0)" class="playBut sm video-button" data-video-id="${ytviditem[i].datavideoid}">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
                         xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px"

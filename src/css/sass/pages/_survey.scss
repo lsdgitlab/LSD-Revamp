@@ -54,3 +54,35 @@ input[type="radio" ] {width: 22px;height: 22px;vertical-align: middle;}
 .box:hover .box-content{ opacity: 0.9; }
 
 /* survey end */
+@media screen and (max-width: 1298px) {
+	.maincnt{max-width: 100%;padding: 0 20px;}
+ 
+}
+@media screen and (max-width: 991px) {
+	.maincnt{max-width: 100%;padding: 0 20px;}
+}
+
+
+@media screen and (max-width: 767px){
+  
+  /* Survey start */
+  .rd-btn {justify-content: flex-start;margin-bottom: 10px;flex-direction: column;    align-items: baseline;}
+  .di-flex .top-sec{margin-bottom: 16px;flex-direction: row;}
+  .di-flex .top-img{flex-direction: row;}
+  .di-flex .top-sec{flex-direction: row;}
+  .srvsecnd {position: initial;padding: 36px 16px;}
+  .srvsecnd .promotional-wht .promotional-heading {font-size: 24px;line-height: 32px;}
+  .surveybox .srvbox {max-width: 416px;height: auto;margin-right: 0;margin-bottom: 20px;}
+  .readysecnd {padding-left: 16px;    margin-bottom: 20px;}
+  .readyfst .ready-txt {line-height: 38px;}
+  .rady { background-size: auto;}
+  .readyfst {padding: 28px 26px;}
+  .rd-btn .radiobtn {border: 1px solid #F2F2F3;padding: 16px; margin-right: 0; margin-bottom: 26px;}
+  .survey-heading { font-size: 32px; line-height: 48px;}
+  .btm-sec .doyou-txt {font-weight: 700;font-size: 24px;line-height: 34px;padding: 0px 0 11px 0;}
+  .btm-sec {padding: 0 22px;}
+  .top-sec {padding: 0 22px;}
+  .surveybox {padding: 0px 0;}
+  .survey {margin-bottom: 20px;}
+  /* Survey end */
+}

@@ -9,7 +9,7 @@
     <title>Start your journey with us</title>
 </head>
 
-<body>
+<body data-barba="wrapper">
     <header></header>
     <section class="journey">
         <div class="maincnt">
@@ -56,10 +56,19 @@
                     </ul>
                     
                     <ul>
-                        <li class="w-50"> <label for="resume">Upload Resume</label>
-                            <input type="file"  name="resume"  placeholder="Upload Resume">
+                        <li class="w-50"> 
+                            <label for="resume">Upload Resume</label>
+                            <div class="upload-btn-wrapper">                                
+                                <img src="img/browse-img.png" alt="">
+                                <p class="text">Drop your image here, or <button class="btn">Browse</button> <input type="file" name="myfile" /></p>
+                                <p class="support">Supports: JPG, JPEG, PNG <=2MB</p>
+                            </div>
+                            
+                            
+                            
+                                <p class="valdi-txt">dummy</p>
                         </li>
-                        <p class="valdi-txt">dummy</p>
+                        
                     </ul>
 
                     <button class="journey-btn">submit </button>
