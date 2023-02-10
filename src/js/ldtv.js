@@ -136,30 +136,28 @@ function init() {
       // const videoId = ytviditem[i].datavideoid;
       var videoPopup = document.getElementById('video-popup')
 
-      // videoPopup.innerHTML =
-      //   '<iframe width="100%" height="360" src="https://www.youtube.com/embed/' +
-      //   videoId +
-      //   '" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-      var player;
+      videoPopup.innerHTML =
+        '<iframe width="100%" height="360" src="https://www.youtube.com/embed/' +
+        videoId +
+        '" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+// var player;
+// function onYouTubeIframeAPIReady() {
+//     var closeButton = document.getElementById('close');
+//       const player = new YT.Player("player", {
+//       height: "360",
+//       width: "640",
+//       videoId: videoId,
+//       events: {
+//         onReady: function(event) {
+//           closeButton.addEventListener("click", function() {
+//             event.target.pauseVideo();
+//           });
+//         }
+//       }
+//     });
+//   }
+//   videoPopup.innerHTML = '<div id="player"></div>'
 
-function onYouTubeIframeAPIReady() {
-    var closeButton = document.getElementById('close');
-      const player = new YT.Player("player", {
-      height: "360",
-      width: "640",
-      videoId: videoId,
-      events: {
-        onReady: function(event) {
-          closeButton.addEventListener("click", function() {
-            event.target.pauseVideo();
-          });
-        }
-      }
-    });
-  }
-
-
-      videoPopup.innerHTML = '<div id="player"></div>'
         popup.classList.add('show');
     }
 
