@@ -43,69 +43,23 @@ function init() {
     //  tabs end
   }
 
-  // youtube video popup
-  var videoButtons = document.getElementsByClassName('video-button')
+  // ******** video popup ********
   var popup = document.getElementById('popup-wrapper')
-
-  // document.querySelector('#social-media').addEventListener('click', function(event){
-  //     if(event.target.matches('.video-button')){
-  //         var videoId = this.getAttribute("data-video-id");
-  //          var videoPopup = document.getElementById("video-popup");
-
-  //          videoPopup.innerHTML = '<iframe width="100%" height="360" src="https://www.youtube.com/embed/' + videoId + '" frameborder="0" allow="accelerometer; autoplay=1; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-  //          popup.classList.add('show');
-
-  //     }
-  // })
-
-  for (var i = 0; i < videoButtons.length; i++) {
-    videoButtons[i].onclick = function (eve) {
-      console.log("check");
-      var videoId = this.getAttribute('data-video-id')
-      var videoPopup = document.getElementById('video-popup')
-
-      videoPopup.innerHTML =
-        '<iframe width="100%" height="360" src="https://www.youtube.com/embed/' +
-        videoId +
-        '" frameborder="0" allow="accelerometer; autoplay=1; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-      popup.classList.add('show')
-    }
-    //   videoButtons[i].addEventListener('click', function (event) {
-    //   })
-  }
   let clsbtn = document.getElementById('close')
   clsbtn.onclick = function () {
+    var videoPopup = document.getElementById('video-popup');
+    videoPopup.innerHTML = '';
     popup.classList.remove('show')
-  }
 
+  }
   window.onclick = function (event) {
     if (event.target == popup) {
       popup.classList.remove('show')
     }
   }
-  // youtube video popup end
+   //******** video popup end  ********
 
-  var player,
-    card = document.querySelector('.card'),
-    video = document.querySelector('.card-video')
-
-  // Shine effect
-  card.onmousemove = function (e) {
-    const x = e.pageX - card.offsetLeft
-    const y = e.pageY - card.offsetTop
-
-    card.style.setProperty('--x', x + 'px')
-    card.style.setProperty('--y', y + 'px')
-  }
-  window.onload = function () {
-    var imgs = document.querySelectorAll('.card-video img')
-    var divs = document.querySelectorAll('.card')
-    for (var i = 0; i < imgs.length; i++) {
-      //  console.log(divs[i]);
-      divs[i].style.backgroundImage = 'url(' + imgs[i].src + ')'
-    }
-  }
-
+  // Data for the video box
   let ytviditem = [
     {
       id: 1,
@@ -171,7 +125,62 @@ function init() {
       name: 'Prema',
       profiledesc: "Facebook's Professional Profiles",
     },
-  ]
+  ]  
+
+//********  on button click append the youtube links to popup ********
+   var videoButtons = document.getElementsByClassName('video-button')
+  for (var i = 0; i < videoButtons.length; i++) {
+    videoButtons[i].onclick = function (eve) {
+      // console.log("check");
+      var videoId = this.getAttribute('data-video-id')
+      // const videoId = ytviditem[i].datavideoid;
+      var videoPopup = document.getElementById('video-popup')
+
+      // videoPopup.innerHTML =
+      //   '<iframe width="100%" height="360" src="https://www.youtube.com/embed/' +
+      //   videoId +
+      //   '" frameborder="0" allow="accelerometer;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      var player;
+
+function onYouTubeIframeAPIReady() {
+    var closeButton = document.getElementById('close');
+      const player = new YT.Player("player", {
+      height: "360",
+      width: "640",
+      videoId: videoId,
+      events: {
+        onReady: function(event) {
+          closeButton.addEventListener("click", function() {
+            event.target.pauseVideo();
+          });
+        }
+      }
+    });
+  }
+
+
+      videoPopup.innerHTML = '<div id="player"></div>'
+        popup.classList.add('show');
+    }
+
+  }
+//********  on button click append the youtube links to popup END ********
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//********  Append the youtube IDs into the popup data attribute ******** /
+   
 
   // option 1
   // var loadmorebtn = document.getElementById('loadmore');
@@ -236,7 +245,9 @@ function init() {
 
   function loadMoreitem() {
     // get the container item added in the container div
-    const container = document.getElementById('thumbimg')
+    const container = document.getElementById('thumbimg');
+
+
 
     // loop through the next 3 item in the array
     for (var i = itemloaded; i < itemloaded + 3; i++) {
@@ -294,3 +305,28 @@ function init() {
 
   loadMoreitem()
 }
+//********  Append the youtube IDs into the popup data attribute END ******** /
+
+
+
+// use for animation
+var player,
+    card = document.querySelector('.card'),
+    video = document.querySelector('.card-video')
+
+  // Shine effect
+  card.onmousemove = function (e) {
+    const x = e.pageX - card.offsetLeft
+    const y = e.pageY - card.offsetTop
+
+    card.style.setProperty('--x', x + 'px')
+    card.style.setProperty('--y', y + 'px')
+  }
+  window.onload = function () {
+    var imgs = document.querySelectorAll('.card-video img')
+    var divs = document.querySelectorAll('.card')
+    for (var i = 0; i < imgs.length; i++) {
+      //  console.log(divs[i]);
+      divs[i].style.backgroundImage = 'url(' + imgs[i].src + ')'
+    }
+  }

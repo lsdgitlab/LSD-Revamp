@@ -187,6 +187,10 @@ header {
                                         -o-transform: translate(-50%, -50%);
                                         -ms-transform: translate(-50%, -50%);
                                         transform: translate(-50%, -50%);
+                                        .playBut {
+                                            width: 38px;
+                                            height: 38px;
+                                         }
                                     }
                                 }
                                 
@@ -281,6 +285,7 @@ header {
         left: -100%;
         top: 0;
     }
+    
 }
 
 @media screen and (max-width: 1199px){
@@ -384,6 +389,7 @@ header {
             // height: 100vh;
             height: 100%;
             z-index: 1;
+            background: #fff;
             @include transition();
 
             ul{
