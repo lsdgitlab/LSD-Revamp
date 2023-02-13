@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const webpack = require("webpack");
+// const chart = require("chart.js")
 const htmlPageNames = [
   {
       pageName: 'index.html',

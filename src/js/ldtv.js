@@ -306,25 +306,31 @@ function init() {
 //********  Append the youtube IDs into the popup data attribute END ******** /
 
 
-
 // use for animation
-var player,
-    card = document.querySelector('.card'),
-    video = document.querySelector('.card-video')
+window.addEventListener('DOMContentLoaded', ()=>{
+  ldtvBox = document.querySelector('.space-ld')
+  var player,
+  card = document.querySelector('.card'),
+  video = document.querySelector('.card-video') 
 
-  // Shine effect
-  card.onmousemove = function (e) {
-    const x = e.pageX - card.offsetLeft
-    const y = e.pageY - card.offsetTop
+// Shine effect
+card.onmousemove = function (e) {
+  const x = e.pageX - card.offsetLeft
+  const y = e.pageY - card.offsetTop
 
-    card.style.setProperty('--x', x + 'px')
-    card.style.setProperty('--y', y + 'px')
+  card.style.setProperty('--x', x + 'px')
+  card.style.setProperty('--y', y + 'px')
+}
+window.onload = function () {
+  var imgs = document.querySelectorAll('.card-video img')
+  var divs = document.querySelectorAll('.card')
+  for (var i = 0; i < imgs.length; i++) {
+    //  console.log(divs[i]);
+    divs[i].style.backgroundImage = 'url(' + imgs[i].src + ')'
   }
-  window.onload = function () {
-    var imgs = document.querySelectorAll('.card-video img')
-    var divs = document.querySelectorAll('.card')
-    for (var i = 0; i < imgs.length; i++) {
-      //  console.log(divs[i]);
-      divs[i].style.backgroundImage = 'url(' + imgs[i].src + ')'
-    }
-  }
+}
+
+})
+
+
+
