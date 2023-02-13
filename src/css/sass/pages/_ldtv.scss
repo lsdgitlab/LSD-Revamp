@@ -142,7 +142,10 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
   }
   .loadmorebg{padding-bottom: 30px;}
 .inactive{display: none;}
-
+.circelGraph{
+  width: 400px;
+  height: 400px;
+}
   /*Medai query*/
 @media screen and (max-width: 1298px) {
 	.maincnt{max-width: 100%;padding: 0 20px;}
