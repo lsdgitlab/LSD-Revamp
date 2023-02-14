@@ -136,10 +136,10 @@ var chart = new Chart(ctx, {
 
           bodyLines.forEach(function(body, i) {
             var colors = tooltipModel.labelColors[i];
-            var style = 'background:' + colors.backgroundColor;
+            var style = 'background:white' + colors.backgroundColor;
             style += '; border-color:' + colors.borderColor;
             style += '; border-width: 2px';
-            var span = '<span class="chartjs-tooltip-key" style="' + style + '"></span>';
+            var span = '<span class="chartjs-tooltip-key"></span>';
             innerHtml += '<tr><td>' + span + '<ul>' + body + '</ul>' + '</td></tr>';
           });
           innerHtml += '</tbody>';
@@ -160,6 +160,7 @@ var chart = new Chart(ctx, {
         tooltipEl.style.fontSize = tooltipModel.bodyFontSize + 'px';
         tooltipEl.style.fontStyle = tooltipModel._bodyFontStyle;
         tooltipEl.style.padding = tooltipModel.yPadding + 'px ' + tooltipModel.xPadding + 'px';
+        tooltipEl.style.backgroundColor = '#ffffff';
       }
     }
   }
