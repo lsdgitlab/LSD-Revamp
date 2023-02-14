@@ -8,155 +8,201 @@
 // import ldtv from './ldtv'
 // import { myChart} from "./customChart";
 // import Chart from 'chart.js';
+var canvas = document.getElementById('myChart')
+var ctx = canvas.getContext('2d')
 
-// render
-// const myChart = new Chart(
-//     document.getElementById('myChart'),
-//     condfig
-// )
+var chart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ['Customer', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+      label: 'Dataset 1',
+      data: [10, 20, 30, 40, 50, 60, 70],
+      descriptions: [
+        ['Description 1a', 'Description 1b', 'Description 1c'],
+        ['Description 2a', 'Description 2b', 'Description 2c'],
+        ['Description 3a', 'Description 3b', 'Description 3c'],
+        ['Description 4a', 'Description 4b', 'Description 4c'],
+        ['Description 5a', 'Description 5b', 'Description 5c'],
+        ['Description 6a', 'Description 6b', 'Description 6c'],
+        ['Description 7a', 'Description 7b', 'Description 7c'],
+      ]
+    }]
+  },
+  options: {
+    tooltips: {
+      enabled: false,
+      // callbacks: {
+      //   label: function(tooltipModel, data) {
+      //     var datasetLabel = data.datasets[tooltipModel.datasetIndex].label || '';
+      //     var dataLabel = data.labels[tooltipModel.index];
+      //     var value = tooltipModel.yLabel;
+      //     return datasetLabel + ': ' + dataLabel + '\n' + 'Customer Journey Mapping: ' + value + '\n' + 'UI/UX Audit & Strategy ' + (value * 2) + '\n' + 'Value 3: ' + (value * 3) + '\n' + 'Value 4: ' + (value * 4);
+      //   }
+      // }
+      callbacks: {
+        title: function(tooltipModel, data) {
+          return data.labels[tooltipModel[0].index];
+        },
+        label: function(tooltipModel, data) {
+          var value = data.datasets[tooltipModel.datasetIndex].data[tooltipModel.index];
+          var descriptions = data.datasets[tooltipModel.datasetIndex].descriptions[tooltipModel.index];
+          var label = '';
+          // label += 'Value: ' + value;
+          if (descriptions) {
+            label += '\n';
+            label += '';
+            for (var i = 0; i < descriptions.length; i++) {
+              label += '\n- ' + descriptions[i];
+            }
+          }
+          return label;
+        }
+      },
 
-// var ctx = document.getElementById("myChart");
-// var myChart = new Chart(ctx, {
+      custom: function(tooltipModel) {
+        // Tooltip Element
+        var tooltipEl = document.getElementById('chartjs-tooltip');
 
-//   type: 'doughnut',
+        // Create element on first render
+        if (!tooltipEl) {
+          tooltipEl = document.createElement('div');
+          tooltipEl.id = 'chartjs-tooltip';
+          tooltipEl.innerHTML = '<table></table>';
+          document.body.appendChild(tooltipEl);
+        }
+
+        // Hide if no tooltip
+        if (tooltipModel.opacity === 0) {
+          tooltipEl.style.opacity = 0;
+          return;
+        }
+
+        // Set caret Position
+        tooltipEl.classList.remove('above', 'below', 'no-transform');
+        if (tooltipModel.yAlign) {
+          tooltipEl.classList.add(tooltipModel.yAlign);
+        } else {
+          tooltipEl.classList.add('no-transform');
+        }
+
+        // Set Text
+        if (tooltipModel.body) {
+          var titleLines = tooltipModel.title || [];
+          var bodyLines = tooltipModel.body.map(function(bodyItem) {
+            return bodyItem.lines;
+          });
+
+          var innerHtml = '<thead>';
+
+          titleLines.forEach(function(title) {
+            innerHtml += '<tr><th>' + title + '</th></tr>';
+          });
+          innerHtml += '</thead><tbody>';
+
+          bodyLines.forEach(function(body, i) {
+            var colors = tooltipModel.labelColors[i];
+            var style = 'background:' + colors.backgroundColor;
+            style += '; border-color:' + colors.borderColor;
+            style += '; border-width: 2px';
+            var span = '<span class="chartjs-tooltip-key" style="' + style + '"></span>';
+            innerHtml += '<tr><td>' + span + '<ul><li>'+ body + '</ul></li>' + '</td></tr>';
+          });
+          innerHtml += '</tbody>';
+
+          var tableRoot = tooltipEl.querySelector('table');
+          tableRoot.innerHTML = innerHtml;
+        }
+
+        // `this` will be the overall tooltip
+        var position = this._chart.canvas.getBoundingClientRect();
+
+        // Display, position, and set styles for font
+        tooltipEl.style.opacity = 1;
+        tooltipEl.style.position = 'absolute';
+        tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+        tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+        tooltipEl.style.fontFamily = tooltipModel._bodyFontFamily;
+        tooltipEl.style.fontSize = tooltipModel.bodyFontSize + 'px';
+        tooltipEl.style.fontStyle = tooltipModel._bodyFontStyle;
+        tooltipEl.style.padding = tooltipModel.yPadding + 'px ' + tooltipModel.xPadding + 'px';
+      }
+    }
+  }
+});
+
+// var chart = new Chart(ctx, {
+//   type: 'line',
 //   data: {
-//     labels: ["Red", "Blue", "Yellow"],
+//     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
 //     datasets: [{
-//       label: '# of Votes',
-//       data: [12, 19, 3],
-//       backgroundColor: [
-//         'rgba(255, 99, 132, 0.2)',
-//         'rgba(54, 162, 235, 0.2)',
-//         'rgba(255, 206, 86, 0.2)'
+//       label: 'My Dataset',
+//       data: [10, 20, 30, 40, 50, 60, 70],
+//       backgroundColor: 'rgba(255, 99, 132, 0.2)',
+//       borderColor: 'rgba(255, 99, 132, 1)',
+//       borderWidth: 1,
+//       descriptions: [
+//         ['Description 1a', 'Description 1b', 'Description 1c'],
+//         ['Description 2a', 'Description 2b', 'Description 2c'],
+//         ['Description 3a', 'Description 3b', 'Description 3c'],
+//         ['Description 4a', 'Description 4b', 'Description 4c'],
+//         ['Description 5a', 'Description 5b', 'Description 5c'],
+//         ['Description 6a', 'Description 6b', 'Description 6c'],
+//         ['Description 7a', 'Description 7b', 'Description 7c'],
 //       ],
-//       borderColor: [
-//         'rgba(255,99,132,1)',
-//         'rgba(54, 162, 235, 1)',
-//         'rgba(255, 206, 86, 1)'
-//       ],
-//       borderWidth: 1
 //     }]
 //   },
 //   options: {
 //     tooltips: {
 //       callbacks: {
 //         title: function(tooltipItem, data) {
-//           return data['labels'][tooltipItem[0]['index']];
+//           return data.labels[tooltipItem[0].index];
 //         },
 //         label: function(tooltipItem, data) {
-//           return data['datasets'][0]['data'][tooltipItem['index']];
-//         },
-//         afterLabel: function(tooltipItem, data) {
-//           var dataset = data['datasets'][0];
-//           var percent = Math.round((dataset['data'][tooltipItem['index']] / dataset["_meta"][0]['total']) * 100)
-//           return '(' + percent + '%)';
+//           var value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+//           var descriptions = data.datasets[tooltipItem.datasetIndex].descriptions[tooltipItem.index];
+//           var label = '';
+//           label += 'Value: ' + value;
+//           if (descriptions) {
+//             label += '\n';
+//             label += 'Descriptions:';
+//             for (var i = 0; i < descriptions.length; i++) {
+//               label += '\n- ' + descriptions[i];
+//             }
+//           }
+//           return label;
 //         }
-//       },
-//       backgroundColor: '#FFF',
-//       titleFontSize: 16,
-//       titleFontColor: '#0066ff',
-//       bodyFontColor: '#000',
-//       bodyFontSize: 14,
-//       displayColors: false
+//       }
 //     }
 //   }
-
 // });
 
-// var ctx = document.getElementById('myChart').getContext('2d')
+
+
+
+
+
 // var chart = new Chart(ctx, {
-//   type: 'doughnut',
+//   type: 'line',
 //   data: {
 //     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-//     datasets: [
-//       {
-//         label: 'My Dataset',
-//         data: [0, 10, 5, 2, 20, 30, 45],
-//         backgroundColor: 'rgba(255, 99, 132, 0.2)',
-//         borderColor: 'rgba(255, 99, 132, 1)',
-//         borderWidth: 1,
-//       },
-//     ],
+//     datasets: [{
+//       label: 'My Dataset',
+//       data: [10, 20, 30, 40, 50, 60, 70].map(function(value) {
+//         return value + ' units sold'; // Append custom string to label
+//       })
+//     }]
 //   },
 //   options: {
 //     tooltips: {
 //       callbacks: {
-//         label: function (tooltipItem, data) {
-//           var label = data.datasets[tooltipItem.datasetIndex].label || ''
-//           if (label) {
-//             label += ': '
-//           }
-//           label += tooltipItem.yLabel
-//           return (
-//             '<div style="background-color: rgba(255, 255, 255, 0.9); border: 1px solid #00FF00; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); padding: 5px 10px; border-radius: 5px;">' +
-//             label +
-//             '</div>'
-//           )
-//         },
-//       },
-//     },
-//   },
-// })
-var chart
+//         label: function(tooltipItem) {
+//           return tooltipItem.yLabel; // Display only the original data value in the tooltip
+//         }
+//       }
+//     }
+//   }
+// });
 
-var canvas = document.getElementById('myChart')
 
-if (chart) {
-  chart.destroy()
-}
 
-var ctx = canvas.getContext('2d')
-chart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [
-      {
-        label: 'My Dataset',
-        data: [0, 10, 5, 2, 20, 30, 45],
-        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    tooltips: {
-      custom: function (tooltip) {
-        // tooltip will be false if tooltip is not visible or should be hidden
-        if (!tooltip) return
-        // Hide the tooltip element initially
-        tooltip.opacity = 0
-      },
-      callbacks: {
-        label: function (tooltipItem, data) {
-          var label = data.datasets[tooltipItem.datasetIndex].label || ''
-          if (label) {
-            label += ': '
-          }
-          label += tooltipItem.value
-
-          // Create a custom div element for the tooltip
-          var tooltipEl = document.createElement('div')
-          tooltipEl.style.backgroundColor = 'rgba(25, 254, 10, 1)'
-          tooltipEl.style.border = '1px solid rgba(0, 0, 0, 0.5)'
-          tooltipEl.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)'
-          tooltipEl.style.padding = '5px 10px'
-          tooltipEl.style.borderRadius = '5px'
-          tooltipEl.innerHTML = label
-
-          // Place the custom div element in the tooltip
-          document.body.appendChild(tooltipEl)
-
-          // Position the tooltip
-          tooltipEl.style.left = window.pageXOffset + tooltip.x + 'px'
-          tooltipEl.style.top = window.pageYOffset + tooltip.y + 'px'
-          tooltip.opacity = 1
-
-          // Return false to indicate that the tooltip should not be rendered by the browser
-          return false
-        },
-      },
-    },
-  },
-})
