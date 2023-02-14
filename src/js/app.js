@@ -14,32 +14,63 @@ var ctx = canvas.getContext('2d')
 var chart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ['Customer', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: [
+      "Media",
+      "UI/UX",
+      "Creative & Communication",
+      "Innovations & Technology",
+      "Customer Experience",
+      "Data & Insights",
+    ],
     datasets: [{
       label: 'Dataset 1',
-      data: [10, 20, 30, 40, 50, 60, 70],
-      descriptions: [
-        ['Description 1a', 'Description 1b', 'Description 1c'],
-        ['Description 2a', 'Description 2b', 'Description 2c'],
-        ['Description 3a', 'Description 3b', 'Description 3c'],
-        ['Description 4a', 'Description 4b', 'Description 4c'],
-        ['Description 5a', 'Description 5b', 'Description 5c'],
-        ['Description 6a', 'Description 6b', 'Description 6c'],
-        ['Description 7a', 'Description 7b', 'Description 7c'],
+      data: [15, 15, 15, 15, 15, 15],
+      backgroundColor: [
+          '#2C93D4',
+          '#37C9EE',
+          '#3FDAD8',
+          '#3F86DA',
+          '#3F4FDA',
+          '#13538A'
+      ],
+      borderColor: [
+          '#2C93D4',
+          '#37C9EE',
+          '#3FDAD8',
+          '#3F86DA',
+          '#3F4FDA',
+          '#13538A'
+      ],
+      borderWidth: 1,
+      descriptions: [                
+        ['Description 1', 'Description 1', 'Description 1'],
+        [ 'Customer Journey Mapping', 'UI/UX Audit & Strategy', 'Digital Assets Strategy', 'Digital Product Strategy', 'Competition benchmarking', 'Conversion Rate Optimization',],
+        ['Description 2', 'Description 2', 'Description 2'],
+        ['Description 3', 'Description 3', 'Description 3'],
+        ['Description 4', 'Description 4', 'Description 4'],
+        ['Description 5', 'Description 5', 'Description 5'],
       ]
     }]
   },
   options: {
+    legend: {
+        display: false
+    },
+    title: {
+        // display: true,
+        display: false,
+        text: ["LS Digital Marketing Transformation Framework"]
+    },
+    animation: {
+        // animateScale: true,
+        // animateRotate: true
+        animateScale: false,
+        animateRotate: false
+    },
+    responsive: true,
+    maintainAspectRatio: false,
     tooltips: {
       enabled: false,
-      // callbacks: {
-      //   label: function(tooltipModel, data) {
-      //     var datasetLabel = data.datasets[tooltipModel.datasetIndex].label || '';
-      //     var dataLabel = data.labels[tooltipModel.index];
-      //     var value = tooltipModel.yLabel;
-      //     return datasetLabel + ': ' + dataLabel + '\n' + 'Customer Journey Mapping: ' + value + '\n' + 'UI/UX Audit & Strategy ' + (value * 2) + '\n' + 'Value 3: ' + (value * 3) + '\n' + 'Value 4: ' + (value * 4);
-      //   }
-      // }
       callbacks: {
         title: function(tooltipModel, data) {
           return data.labels[tooltipModel[0].index];
@@ -49,16 +80,19 @@ var chart = new Chart(ctx, {
           var descriptions = data.datasets[tooltipModel.datasetIndex].descriptions[tooltipModel.index];
           var label = '';
           // label += 'Value: ' + value;
+         
           if (descriptions) {
             label += '\n';
             label += '';
+            
             for (var i = 0; i < descriptions.length; i++) {
-              label += '\n- ' + descriptions[i];
-            }
+              label += '<li>' + descriptions[i] + '</li>'            }
+           
           }
+       
           return label;
         }
-      },
+      },     
 
       custom: function(tooltipModel) {
         // Tooltip Element
@@ -102,11 +136,11 @@ var chart = new Chart(ctx, {
 
           bodyLines.forEach(function(body, i) {
             var colors = tooltipModel.labelColors[i];
-            var style = 'background:' + colors.backgroundColor;
+            var style = 'background:white' + colors.backgroundColor;
             style += '; border-color:' + colors.borderColor;
             style += '; border-width: 2px';
-            var span = '<span class="chartjs-tooltip-key" style="' + style + '"></span>';
-            innerHtml += '<tr><td>' + span + '<ul><li>'+ body + '</ul></li>' + '</td></tr>';
+            var span = '<span class="chartjs-tooltip-key"></span>';
+            innerHtml += '<tr><td>' + span + '<ul>' + body + '</ul>' + '</td></tr>';
           });
           innerHtml += '</tbody>';
 
@@ -126,83 +160,12 @@ var chart = new Chart(ctx, {
         tooltipEl.style.fontSize = tooltipModel.bodyFontSize + 'px';
         tooltipEl.style.fontStyle = tooltipModel._bodyFontStyle;
         tooltipEl.style.padding = tooltipModel.yPadding + 'px ' + tooltipModel.xPadding + 'px';
+        tooltipEl.style.backgroundColor = '#ffffff';
       }
     }
   }
 });
 
-// var chart = new Chart(ctx, {
-//   type: 'line',
-//   data: {
-//     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-//     datasets: [{
-//       label: 'My Dataset',
-//       data: [10, 20, 30, 40, 50, 60, 70],
-//       backgroundColor: 'rgba(255, 99, 132, 0.2)',
-//       borderColor: 'rgba(255, 99, 132, 1)',
-//       borderWidth: 1,
-//       descriptions: [
-//         ['Description 1a', 'Description 1b', 'Description 1c'],
-//         ['Description 2a', 'Description 2b', 'Description 2c'],
-//         ['Description 3a', 'Description 3b', 'Description 3c'],
-//         ['Description 4a', 'Description 4b', 'Description 4c'],
-//         ['Description 5a', 'Description 5b', 'Description 5c'],
-//         ['Description 6a', 'Description 6b', 'Description 6c'],
-//         ['Description 7a', 'Description 7b', 'Description 7c'],
-//       ],
-//     }]
-//   },
-//   options: {
-//     tooltips: {
-//       callbacks: {
-//         title: function(tooltipItem, data) {
-//           return data.labels[tooltipItem[0].index];
-//         },
-//         label: function(tooltipItem, data) {
-//           var value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
-//           var descriptions = data.datasets[tooltipItem.datasetIndex].descriptions[tooltipItem.index];
-//           var label = '';
-//           label += 'Value: ' + value;
-//           if (descriptions) {
-//             label += '\n';
-//             label += 'Descriptions:';
-//             for (var i = 0; i < descriptions.length; i++) {
-//               label += '\n- ' + descriptions[i];
-//             }
-//           }
-//           return label;
-//         }
-//       }
-//     }
-//   }
-// });
-
-
-
-
-
-
-// var chart = new Chart(ctx, {
-//   type: 'line',
-//   data: {
-//     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-//     datasets: [{
-//       label: 'My Dataset',
-//       data: [10, 20, 30, 40, 50, 60, 70].map(function(value) {
-//         return value + ' units sold'; // Append custom string to label
-//       })
-//     }]
-//   },
-//   options: {
-//     tooltips: {
-//       callbacks: {
-//         label: function(tooltipItem) {
-//           return tooltipItem.yLabel; // Display only the original data value in the tooltip
-//         }
-//       }
-//     }
-//   }
-// });
 
 
 
