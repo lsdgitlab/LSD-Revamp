@@ -4,24 +4,20 @@
 // // window.Chart = Chart;
 // observer.observe();
 
-
-import career from './career-job-details'
-import ldtv from './ldtv'
+// import career from './career-job-details'
+// import ldtv from './ldtv'
 // import { myChart} from "./customChart";
 // import Chart from 'chart.js';
-
-
-
 
 // render
 // const myChart = new Chart(
 //     document.getElementById('myChart'),
 //     condfig
 // )
- 
+
 // var ctx = document.getElementById("myChart");
 // var myChart = new Chart(ctx, {
-    
+
 //   type: 'doughnut',
 //   data: {
 //     labels: ["Red", "Blue", "Yellow"],
@@ -67,53 +63,100 @@ import ldtv from './ldtv'
 
 // });
 
-const data = {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    datasets: [{
-      label: 'Weekly Sales',
-      data: [18, 12, 6, 9, 12, 3, 9],
-      backgroundColor: [
-        'rgba(255, 26, 104, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)',
-        'rgba(0, 0, 0, 0.2)'
-      ],
-      borderColor: [
-        'rgba(255, 26, 104, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)',
-        'rgba(0, 0, 0, 1)'
-      ],
-      borderWidth: 1
-    }]
-  };
+// var ctx = document.getElementById('myChart').getContext('2d')
+// var chart = new Chart(ctx, {
+//   type: 'doughnut',
+//   data: {
+//     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+//     datasets: [
+//       {
+//         label: 'My Dataset',
+//         data: [0, 10, 5, 2, 20, 30, 45],
+//         backgroundColor: 'rgba(255, 99, 132, 0.2)',
+//         borderColor: 'rgba(255, 99, 132, 1)',
+//         borderWidth: 1,
+//       },
+//     ],
+//   },
+//   options: {
+//     tooltips: {
+//       callbacks: {
+//         label: function (tooltipItem, data) {
+//           var label = data.datasets[tooltipItem.datasetIndex].label || ''
+//           if (label) {
+//             label += ': '
+//           }
+//           label += tooltipItem.yLabel
+//           return (
+//             '<div style="background-color: rgba(255, 255, 255, 0.9); border: 1px solid #00FF00; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); padding: 5px 10px; border-radius: 5px;">' +
+//             label +
+//             '</div>'
+//           )
+//         },
+//       },
+//     },
+//   },
+// })
+var chart
 
-  // config 
-  const config = {
-    type: 'doughnut',
-    data,
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
+var canvas = document.getElementById('myChart')
+
+if (chart) {
+  chart.destroy()
+}
+
+var ctx = canvas.getContext('2d')
+chart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [
+      {
+        label: 'My Dataset',
+        data: [0, 10, 5, 2, 20, 30, 45],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1,
       },
-      plugins :{
-          tooltip:{
-              enabled : false
+    ],
+  },
+  options: {
+    tooltips: {
+      custom: function (tooltip) {
+        // tooltip will be false if tooltip is not visible or should be hidden
+        if (!tooltip) return
+        // Hide the tooltip element initially
+        tooltip.opacity = 0
+      },
+      callbacks: {
+        label: function (tooltipItem, data) {
+          var label = data.datasets[tooltipItem.datasetIndex].label || ''
+          if (label) {
+            label += ': '
           }
-      }
-    }
-  };
+          label += tooltipItem.value
 
-  // render init block
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
+          // Create a custom div element for the tooltip
+          var tooltipEl = document.createElement('div')
+          tooltipEl.style.backgroundColor = 'rgba(25, 254, 10, 1)'
+          tooltipEl.style.border = '1px solid rgba(0, 0, 0, 0.5)'
+          tooltipEl.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.2)'
+          tooltipEl.style.padding = '5px 10px'
+          tooltipEl.style.borderRadius = '5px'
+          tooltipEl.innerHTML = label
+
+          // Place the custom div element in the tooltip
+          document.body.appendChild(tooltipEl)
+
+          // Position the tooltip
+          tooltipEl.style.left = window.pageXOffset + tooltip.x + 'px'
+          tooltipEl.style.top = window.pageYOffset + tooltip.y + 'px'
+          tooltip.opacity = 1
+
+          // Return false to indicate that the tooltip should not be rendered by the browser
+          return false
+        },
+      },
+    },
+  },
+})
