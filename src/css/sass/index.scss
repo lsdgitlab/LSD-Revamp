@@ -4,6 +4,7 @@
 :root {
   --easing: cubic-bezier(0.5, 0.7, 0.4, 1);  
 }
+@import "~bootstrap/scss/bootstrap";
 body {
   // --page-background: #404046;
   --page-background: #fff;
@@ -22,11 +23,11 @@ body {
 
 
 // // 3. Base stuff
-@import
-  'base/base',
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
+// @import
+//   'base/base',
+//   'base/fonts',
+//   'base/typography';
+//   // 'base/helpers';
 
 // // 4. Layout-related sections
 @import
