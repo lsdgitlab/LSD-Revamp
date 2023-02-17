@@ -1,6 +1,7 @@
 /* career job list start */
 .maincnt{max-width:1280px;width:100%;margin:0 auto}
-#career{background:#f8f8f8;height:100vh}h1{margin:0;padding:30px 0}
+#career{background:#f8f8f8;}
+h1{margin:0;padding:30px 0}
 .ltSec{width:80%;overflow:hidden}
 .rtSec{width:20%}
 .carouselbg{width:100%;padding:15px 0}
@@ -9,13 +10,16 @@
 #joblist li{color:#888891;margin:0 30px 0 0;display:inline-block;width:100%;white-space:nowrap;position:relative}
 #joblist li:after{content:"";width:0;height:2px;position:absolute;bottom:-15px;left:0;transition:all ease-in 300ms}
 #joblist li.act:after{width:100%;background:#f15a22;transition:all ease-in 300ms}
-#jobcard dl{box-sizing:border-box;width:402px;height:190px;left:0;top:0;background:#FFF;border:1px solid #D7D7DA;border-radius:8px;justify-content:flex-start;display:inline-flex;flex-direction:column;align-items:flex-start;padding:30px;margin:10px}
-#jobcard dl dt{font-weight:600;font-size:24px;line-height:140%;letter-spacing:-.01em;display:flex}
-#jobcard dl dd,ul{margin:0;padding:0}#jobcard dl dd p{font-size:16px;line-height:140%;letter-spacing:-.01em;color:#202025}
+#jobcard dl{box-sizing:border-box;width:416px;height:190px;left:0;top:0;background:#FFF;border:1px solid #D7D7DA;border-radius:8px;justify-content:flex-start;display:inline-flex;flex-direction:column;align-items:flex-start;padding:30px;margin-bottom: 20px;}
+#jobcard dl dt{font-weight:600;font-size:24px;letter-spacing:-.01em;display:flex}
+#jobcard dl dd{margin:0;padding:0}
+#jobcard dd ul{margin-top:15px;}
+#jobcard dd p{margin-top:5px;}
+#jobcard dl dd p{font-size:16px;letter-spacing:-.01em;color:#202025}
 #jobcard dl dd li{display:inline-flex;flex-direction:row;align-items:flex-start;padding:10px;gap:23px;height:36px;background:#F2F2F3;border-radius:8px;margin-right:5px}
-#jobcard dl dd li a{font-weight:400;font-size:16px;line-height:100%;text-decoration:none;letter-spacing:-.01em;color:#56565D}
+#jobcard dl dd li a{font-weight:400;font-size:16px;text-decoration:none;letter-spacing:-.01em;color:#56565D}
 #joblist li.hidden{display:none}
-.scroll-style::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 2px rgba(0,0,0,0.3);background-color:#F5F5F5;border-radius:5px}.scroll-style::-webkit-scrollbar{background-color:#F5F5F5;width:5px;height:5px}.scroll-style::-webkit-scrollbar-thumb{background-color:#a5a5a5}
+.scroll-style::-webkit-scrollbar-track{box-shadow:inset 0 0 2px rgba(0,0,0,0.3);background-color:#F5F5F5;border-radius:5px}.scroll-style::-webkit-scrollbar{background-color:#F5F5F5;width:5px;height:5px}.scroll-style::-webkit-scrollbar-thumb{background-color:#a5a5a5}
 #nextBtn{width:40px;height:100%;line-height:40px;position:absolute;right:20%;margin-right:-50px;cursor:pointer;top:0;z-index:555;background:#fff}#prevBtn{width:40px;height:100%;line-height:40px;position:absolute;left:0;margin-right:-50px;cursor:pointer;top:0;z-index:555;background:#fff}
 .arrow{margin:0 0 0 10px;display:inline-block;height:12px;position:relative;width:12px}
 .arrow::after{border-bottom-style:solid;border-bottom-width:2px;border-right-style:solid;border-right-width:2px;content:"";display:inline-block;height:12px;left:-7px;position:absolute;top:2px;width:12px}
@@ -28,6 +32,15 @@
 .search:focus + .searchbutton{transition-duration:.4s;-moz-transition-duration:.4s;-webkit-transition-duration:.4s;-o-transition-duration:.4s;background-color:#fff;color:#000}
 .search{position:absolute;right:30px;background-color:#fff;outline:none;border:none;padding:0;width:0;height:100%;z-index:10;transition-duration:.4s;-moz-transition-duration:.4s;-webkit-transition-duration:.4s;-o-transition-duration:.4s}
 .search:focus{width:169px;padding:0 16px 0 0;text-indent:10px}
+
+#jobcard {
+    /* justify-content: center; */
+    /* align-items: center; */
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 36px
+}
 /* career job list end */
 
 /* career details start */
@@ -35,8 +48,8 @@
 .career-detail .job-detail { border-bottom: 1px solid #D7D7DA;}
 .career-detail .job-detail .browse { font-size: 16px; color: #007BB6; margin-top: 40px; margin-bottom: 30px; text-transform: uppercase; display: block;}
 .career-detail .job-detail .browse img { display: inline-block; font-size: initial; vertical-align: middle; margin-right: 8px;}
-.career-detail .job-detail h1 { font-size: 48px; color: #202025; font-weight: 700; line-height: 1.5;}
-.career-detail .job-detail .title { font-size: 24px; color: #202025; line-height: 1.5; line-height: 34px; font-weight: 600; margin-bottom: 5px;}
+.career-detail .job-detail h1 { font-size: 48px; color: #202025; font-weight: 700;}
+.career-detail .job-detail .title { font-size: 24px; color: #202025; line-height: 34px; font-weight: 600; margin-bottom: 5px;}
 .career-detail .job-detail .location { font-size: 16px; color:#202025; font-weight: 500; line-height: 22px;  margin-bottom: 16px;}
 ul { padding: 0; margin: 0; list-style: outside none none;}
 li { margin: 0; padding: 0;}
@@ -60,14 +73,14 @@ li { margin: 0; padding: 0;}
 .journey .browse img { display: inline-block; font-size: initial; vertical-align: middle; margin-right: 8px;}
 .journey-form{max-width: 1190px; margin: 0 auto; box-sizing: border-box;}
 .journey-form .jny-txt{font-weight: 600;font-size: 32px;line-height: 44px;letter-spacing: -0.01em;color: #202025; margin-bottom: 5px;}
-.journey-form .sub-txt{font-style: normal;font-weight: 500;font-size: 16px;line-height: 140%;letter-spacing: -0.01em;color: #888891; margin: 0 auto; margin-bottom: 40px;}
+.journey-form .sub-txt{font-style: normal;font-weight: 500;font-size: 16px;letter-spacing: -0.01em;color: #888891; margin: 0 auto; margin-bottom: 40px;}
 .journey-form .form{padding: 50px; background: #FFFFFF;box-shadow: 0px 4px 44px rgba(32, 32, 37, 0.08);border-radius: 0px 0px 8px 8px;}
-.journey-form .form input{max-width: 525px;width: 100%; height: auto;font-weight: 400;font-size: 16px;line-height: 100%; letter-spacing: -0.01em; color: #888891; padding: 24px; border: 1px solid #BDBDC2;border-radius: 8px; }
+.journey-form .form input{max-width: 525px;width: 100%; height: auto;font-weight: 400;font-size: 16px;letter-spacing: -0.01em; color: #888891; padding: 24px; border: 1px solid #BDBDC2;border-radius: 8px; }
 .journey-form .form ul li{padding: 14px 0 5px 0 ;}
-.journey-form .form select{max-width: 525px;width: 100%; height: auto;font-weight: 400;font-size: 16px;line-height: 100%; letter-spacing: -0.01em; color: #888891; padding: 24px; border: 1px solid #BDBDC2;border-radius: 8px; }
+.journey-form .form select{max-width: 525px;width: 100%; height: auto;font-weight: 400;font-size: 16px;letter-spacing: -0.01em; color: #888891; padding: 24px; border: 1px solid #BDBDC2;border-radius: 8px; }
 .journey-form .form .valdi-txt{margin: 0 auto;color: red;font-size: 14px;}
-.journey-form .form li label{font-weight: 500;font-size: 16px;line-height: 140%;letter-spacing: -0.01em;color: #202025;}
-.journey-btn{padding: 24px;gap: 8px;max-width: 524px;width: 100%;height: 64px;background: #034EA2;border-radius: 8px;border: 0;font-weight: 600;font-size: 16px;line-height: 100%;letter-spacing: 0.06em;text-transform: uppercase;color: #FFFFFF;margin-top: 20px;}
+.journey-form .form li label{font-weight: 500;font-size: 16px;letter-spacing: -0.01em;color: #202025;}
+.journey-btn{padding: 24px;gap: 8px;max-width: 524px;width: 100%;height: 64px;background: #034EA2;border-radius: 8px;border: 0;font-weight: 600;font-size: 16px;letter-spacing: 0.06em;text-transform: uppercase;color: #FFFFFF;margin-top: 20px;}
 
 /* Start your journey with us end */
 
@@ -78,8 +91,9 @@ li { margin: 0; padding: 0;}
   .journey-form .form ul li {padding: 14px 0 5px 16px;}
   .journey-form .form li label {font-size: 14px;}
 }
-/* @media screen and (max-width: 1200px) {.container{max-width: 100%;padding: 0 20px ;}
-} */
+@media screen and (max-width: 1023px) {
+	.maincnt{margin-top: 76px;}
+}
 @media screen and (max-width: 991px) {
 	.maincnt{max-width: 100%;padding: 0 20px;}
 	.first-part .Fbcreator {font-size: 40px; line-height: 45px;}
@@ -119,6 +133,7 @@ li { margin: 0; padding: 0;}
 	/* .second-part {border-left: 1px solid rgb(217 217 217 / 80%);} */
 }
 @media screen and (max-width: 767px){
+	h1{font-size: 32px;}
 	.thumbTxt .thumbsmltxt {font-size: 12px;}
   .w-60{ width: 100%;}
 .w-40{ width: 100%;}
