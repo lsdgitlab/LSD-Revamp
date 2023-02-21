@@ -18,7 +18,7 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 .play{font-weight: 400; font-size: 16px;line-height: 100%;text-align: center;letter-spacing: 0.04em;color: #FFFFFF;margin-top: 10px;text-decoration: none;}
 // .Ytsld{margin-bottom: 40px;}
 .Ytsld .newRele{font-style: normal;font-weight: 700;font-size: 24px;line-height:normal;letter-spacing: -0.03em;color: #FFFFFF;margin: 0 auto;margin-bottom: 12px;}
-.Ytsld .slid{overflow-x:auto;}
+// .Ytsld .slid{overflow-x:auto;}
 
 
 .Ytsld .thumbnail{position: relative;margin-right: 14px;align-self: flex-start; padding-bottom: 30px;}
@@ -124,9 +124,15 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
   .social-media-1{font-weight: 500;font-size: 14px;line-height: 100%;color: #FFFFFF;background: #202025;border-radius: 8px;padding: 12px 24px;}
   .insta-first .insta-heding{max-width: 554px;font-weight: 700; font-size: 48px;line-height: 58px;letter-spacing: -0.03em; color: #FFFFFF;}
   .insta-first .insta-txt{max-width: 480px;font-weight: 400;font-size: 20px;line-height: 28px;letter-spacing: -0.01em;color: #FFFFFF;  opacity: 0.6;}
+  .inst-scnd {position: relative;}
   .inst-scnd .right-img img{ height: auto;border-radius: 10px; }
-  /* .inst-scnd .right-img {position: relative;} */
-  .inst-scnd .insa-btn{position: absolute; top: 42%; left: 74%;}
+  .inst-scnd .insa-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -34px;
+    margin-left: -34px;
+}
    button{text-align: center; cursor: pointer;padding: 16px;width: 140px;height: 51px;}
   .load-more{font-weight: 500;font-size: 16px;line-height: 19px; display: flex; align-items: center;letter-spacing: -0.01em;color: #888891;border: 1px solid #888891;background: #000000;border-radius: 40px;margin: 0 auto;}
   .second{padding: 40px 0;}
@@ -171,19 +177,23 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 @media screen and (max-width: 907px){
 	.first-part .watch-txt {font-size: 14px	}
 	.first-part .Fbcreator {font-size: 36px;line-height: 42px;}
-	.Ytsld{flex-direction: row;}
+	// .Ytsld{flex-direction: row;}
 	.slid{ flex-direction: row; }
 	.thumbnail .icon-txt {	flex-direction: row;}
 	.Ytsld .thumbnail {position: relative;margin-right: 14px;flex: none;}
 	.ldtvinsigh .second-part .ldtv-txt {font-size: 16px;padding-left: 0;text-align: center;padding: 0 20px;line-height: 22px;}
 	.Social {margin-bottom: 16px;}
-  /* .web-category .Categories {padding: 10px 0 0 0; margin-bottom: 60px; overflow-x: auto;}
-.web-category .Ytsld .slid{ flex-direction: column; }
-   .web-category .Ytsld .slid{overflow-x:inherit;} */
+  .web-category .Categories {padding: 10px 0 0 0; margin-bottom: 60px; overflow-x: auto;}
+  .web-category .Ytsld { flex-direction: column; }
+   .web-category .Ytsld .slid{overflow-x:inherit;width: 100%;height: auto;flex-direction: column;} 
+
+
    .web-category .Categories { padding: 10px 0 0 0;margin-bottom: 60px;overflow-x: auto;}
   .w-33 {width: 100%;}
   .popup-content {padding: 7px;width: 88%;margin-top: 40px;margin-top: -180px; top: 50%;}
   .w-50 {width: 100%;}
+  .Ytsld .slid {overflow-x: auto;width: 480px;height:345px;flex-direction: column;}
+  .thumbTxt .thumbsmltxt{min-height: inherit;}
 
 }
 @media screen and (max-width: 768px){
@@ -207,13 +217,18 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 .creative-box .w-50 {width: 100%;}
 .first-part .watch-txt {font-size: 14px;}
 .di-flex {flex-direction: column;}
-.Ytsld{flex-direction: row;}
+// .Ytsld{flex-direction: row;}
 .slid{ flex-direction: row; }
 .web-category .Ytsld .slid{ flex-direction: column; }
 .web-category .Ytsld .slid{overflow-x:inherit;}
 .thumbnail .icon-txt {	flex-direction: row;}
 .first-part {text-align: center;}
-.Ytsld .thumbnail {position: relative;margin-right: 10px;flex: none;max-width: 100%;width: 100%;}
+.Ytsld .thumbnail {margin-right: 10px;align-self: auto;
+  white-space: nowrap;
+  display: inline-block;
+  width: 360px;
+  max-width: 100%;}
+
  .web-category .Ytsld .thumbnail {margin-right: 0;}
 .ldtvinsigh .second-part .ldtv-txt {font-size: 16px;padding-left: 0;text-align: center;padding: 0 20px;line-height: 22px;margin: 0 auto;}
 .first-part .Fbcreator {font-size: 32px;line-height: 41px;text-align: center;}
@@ -230,13 +245,15 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 .ldtvinsights {padding: 24px 0;}
 /* LDTV end */
 
+.MostWatched{overflow: hidden;}
+
 
 
 }
 
 @media screen and (max-width: 753px){
 	.thindustry .btm-img {top: 244px;}
-	.inst-scnd .insa-btn {position: absolute;top: 64%;left: 41%;}
+	// .inst-scnd .insa-btn {position: absolute;top: 64%;left: 41%;}
 }
 
 @media screen and (max-width: 480px)
@@ -250,7 +267,9 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 	.thindustry .btm-img {top: 270px;}
 	}
   @media screen and (max-width: 375px){
- 
+    .Ytsld .thumbnail {
+      width:290px;
+  }
 }
 @media screen and (max-width: 360px){
 	.thindustry .btm-img {top: 284px;}
