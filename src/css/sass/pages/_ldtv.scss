@@ -174,7 +174,9 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 	.thindustry .industry .industry-first .indtxt {font-size: 24px;line-height: 32px;}
 	.thindustry .industry .industry-first .indbtmtxt {font-size: 16px;line-height: 16px;margin-bottom: 80px;}
 	.slider .thumbnail .sub-txt {padding: 4px;margin: 0 auto;font-size: 12px;top: 3px;right: 4px;}
-  
+  .journey-form .form ul li {
+    padding: 14px 0 5px 16px;
+}
 }
 
 @media screen and (max-width: 907px){
@@ -194,7 +196,7 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
    .web-category .Categories { padding: 10px 0 0 0;margin-bottom: 60px;overflow-x: auto;}
   .w-33 {width: 100%;}
   .popup-content {padding: 7px;width: 88%;margin-top: 40px;margin-top: -180px; top: 50%;}
-  .w-50 {width: 100%;}
+  .w50 {width: 100%;}
   .Ytsld .slid {overflow-x: auto;width: 480px;height:345px;flex-direction: column;}
   .thumbTxt .thumbsmltxt{min-height: inherit;}
 
@@ -209,7 +211,7 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 }
 
 @media screen and (max-width: 768px){
-  .w-50 {width: 100%;}
+  .w50 {width: 100%;}
 	.thumbTxt .thumbsmltxt {font-size: 12px;}
 	.allcategories .cate-box {padding: 15px;margin-right: 12px;white-space:nowrap;}
 	/* .second-part {border-left: 1px solid rgb(217 217 217 / 80%);} */
@@ -220,14 +222,14 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
   width: 50% !important;
 }
 .web-category{margin-top:105px;}
-// .card {width:100%;height: 223px;}
-.maincnt .first .w-50 {width: 100%;}
-.space-ld .w-50 {width: 100% !important;}
-.industry .w-50 {width: 100% !important;}
-.recentsrv .w-50 {width: 100% ;}
-.reaysec .w-50 {width: 100%;}
-.creative-box .w-50 {width: 100%;}
-.first-part .watch-txt {font-size: 14px;}
+.card {width:100%;height: 223px;}
+.maincnt .first .w50 {width: 100%;}
+.space-ld .w50 {width: 100%;}
+.industry .w50 {width: 100%;}
+.recentsrv .w50 {width: 100%;}
+.reaysec .w50 {width: 100%;}
+.creative-box .w50 {width: 100%;}
+.first-part .watch-txt {display: none;}
 .di-flex {flex-direction: column;}
 // .Ytsld{flex-direction: row;}
 .slid{ flex-direction: row; }
@@ -251,8 +253,15 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 .di-flex.fs {	flex-direction: row;}
 .thindustry .btm-img {display: block;text-align: center;padding: 27px 0;}
 .thindustry {position: relative;}
-.thindustry .btm-img {/* display: block; */text-align: center;padding: 27px 0;position: absolute;top: 282px;}
-.first-fold {background-image: linear-gradient(273deg, rgba(0, 0, 0, 0) 0%, #000000 60.82%);padding: 40px 0 0 0;}
+.thindustry .btm-img {/* display: block; */text-align: center;padding: 27px 0;position: absolute;top: 359px;}
+.first-fold {
+  background-image: linear-gradient(175deg, rgba(0, 0, 0, 0.3) 0%, #000000), url(../img/backgroung.png);
+  background-attachment: scroll;
+  background-position: center top;
+  background-size: cover;
+  overflow: hidden;
+  padding: 120px 0 0 0;
+}
 .thindustry .industry .industry-first .indtxt {font-size: 24px;line-height: 32px;}
 .ldtvinsights {padding: 24px 0;}
 /* LDTV end */
@@ -264,25 +273,33 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 // 	.thindustry .btm-img {top: 280px;}
 // }
 @media screen and (max-width: 753px){
-	.thindustry .btm-img {top: 280px;}
+	// .thindustry .btm-img {top: 365px;}
 	// .inst-scnd .insa-btn {position: absolute;top: 64%;left: 41%;}
 }
+
+@media screen and (max-width: 753px){
+	// .thindustry .btm-img {top: 365px;}
+	.inst-scnd .insa-btn {position: absolute;top: 64%;left: 41%;}
+}
+// @media screen and (max-width: 522px){
+//   .thindustry .btm-img {top: 365px;}
+// }
 
 @media screen and (max-width: 480px)
 {
   .first-part .Fbcreator {font-size: 32px;line-height: 41px;text-align: center;}
-  .thindustry .btm-img {top: 280px;}
+  .thindustry .btm-img {top: 367px;}
 //   .Ytsld .thumbnail .sub-txt {
 //     top: 7px;
 //     right: 0; 
 // }
 }
-@media screen and (max-width: 470px){
-  .thindustry .btm-img {top: 280px;}
+@media screen and (max-width: 474px){
+  .thindustry .btm-img {top: 366px;}
 
 }
 @media screen and (max-width: 429px){
-	.thindustry .btm-img {top: 314px;}
+	.thindustry .btm-img {top: 395px;}
 	}
   @media screen and (max-width: 375px){
     .Ytsld .thumbnail {
@@ -290,6 +307,6 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
   }
 }
 @media screen and (max-width: 360px){
-	.thindustry .btm-img {top: 332px;}
+	.thindustry .btm-img {top: 409px;}
 
 }
