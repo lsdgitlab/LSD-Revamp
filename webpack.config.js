@@ -29,6 +29,10 @@ const htmlPageNames = [
     title: 'Survey',
   },
   {
+    pageName: 'career.html',
+    title: 'Career',
+  },
+  {
     pageName: 'career-details.html',
     title: 'Career details',
   },
