@@ -58,12 +58,12 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 .thindustry .industry .industry-first span{display: block;font-weight: 500;font-size: 16px;line-height: 100%;letter-spacing: 0.1em;text-transform:uppercase;color: #FFFFFF;  margin-bottom: 20px;}
 .thindustry .industry .industry-first .indtxt{font-weight: 700;font-size: 44px;line-height:52px;letter-spacing: -0.03em;color: #FFFFFF;margin: 0 auto; margin-bottom: 28px;}
 .thindustry .industry .industry-first .indbtmtxt{font-weight: 400;font-size: 20px;line-height: 140%;letter-spacing: -0.01em;color: #FFFFFF;opacity: 0.6; margin: 0 auto; margin-bottom: 100px;}
-.thindustry .industry .industry-first .dbl-qt {margin-bottom: 45px;}
+.thindustry .industry .industry-first .dbl-qt {margin-bottom: 45px;margin-left: 0;}//aman
 .thindustry .industry .industry-second{display: block;}
 .thindustry .industry .industry-second .first-img{margin-left: 20px;}
 .thindustry .btm-img{display: block; text-align: left;}
 .di-flex .fs{flex-wrap: nowrap;}
-
+.fs .w-25{width: 50% !important;}//aman
 .vieo-sec{padding: 40px 0 0 0;background: linear-gradient(80deg, rgba(0, 0, 0, 0) 0%, #000000 18.82%);}
 /* use for popup */
 .popup-container { visibility: hidden; opacity: 0; transition: all 0.3s ease-in-out; transform: scale(1.3); position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(21, 17, 17, 0.61); display: flex; align-items: center;}
@@ -165,9 +165,7 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 	.thindustry .industry .industry-first .indtxt {font-size: 24px;line-height: 32px;}
 	.thindustry .industry .industry-first .indbtmtxt {font-size: 16px;line-height: 16px;margin-bottom: 80px;}
 	.slider .thumbnail .sub-txt {padding: 4px;margin: 0 auto;font-size: 12px;top: 3px;right: 4px;}
-  .journey-form .form ul li {
-    padding: 14px 0 5px 16px;
-}
+  
 }
 
 @media screen and (max-width: 907px){
@@ -196,12 +194,15 @@ header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
 }
 @media screen and (max-width: 767px){
 /* LDTV start  */
+.w-25 {
+  width: 50% !important;
+}
 .web-category{margin-top:105px;}
 .card {width:100%;height: 223px;}
 .maincnt .first .w-50 {width: 100%;}
 .space-ld .w-50 {width: 100%;}
-.industry .w-50 {width: 100%;}
-.recentsrv .w-50 {width: 100%;}
+.industry .w-50 {width: 100% !important;}
+.recentsrv .w-50 {width: 100% ;}
 .reaysec .w-50 {width: 100%;}
 .creative-box .w-50 {width: 100%;}
 .first-part .watch-txt {font-size: 14px;}
