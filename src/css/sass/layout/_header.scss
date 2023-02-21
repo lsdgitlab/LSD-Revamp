@@ -44,6 +44,12 @@ header {
                         padding: 5px 26px 5px 8px;
                         line-height: 70px;
                         border-bottom: 2px solid $white-color;
+                        img{
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: 5px;
+                        }
+                        .ldtv-globe{ display: none; }
                     }
 
                     &.nav-link::after {

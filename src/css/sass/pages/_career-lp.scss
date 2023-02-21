@@ -105,18 +105,198 @@
 }
 
 .recent-jobs {
+    padding-bottom: 76px;    
+    .maincnt{
+        @include pos-relative();
+    }
+    h2{
+        font-family: inherit;
+        font-style: normal;
+        font-weight: $font-weight-bold;
+        font-size: 40px;
+        line-height: 60px;
+        margin: 0 0 48px;
+        letter-spacing: -0.01em;
+        color: $neutral-black;
+    }
+    .ext-link{
+        color: $primary-blue;
+        font-weight: normal;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 22px;
+        a{
+            color: $primary-blue;
+        }
+        img{
+            @include di-block();
+            @include valign-top();
+            padding: 5px 1px;
+            margin: 0 0 0 7px;
+        }
+    }
     .job-cards {
         @include f-0();
+        padding-bottom: 38px;
+        border-bottom: 1px solid #D7D7DA;
         .job-card {
             width: 416px;
             height: 190px;
-            background: $white;
-            border: 1px solid #D7D7DA;
-            @include border-radius(8px);
+            background: transparent;
+            // border: 1px solid #D7D7DA;
+            // @include border-radius(8px);
             margin-bottom: 20px;
             @include di-block();
             @include valign-top();
+            @include border-box();
+            padding-right: 20px;
+            
+
+            dl {
+                // box-sizing: border-box;
+                // width: 416px;
+                // height: 190px;
+                // left: 0;
+                // top: 0;
+                background: $white;
+                border: 1px solid #D7D7DA;
+                border-radius: 8px;
+                // justify-content: flex-start;
+                // display: inline-flex;
+                // flex-direction: column;
+                // align-items: flex-start;
+                padding: 35px 32px;
+                // margin-bottom: 20px;
+                @include border-box();
+            
+                dt {
+                    font-weight: 600;
+                    font-size: 24px;
+                    letter-spacing: -.01em;
+                    line-height: 1.4;
+                }
+            
+                dd {
+                    margin: 0;
+                    padding: 0;
+            
+                    p {
+                        font-size: 16px;
+                        letter-spacing: -0.01em;
+                        color: $neutral-black;
+                        margin-top: 5px;
+                    }
+            
+                    ul {
+                        margin-top: 15px;
+                        @include f-0();
+            
+                        li {
+                            @include di-block();
+                            @include valign-middle();
+                            line-height: 1;
+                            padding: 10px;
+                            height: 36px;
+                            background: $white-light-color;
+                            border-radius: 8px;
+                            margin-right: 5px;
+                            align-items: center;
+            
+                            a {
+                                font-weight: 400;
+                                font-size: 16px;
+                                text-decoration: none;
+                                letter-spacing: -.01em;
+                                color: #56565D;
+                            }
+                        }
+                    }
+            
+                }
+            
+            }
+
         }
+    }
+}
+
+.global-map{
+    background: $neutral-black;
+    padding: 60px 0;
+    h2{
+        font-family: inherit;
+        font-style: normal;
+        font-weight: $font-weight-bold;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #F2F2F3;
+        margin: 0 0 16px;
+    }
+    .short-info{
+        margin: 0 0 24px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: $font-weight-normal;
+        font-size: $large-font-size;
+        line-height: 1;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #F2F2F3;
+
+    }
+    .world-map{
+        margin-bottom: 60px;
+    }
+    .locations{
+        padding-bottom: 85px;
+
+        .location-acc{
+            margin-bottom: 24px;
+            @include f-0();
+            .loc-address{
+                @include di-block();
+                @include valign-top();
+                width: 33.33%;
+                padding: 0 9.5% 0 0;
+                @include border-box();
+                .city-name{
+                    margin-bottom: 16px;
+                    margin-top: 20px;
+                    p{
+                        font-family: inherit;
+                        font-style: normal;
+                        font-weight: $font-weight-SemiBold;
+                        font-size: 24px;
+                        line-height: 31px;
+                        letter-spacing: -0.03em;
+                        color: $white;
+                        margin: 0;
+                    }
+                }
+                .city-address{
+                    margin-top: 16px;
+                    p{
+                        font-family: inherit;
+                        font-style: normal;
+                        font-weight: $font-weight-medium;
+                        font-size: $base-font-size;
+                        line-height: 24px;
+                        letter-spacing: -0.01em;
+                        color: $white;
+                        opacity: 0.6;
+                        margin: 0;
+
+                    }
+                    
+
+                }
+            }
+        }
+        
+
     }
 }
 
@@ -182,13 +362,84 @@
     
         
     }
+
+    .global-map{
+        .locations{
+            .location-acc{
+                .loc-address{
+                    
+                    padding-right: 7.5%;
+                }
+            }
+        }
+    }
     
 }
 
 // @media screen and (max-width:1140px) {}
-// @media screen and (max-width:1023px) {}
+@media screen and (max-width:1023px) {
+    .global-map{
+        .locations{
+            .location-acc{
+                .loc-address{
+                    
+                    padding-right: 3.5%;
+                }
+            }
+        }
+    }
+}
 // @media screen and (max-width:991px) {}
-// @media screen and (max-width:767px) {}
+// @media screen and (max-width:767px) { }
+@media screen and (max-width:767px) {
+    .global-map{
+        .locations{
+            padding-bottom: 0;
+            .location-acc{
+                margin-bottom: 0;
+                .loc-address{
+                    width: 100%;
+                    padding: 0;
+                    &:first-child{
+                        .city-name{
+                            margin-top: 0;
+                        }
+                    }
+                    .city-name{
+                        margin-bottom: 0;
+                        @include pos-relative();
+                        
+                            width: 18px;
+                            height: 18px;                            
+                            padding: 9px;
+                            border: 1px solid #D7D7DA;
+                            &::before, &::after{
+                                content: "";
+                                position:absolute;   
+                                left:50%;                             
+                                top: 50%;                 
+                                transform: translate(-50%, -50%);               
+                                background: #D7D7DA;
+                            }
+                            &::before{
+                                width: 8px;
+                                height: 1px;                                
+                            }
+                            &::after{
+                                width: 1px;
+                                height: 8px;
+                            }
+                        
+                        
+                    }
+                    .city-address{
+                        display: none;                        
+                    }
+                }
+            }
+        }
+    }
+}
 // @media screen and (max-width:600px) {}
 // @media screen and (max-width:575px) {}
 // @media screen and (max-width:320px) {}
