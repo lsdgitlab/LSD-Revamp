@@ -2,7 +2,8 @@
 .ldtv-header{background: #000; border: 1px solid rgba(255, 255, 255, 0.2);}
 header.ldtv-header .menu ul li a{ color: #fff;}
 header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
-header.ldtv-header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}header.ldtv-header .menu ul li:hover .nav-link{ color: #fff; border-bottom: 2px solid #fff;}
+header.ldtv-header .menu ul li a.nav-link{border-bottom: 2px solid transparent;}
+header.ldtv-header .menu ul li:hover .nav-link{ color: #fff; border-bottom: 2px solid #fff;}
 header.ldtv-header .menu ul li:hover .nav-link::after {background: transparent url("../img/icons/up-arrow-white.png") scroll no-repeat 50% 50%;}
 header.ldtv-header .menu ul li a.nav-link img{ display: none;}
 header.ldtv-header .menu ul li a.nav-link img.ldtv-globe{ display: inline-block;}
@@ -164,7 +165,9 @@ header.ldtv-header .menu ul li a.nav-link img.ldtv-globe{ display: inline-block;
 }
 /* @media screen and (max-width: 1200px) {.container{max-width: 100%;padding: 0 20px ;}
 } */
-@media screen and (max-width:1023px) {header.ldtv-header .hamburger-menu span{ background:#fff;}}
+@media screen and (max-width:1023px) {
+  header.ldtv-header .hamburger-menu span{ background:#fff;}
+}
 @media screen and (max-width: 991px) {
 	.maincnt{max-width: 100%;padding: 0 20px;}
 	.first-part .Fbcreator {font-size: 40px; line-height: 45px;}
