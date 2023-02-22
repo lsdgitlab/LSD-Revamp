@@ -56,31 +56,30 @@ $(document).ready(function(){
    });
 
 
-
-   var wsize = 991;
-   if(wsize <= 991){
-    $(function() {
-        $('.city-name').click(function(j) {
-    
-            var dropDown = $(this).closest('.loc-address').find('.city-address');
-            $(this).closest('.location-acc').find('.city-address').not(dropDown).slideUp();
-    
-            if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            } else {
-            $(this).closest('.location-acc').find('.city-name.active').removeClass('active');
-            $(this).addClass('active');
-            }
-    
-            dropDown.stop(false, true).slideToggle();
-            j.preventDefault();
-        });
-      });
-
-   }
-
+   var size;
+   size = $(window).width();   
    
-
+   if(size < 767) {
+       $(function() {
+           $('.city-name').on('click', function (j) {
+       
+               var dropDown = $(this).closest('.loc-address').find('.city-address');
+               $(this).closest('.location-acc').find('.city-address').not(dropDown).slideUp();
+       
+               if ($(this).hasClass('active')) {
+               $(this).removeClass('active');
+               } else {
+               $(this).closest('.location-acc').find('.city-name.active').removeClass('active');
+               $(this).addClass('active');
+               }
+       
+               dropDown.stop(false, true).slideToggle();
+               j.preventDefault();
+           });
+       });
+   
+   }
 
 
 });
+

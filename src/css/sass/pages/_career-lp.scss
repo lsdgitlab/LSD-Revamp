@@ -88,9 +88,11 @@
                     letter-spacing: -0.01em;
                     color: rgba(0, 0, 0, 0.6);
                     font-size: $large-font-size;
+                    margin: 0;
                     a{
                         color: $primary-blue;
-                        display: block;
+                        @include di-block();
+                        @include valign-top();
                         margin-top: 20px;
                     }
         
@@ -306,7 +308,7 @@
 
 @media screen and (max-width:1199px) {
     .career-action {
-        padding: 115px 0;
+        
     
         p.short-title {
             font-size: $small-font-size;
@@ -330,9 +332,7 @@
         
                 
                 .vid-thumb{
-                    -webkit-box-shadow: 20px 20px 0px 0px $selective-yellow;
-                    box-shadow: 20px 20px 0px 0px $selective-yellow;
-    
+                        
                     .video-button{
                         width: 59px;
                         height: 59px;
@@ -392,6 +392,63 @@
 // @media screen and (max-width:991px) {}
 // @media screen and (max-width:767px) { }
 @media screen and (max-width:767px) {
+
+    .career-action {
+        
+        p.short-title {
+        }
+      
+        h2 {
+        }
+        .action{
+            .action-row{  
+                padding-bottom: 7px;
+
+                &:last-child{
+                    
+                }
+                
+        
+                .vid-thumb, .vid-info{
+                    width: 100% !important;
+                    display: block;
+                }
+                .vid-thumb{
+                    -webkit-box-shadow: 10px 10px 0px 0px $selective-yellow;
+                    box-shadow: 10px 10px 0px 0px $selective-yellow;
+                    max-width: 635px;
+                    margin-bottom: 50px;
+                    width: calc(100% - 10px) !important;
+                    &::before {
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    .video-button{
+                    }
+                }
+                .vid-info{
+                    padding-left: 0;
+                    h3{
+                    }
+                    p{
+                       
+                        a{
+                           
+                        }
+            
+                    }
+                }
+        
+            }
+        }
+        
+      
+        
+      }
+
+
+
     .global-map{
         .locations{
             padding-bottom: 0;
@@ -405,35 +462,52 @@
                             margin-top: 0;
                         }
                     }
-                    .city-name{
+                    .city-name{                        
                         margin-bottom: 0;
+                        cursor: pointer;
                         @include pos-relative();
+
+                            p{
+                                font-weight: $font-weight-medium;
+                            }
+                            
+                            span{
+                                display: block;
+                                width: 18px;
+                                height: 18px;
+                                border: 1px solid #D7D7DA;
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);                                
+                                @include border-radius(50%);
+                                @include border-box();
+                                &::before, &::after{
+                                    content: "";
+                                    position:absolute;   
+                                    left:50%;                             
+                                    top: 50%;                 
+                                    transform: translate(-50%, -50%);               
+                                    background: #D7D7DA;
+                                }
+                                &::before{
+                                    width: 7px;
+                                    height: 1px;                                
+                                }
+                                &::after{
+                                    width: 1px;
+                                    height: 7px;
+                                }
                         
-                            width: 18px;
-                            height: 18px;                            
-                            padding: 9px;
-                            border: 1px solid #D7D7DA;
-                            &::before, &::after{
-                                content: "";
-                                position:absolute;   
-                                left:50%;                             
-                                top: 50%;                 
-                                transform: translate(-50%, -50%);               
-                                background: #D7D7DA;
-                            }
-                            &::before{
-                                width: 8px;
-                                height: 1px;                                
-                            }
-                            &::after{
-                                width: 1px;
-                                height: 8px;
                             }
                         
                         
                     }
                     .city-address{
-                        display: none;                        
+                        display: none;  
+                        p{
+                            font-weight: $font-weight-normal;
+                        }                      
                     }
                 }
             }
