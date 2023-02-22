@@ -142,11 +142,11 @@ background: #fff url(../img/expand_more.png) scroll no-repeat right top; backgro
    .web-category .Categories { padding: 10px 0 0 0;margin-bottom: 60px;overflow-x: auto;}
   .w-33 {width: 100%;}
   .popup-content {padding: 7px;width: 88%;margin-top: 40px;margin-top: -180px; top: 50%;}
-  .journey-form .form .w-50{width: 50%;}
+  .journey-form .form .w50{width: 50%;}
 
 }
 @media screen and (max-width: 768px){
-    // .w-50:not(.journey-form .form .w-50) {width: 100%;}
+    // .w50:not(.journey-form .form .w50) {width: 100%;}
     //   .thumbTxt .thumbsmltxt {font-size: 12px;}
     //   .allcategories .cate-box {padding: 12px 32px;min-height: 36px;margin-bottom: 12px;margin-right: 12px;}
       /* .second-part {border-left: 1px solid rgb(217 217 217 / 80%);} */  
@@ -156,7 +156,7 @@ background: #fff url(../img/expand_more.png) scroll no-repeat right top; backgro
 @media screen and (max-width: 767px){
 
 /* Start your journey with us start */
-.journey-form .form .w-50 {width: 100%;}
+.journey-form .form .w50 {width: 100%;}
 .journey-form .form li label {font-size: 14px;}
 .journey-form .form ul li {/*padding: 6px 0 6px 0;*/}
 .journey-form .form {padding: 32px 16px;}
