@@ -52,6 +52,7 @@ header {
                         .ldtv-globe{ display: none; }
                     }
 
+
                     &.nav-link::after {
                         content: "";
                         background: transparent url("../img/icons/down-arrow.png") scroll no-repeat 50% 50%;
