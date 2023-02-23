@@ -248,7 +248,7 @@ function init() {
 
 
     // loop through the next 3 item in the array
-    for (var i = itemloaded; i < itemloaded + 3; i++) {
+    for (var i = itemloaded; i < itemloaded + 4; i++) {
       if (i >= ytviditem.length) {
         // if there are no more items to load, break out of the loop
         break
@@ -289,7 +289,7 @@ function init() {
       container.innerHTML += htmlThumb
     }
     // update the items to be loaded into the conateiner
-    itemloaded += 3
+    itemloaded += 4
 
     // disabled the load more button
     if (itemloaded > ytviditem.length) {
