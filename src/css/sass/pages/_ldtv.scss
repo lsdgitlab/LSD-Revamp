@@ -3,8 +3,57 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+
 header.ldtv-header .menu ul li a {
   color: #fff;
+}
+
+header .menu ul li a.nav-link {
+  border-bottom: 2px solid transparent;
+}
+
+header.ldtv-header .menu ul li a.nav-link {
+  border-bottom: 2px solid transparent;
+}
+
+header.ldtv-header .menu ul li:hover .nav-link {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+header.ldtv-header .menu ul li:hover .nav-link::after {
+  background: transparent url("../img/icons/up-arrow-white.png") scroll no-repeat 50% 50%;
+}
+
+header.ldtv-header .menu ul li a.nav-link img {
+  display: none;
+}
+
+header.ldtv-header .menu ul li a.nav-link img.ldtv-globe {
+  display: inline-block;
+}
+
+.social-media {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, #000000 100%), url(../img/banner.png);
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.Social {
+  margin-bottom: 200px;
+}
+
+.Social .social-txt {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin: 0 auto;
 }
 
 header .menu ul li a.nav-link {
@@ -766,6 +815,7 @@ header .menu ul li a.nav-link {
 
 .playBut .triangle {
   -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
   stroke-dasharray: 240;
   stroke-dashoffset: 480;
   stroke: #fff;
@@ -930,6 +980,7 @@ button {
 }
 
 @media screen and (max-width: 1024px) {
+  header.ldtv-header{z-index: 11;}
   header .hamburger-menu span {
     background: #fff;
   }
@@ -973,6 +1024,44 @@ button {
     font-size: 40px;
     line-height: 45px;
   }
+
+  .first-part .watch-txt {
+    font-size: 18px;
+    margin-bottom: 90px;
+  }
+
+  .thumbTxt .thumbsmltxt {
+    font-size: 16px;
+  }
+
+  .allcategories .cate-box .cat-txt {
+    font-size: 14px;
+  }
+
+  .ldtvinsigh .second-part .ldtv-txt {
+    font-size: 16px;
+    padding-left: 46px;
+  }
+
+  .thindustry .industry .industry-first .indtxt {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .thindustry .industry .industry-first .indbtmtxt {
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 80px;
+  }
+
+  .slider .thumbnail .sub-txt {
+    padding: 4px;
+    margin: 0 auto;
+    font-size: 12px;
+    top: 3px;
+    right: 4px;
+  }
+
 
   .first-part .watch-txt {
     font-size: 18px;
@@ -1076,7 +1165,7 @@ button {
   .Social {
     margin-bottom: 16px;
   }
-
+  
 
 
 
@@ -1129,29 +1218,18 @@ button {
     max-width: 100%;
     font-size: 20px;
   }
-
   .insta-first .insta-txt br {
     display: none;
   }
-
-  .insta-first .insta-heding br {
-    display: none;
-  }
-
-  // .Categories{padding: 72px 0 0 0; }
 }
-
-
-// @media screen and (max-width: 843px){
-//   .Ytsld .thumbnail .sub-txt {
-//     top: 6px;
-// }
-
-// }
 
 @media screen and (max-width: 768px) {
   .w50 {
     width: 100%;
+  }
+
+  .thumbTxt .thumbsmltxt {
+    font-size: 12px;
   }
 
   .allcategories .cate-box {
@@ -1245,6 +1323,7 @@ button {
   .Ytsld .thumbnail {
     margin-right: 10px;
     align-self: auto;
+    white-space: nowrap;
     display: inline-block;
     width: 360px;
     max-width: 100%;
@@ -1253,6 +1332,77 @@ button {
   .web-category .Ytsld .thumbnail {
     margin-right: 0;
   }
+
+  .ldtvinsigh .second-part .ldtv-txt {
+    font-size: 16px;
+    padding-left: 0;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 22px;
+    margin: 0 auto;
+  }
+
+  .first-part .Fbcreator {
+    font-size: 32px;
+    line-height: 41px;
+    text-align: center;
+  }
+
+  .second-part {
+    border-left: none;
+  }
+
+  .Categories .di-flex {
+    flex-direction: row;
+  }
+
+  .web-category .Categories {
+    padding: 10px 0 0 0;
+    margin-bottom: 60px;
+    overflow-x: auto;
+  }
+
+  .web-category .Categories .di-flex {
+    flex-wrap: inherit;
+    justify-content: inherit;
+  }
+
+  .di-flex.fs {
+    flex-direction: row;
+  }
+
+  .thindustry .btm-img {
+    display: block;
+    text-align: center;
+    padding: 27px 0;
+  }
+
+  .thindustry {
+    position: relative;
+  }
+
+  .thindustry .btm-img {
+    text-align: center;
+    padding: 27px 0;
+    position: absolute;
+    top: 212px;
+  }
+
+  .first-fold {
+    background-image: linear-gradient(273deg, rgba(0, 0, 0, 0) 0%, #000000 60.82%);
+    padding: 40px 0 0 0;
+  }
+
+  .thindustry .industry .industry-first .indtxt {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .ldtvinsights {
+    padding: 24px 0;
+  }
+
+  /* LDTV end */
 
   .ldtvinsights .second-part {
     border-left: 0;
