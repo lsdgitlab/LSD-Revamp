@@ -20,11 +20,11 @@ header.ldtv-header .menu ul li:hover .nav-link {
   color: #fff;
   border-bottom: 2px solid #fff;
 }
+header.ldtv-header .menu ul li a.nav-link::after {background: transparent url("../img/icons/up-arrow-white.png") scroll no-repeat 50% 50%;  transform: translate(-50%, -50%) rotate(180deg);}
 
 header.ldtv-header .menu ul li:hover .nav-link::after {
-  background: transparent url("../img/icons/up-arrow-white.png") scroll no-repeat 50% 50%;
+  background: transparent url("../img/icons/up-arrow-white.png") scroll no-repeat 50% 50%; transform: translate(-50%, -50%) rotate(0);
 }
-
 header.ldtv-header .menu ul li a.nav-link img {
   display: none;
 }
@@ -1331,6 +1331,7 @@ button {
 
   .web-category .Ytsld .thumbnail {
     margin-right: 0;
+    padding-right: 0;
   }
 
   .ldtvinsigh .second-part .ldtv-txt {
@@ -1540,4 +1541,9 @@ button {
     top: 314px;
   }
 
+}
+@media screen and (max-width: 375px) {
+.Ytsld .thumbnail {
+  width:290px;
+}
 }
