@@ -3,12 +3,22 @@
 .journey{padding: 20px 0;}
 .journey .browse { font-size: 16px; color: #007BB6; margin-top: 20px; margin-bottom: 10px; text-transform: uppercase; display: block;}
 .journey .browse img { display: inline-block; font-size: initial; vertical-align: middle; margin-right: 8px;}
-.journey-form{max-width: 1190px; margin: 0 auto; box-sizing: border-box;}
+// .journey-form{max-width: 1190px; margin: 0 auto; box-sizing: border-box;}
+.journey .w50 {width: 49%;}
 .journey-form .jny-txt{font-weight: 600;font-size: 32px;line-height: 44px;letter-spacing: -0.01em;color: #202025; margin-bottom: 5px;}
 .journey-form .sub-txt{font-style: normal;font-weight: 500;font-size: 16px;line-height: 140%;letter-spacing: -0.01em;color: #888891; margin: 0 auto; margin-bottom: 40px;}
 .journey-form .form{padding: 50px; background: #FFFFFF;box-shadow: 0px 4px 44px rgba(32, 32, 37, 0.08);border-radius: 0px 0px 8px 8px;}
-.journey-form .form input{max-width: 525px;width: 100%; height: auto;font-weight: 400;font-size: 16px;line-height: 100%; letter-spacing: -0.01em; color: #888891; padding: 22px 16px; border: 1px solid #BDBDC2;border-radius: 8px; }
-.journey-form .form ul li{padding-bottom:22px;position: relative;}
+.journey-form .form input{
+  max-width: 100%;
+  width: 100%; height: auto;font-weight: 400;font-size: 16px;line-height: 100%; letter-spacing: -0.01em; color: #888891; padding: 22px 16px; border: 1px solid #BDBDC2;border-radius: 8px; }
+.journey-form .form ul:first-child{
+  // display: inline-flex;
+  // flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.journey-form .form ul:nth-child(2){margin-top: 30px;}
+.journey-form .form ul li{padding-bottom:22px;position: relative;    display: inline-block;}
 .journey-form .form ul li:nth-child(odd) { 
   padding-right: 20px;
 }
@@ -19,11 +29,14 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  max-width: 525px;width: 100%; height: auto;font-weight: 400;font-size: 16px;line-height: 100%; letter-spacing: -0.01em; color: #888891; padding: 22px 16px; border: 1px solid #BDBDC2;border-radius: 8px; 
+  // max-width: 525px;
+  width: 100%; height: auto;font-weight: 400;font-size: 16px;line-height: 100%; letter-spacing: -0.01em; color: #888891; padding: 22px 16px; border: 1px solid #BDBDC2;border-radius: 8px; 
 background: #fff url(../img/expand_more.png) scroll no-repeat right top; background-position: 95% 50%;}
 .journey-form .form .valdi-txt{margin: 0 auto;color: red;font-size: 14px; position: absolute;}
 .journey-form .form li label{display: block; margin-bottom: 8px; font-weight: 500;font-size: 16px;line-height: 140%;letter-spacing: -0.01em;color: #202025;}
-.journey-btn{padding: 24px;gap: 8px;max-width: 524px;width: calc(50% - 16px);height: 64px;background: #034EA2;border-radius: 8px;border: 0;font-weight: 600;font-size: 16px;line-height: 100%;letter-spacing: 0.06em;text-transform: uppercase;color: #FFFFFF;margin-top: 20px;
+.journey-btn{padding: 24px;gap: 8px;
+  // max-width: 524px;
+  width: calc(50% - 16px);height: 64px;background: #034EA2;border-radius: 8px;border: 0;font-weight: 600;font-size: 16px;line-height: 100%;letter-spacing: 0.06em;text-transform: uppercase;color: #FFFFFF;margin-top: 20px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
@@ -142,7 +155,7 @@ background: #fff url(../img/expand_more.png) scroll no-repeat right top; backgro
   //  .web-category .Categories { padding: 10px 0 0 0;margin-bottom: 60px;overflow-x: auto;}
   .w-33 {width: 100%;}
   .popup-content {padding: 7px;width: 88%;margin-top: 40px;margin-top: -180px; top: 50%;}
-  .journey-form .form .w50{width: 50%;}
+  .journey-form .form .w50{width: 49%;}
 
 }
 @media screen and (max-width: 768px){
@@ -174,7 +187,5 @@ background: #fff url(../img/expand_more.png) scroll no-repeat right top; backgro
   .journey-form h1 {font-size: 24px;}
 }
 @media screen and (max-width: 374px){
-.journey-form .form li label {
-    font-size: 12px;
-}
+.journey-form .form li label {font-size: 12px;}
 }

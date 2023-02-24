@@ -5,3 +5,4 @@ package-lock.json
 .vscode
 dist.zip
 survey-dist.zip
+shared/
