@@ -8,7 +8,7 @@ $(document).ready(function(){
         $("#"+tab_id).addClass('current');
     });	
 
-
+//start of mobile menu
     $(".hamburger-menu").click(function(){
         $(this).toggleClass("act");
         $(".mob-menu").toggleClass("menu-open");
@@ -17,14 +17,10 @@ $(document).ready(function(){
 
 
     $('.has-submenu').on('click',function(){
-        // $('.l1').on('click',function(){
         var tag = $(this).attr('value');
         var tag1 = $(this).text();
-       // window.alert("#layer"+tag1);
        var back_link="#layer"+tag;
-       //window.alert(back_link);
       $('.mnav-link').attr('href',back_link);
-       //$('.nav-link').text(tag1);
        $('.mnav-link').attr('value',tag);
        $("#layer"+tag).removeClass('hide-menu'); 
         $("#layer"+tag).toggleClass('show-menu'); 
@@ -32,12 +28,10 @@ $(document).ready(function(){
    $('.mnav-link').on('click',function(){
         var tag = $(this).attr('href');
        var val= $(this).attr('value');
-       // window.alert(val);
         $(tag).removeClass('show-menu'); 
         var back_link="#layer"+(val-1);
         $('.mnav-link').attr('href',back_link);
        $('.mnav-link').attr('value',val-1);
-       //window.alert(back_link);
        
    });
 
@@ -54,8 +48,9 @@ $(document).ready(function(){
     $('.layer2 ul.list').hide();
     $('.transform').show(100);
    });
+//end of mobile menu
 
-
+//start section career LP page address 
    var size;
    size = $(window).width();   
    
@@ -79,6 +74,7 @@ $(document).ready(function(){
        });
    
    }
+//end section career LP page address 
 
 
 });
