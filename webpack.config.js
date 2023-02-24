@@ -48,6 +48,10 @@ const htmlPageNames = [
     pageName: 'creative-portfolio.html',
     title: 'Creative Portfolio',
   },
+  {
+    pageName: 'survey-1.html',
+    title: 'Survey-details',
+  },
 ]
 let htmlFileName = htmlPageNames.map((htmlPage) => htmlPage.pageName)
 let multipleHtmlPlugins = htmlPageNames.map((name) => {
