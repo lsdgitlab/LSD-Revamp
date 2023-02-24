@@ -1,27 +1,133 @@
-.career-action {
-    padding: 115px 0;
+.short-title {
+    font-family: inherit;
+    font-style: $font-weight-normal;
+    font-weight: $font-weight-SemiBold;
+    font-size: $small-font-size;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $accent-orange;
+    margin: 10px auto 8px;
+}
 
-    p.short-title {
-        font-family: inherit;
-        font-style: $font-weight-normal;
-        font-weight: $font-weight-SemiBold;
-        font-size: $small-font-size;
-        line-height: 1;
-        text-align: center;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: $accent-orange;
-        margin: 10px auto 8px;
+.heading {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    font-size: $h2-font-size;
+    line-height: 62px;
+    text-align: center;
+    letter-spacing: -0.01em;    
+    margin: 0;
+}
+
+.one-word{
+    .heading{
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    .vid-thumbnail {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 80px 0;
+        @include border-box();
+        -webkit-box-shadow: 20px 20px 0px 0px $selective-yellow;
+        box-shadow: 20px 20px 0px 0px $selective-yellow;
+        @include pos-relative();
+    
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #000;
+            opacity: 0.5;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+        }
+    
+        img {
+            width: 100%;
+        }
+    
+        .video-button {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 59px;
+            height: 59px;
+        }
+    }
+}
+
+.ls-team{
+    padding: 70px 0 0;
+    background: $neutral-black url('../../../img/career/wires.svg') scroll no-repeat top center;
+    background-position-y: 18px;
+    @include pos-relative();
+    overflow: hidden;
+    &::after {
+        content: "";
+        background: #fff;
+        position: absolute;
+        top: 61%;
+        left: 0;
+        width: 100%;
+        height: 39%;
+    }
+    .short-title{
+
+    }
+    .heading{
+        margin-bottom: 75px;
+        color: $white;
+    }
+    img{
+        @include pos-relative();
+        z-index: 01;
     }
 
-    h2 {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: $font-weight-bold;
-        font-size: $h2-font-size;
-        line-height: 62px;
-        text-align: center;
-        letter-spacing: -0.01em;
+}
+
+
+
+.career-action {
+    padding: 115px 0;
+    .maincnt{        
+        margin-top: 0 !important;
+    }
+
+    // p.short-title {
+    //     font-family: inherit;
+    //     font-style: $font-weight-normal;
+    //     font-weight: $font-weight-SemiBold;
+    //     font-size: $small-font-size;
+    //     line-height: 1;
+    //     text-align: center;
+    //     letter-spacing: 0.06em;
+    //     text-transform: uppercase;
+    //     color: $accent-orange;
+    //     margin: 10px auto 8px;
+    // }
+
+    // h2 {
+    //     font-family: 'Inter';
+    //     font-style: normal;
+    //     font-weight: $font-weight-bold;
+    //     font-size: $h2-font-size;
+    //     line-height: 62px;
+    //     text-align: center;
+    //     letter-spacing: -0.01em;
+    //     color: $neutral-black;
+    // }
+    .heading{
         color: $neutral-black;
     }
     .action{
@@ -41,11 +147,13 @@
                 @include di-block();
                 @include valign-middle();
                 @include border-box();
+                width: 50%;
             }
             .vid-thumb{
                 -webkit-box-shadow: 20px 20px 0px 0px $selective-yellow;
                 box-shadow: 20px 20px 0px 0px $selective-yellow;
                 @include pos-relative();
+                
                 &::before {
                     content: "";
                     position: absolute;
@@ -56,6 +164,9 @@
                     height: 100%;
                     width: 100%;
                     z-index: 0;
+                }
+                img{
+                    width: 100%;
                 }
                 .video-button{
                     position: absolute;
@@ -88,6 +199,7 @@
                     letter-spacing: -0.01em;
                     color: rgba(0, 0, 0, 0.6);
                     font-size: $large-font-size;
+                    margin: 0;
                     a{
                         color: $primary-blue;
                         display: block;
@@ -105,18 +217,201 @@
 }
 
 .recent-jobs {
+    padding-bottom: 76px;    
+    .maincnt{
+        @include pos-relative();
+        margin-top: 0 !important;
+    }
+    h2{
+        font-family: inherit;
+        font-style: normal;
+        font-weight: $font-weight-bold;
+        font-size: 40px;
+        line-height: 60px;
+        margin: 0 0 48px;
+        letter-spacing: -0.01em;
+        color: $neutral-black;
+    }
+    .ext-link{
+        color: $primary-blue;
+        font-weight: normal;
+        position: absolute;
+        right: 20px;
+        top: 0;
+        margin-top: 22px;
+        &.mob{
+            display: none;
+        }
+        a{
+            color: $primary-blue;
+        }
+        img{
+            @include di-block();
+            @include valign-top();
+            padding: 5px 1px;
+            margin: 0 0 0 7px;
+        }
+    }
     .job-cards {
         @include f-0();
+        padding-bottom: 38px;
+        border-bottom: 1px solid #D7D7DA;
         .job-card {
-            width: 416px;
+            // width: 416px;
+            width: 33.33%;
             height: 190px;
-            background: $white;
-            border: 1px solid #D7D7DA;
-            @include border-radius(8px);
+            min-height: 190px;
+            background: transparent;
+            // border: 1px solid #D7D7DA;
+            // @include border-radius(8px);
             margin-bottom: 20px;
             @include di-block();
             @include valign-top();
+            @include border-box();
+            padding-right: 20px;
+            &:nth-child(3n){
+                padding-right: 0;
+            }
+            
+
+            dl {
+                background: $white;
+                border: 1px solid #D7D7DA;
+                border-radius: 8px;
+                padding: 35px 32px;
+                margin-bottom: 0px;
+                @include border-box();
+            
+                dt {
+                    font-weight: 600;
+                    font-size: 24px;
+                    letter-spacing: -.01em;
+                    line-height: 1.4;
+                }
+            
+                dd {
+                    margin: 0;
+                    padding: 0;
+            
+                    p {
+                        font-size: 16px;
+                        letter-spacing: -0.01em;
+                        color: $neutral-black;
+                        margin-top: 5px;
+                    }
+            
+                    ul {
+                        margin-top: 15px;
+                        @include f-0();
+            
+                        li {
+                            @include di-block();
+                            @include valign-middle();
+                            line-height: 1;
+                            padding: 10px;
+                            height: 36px;
+                            background: $white-light-color;
+                            border-radius: 8px;
+                            margin-right: 5px;
+                            align-items: center;
+            
+                            a {
+                                font-weight: 400;
+                                font-size: 16px;
+                                text-decoration: none;
+                                letter-spacing: -.01em;
+                                color: #56565D;
+                            }
+                        }
+                    }
+            
+                }
+            
+            }
+
         }
+    }
+}
+
+.global-map{
+    background: $neutral-black;
+    padding: 60px 0;
+    .maincnt{
+        margin-top: 0 !important;
+    }
+    h2{
+        font-family: inherit;
+        font-style: normal;
+        font-weight: $font-weight-bold;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #F2F2F3;
+        margin: 0 0 16px;
+    }
+    .short-info{
+        margin: 0 0 24px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: $font-weight-normal;
+        font-size: $large-font-size;
+        line-height: 1;
+        text-align: center;
+        letter-spacing: -0.01em;
+        color: #F2F2F3;
+
+    }
+    .world-map{
+        margin-bottom: 60px;
+    }
+    .locations{
+        padding-bottom: 65px;
+
+        .location-acc{
+            margin-bottom: 24px;
+            @include f-0();
+            .loc-address{
+                @include di-block();
+                @include valign-top();
+                width: 33.33%;
+                padding: 0 9.5% 0 0;
+                @include border-box();
+                .city-name{
+                    margin-bottom: 16px;
+                    margin-top: 20px;
+                    p{
+                        font-family: inherit;
+                        font-style: normal;
+                        font-weight: $font-weight-SemiBold;
+                        font-size: 24px;
+                        line-height: 31px;
+                        letter-spacing: -0.03em;
+                        color: $white;
+                        margin: 0;
+                    }
+                }
+                .city-address{
+                    margin-top: 16px;
+                    p{
+                        font-family: inherit;
+                        font-style: normal;
+                        font-weight: $font-weight-medium;
+                        font-size: $base-font-size;
+                        line-height: 24px;
+                        letter-spacing: -0.01em;
+                        color: $white;
+                        opacity: 0.6;
+                        margin: 0;
+
+                    }
+                    
+
+                }
+            }
+        }
+        
+
     }
 }
 
@@ -125,17 +420,26 @@
 
 
 @media screen and (max-width:1199px) {
+    .short-title {
+        font-size: $small-font-size;
+    }
+
+    .heading {
+        font-size: $h3-font-size;
+        line-height: 42px;
+    }
+    
     .career-action {
-        padding: 115px 0;
+        
     
-        p.short-title {
-            font-size: $small-font-size;
-        }
+        // p.short-title {
+        //     font-size: $small-font-size;
+        // }
     
-        h2 {
-            font-size: $h3-font-size;
-            line-height: 42px;
-        }
+        // h2 {
+        //     font-size: $h3-font-size;
+        //     line-height: 42px;
+        // }
         .action{
             .action-row{
                 margin-bottom: 56px;
@@ -150,9 +454,7 @@
         
                 
                 .vid-thumb{
-                    -webkit-box-shadow: 20px 20px 0px 0px $selective-yellow;
-                    box-shadow: 20px 20px 0px 0px $selective-yellow;
-    
+                        
                     .video-button{
                         width: 59px;
                         height: 59px;
@@ -182,13 +484,308 @@
     
         
     }
+
+    .global-map{
+        .locations{
+            .location-acc{
+                .loc-address{
+                    
+                    padding-right: 7.5%;
+                }
+            }
+        }
+    }
     
 }
 
 // @media screen and (max-width:1140px) {}
-// @media screen and (max-width:1023px) {}
-// @media screen and (max-width:991px) {}
-// @media screen and (max-width:767px) {}
-// @media screen and (max-width:600px) {}
+@media screen and (max-width:1023px) {
+    .global-map{
+        .locations{
+            .location-acc{
+                .loc-address{
+                    
+                    padding-right: 3.5%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:991px) {
+    .ls-team{
+        &::after {
+            top: 68%;
+          }
+        .heading {
+            margin-bottom: 44px;
+        }
+    }
+
+    .career-action {
+        
+        .action {
+            .action-row {
+
+                // .vid-thumb {
+                //     width: calc(100% - 20px) !important;
+                //     margin-bottom: 50px;
+                // }
+
+            }
+        }
+    
+    }
+
+
+    .recent-jobs {
+        
+        .job-cards {
+    
+            .job-card {
+                width: 50%;
+                &:nth-child(3n){
+                    padding-right: 20px;
+                }
+                &:nth-child(2n){
+                    padding-right: 0px;
+                }
+                
+    
+               
+    
+            }
+        }
+    }
+
+
+}
+
+
+
+@media screen and (max-width:767px) {
+    .short-title {
+        
+    }
+
+    .heading {
+
+    }
+
+    .career-action {
+        padding: 42px 0 64px;
+
+        // p.short-title {
+        // }
+      
+        // h2 {
+        // }
+        .action{
+            margin-top: 44px;
+            .action-row{  
+                padding-bottom: 7px;
+
+                &:last-child{
+                    
+                }
+                
+        
+                .vid-thumb, .vid-info{
+                    width: 100% !important;
+                    display: block;
+                }
+                .vid-thumb{
+                    -webkit-box-shadow: 10px 10px 0px 0px $selective-yellow;
+                    box-shadow: 10px 10px 0px 0px $selective-yellow;                    
+                    margin-bottom: 50px;
+                    width: calc(100% - 20px) !important;
+                    &::before {
+                    }                    
+                    .video-button{
+                    }
+                }
+                .vid-info{
+                    padding-left: 0;
+                    h3{
+                    }
+                    p{
+                       
+                        a{
+                           
+                        }
+            
+                    }
+                }
+        
+            }
+        }
+        
+      
+        
+      }
+
+    
+      .recent-jobs {
+        padding-bottom: 38px;
+     
+     h2{
+         font-size: 32px;
+         line-height: 48px;
+     }
+     .ext-link{
+        &.desk{
+            display: none;
+        }
+        &.mob{
+            display: block;
+            position: relative;
+            left: auto;
+            right: auto;
+            top: auto;
+        }
+     }
+     
+     .job-cards {
+        padding-bottom: 0;
+        border-bottom: none;       
+        
+         .job-card {        
+            width: 100%;
+            margin-bottom: 20px;
+            padding-right: 0px;
+            &:nth-child(2n), &:nth-child(3n){
+                padding-right: 0;
+            }
+ 
+             
+ 
+         }
+     }
+ }
+
+
+
+    .global-map{
+        padding-top: 27px;
+        h2{
+            font-size: 32px;
+            font-weight: $font-weight-bold;
+            line-height: 38px;
+            margin: 0 0 24px;
+        }
+        .short-info{
+            font-size: $base-font-size;
+            line-height: 24px;
+            margin: 0 0 60px;
+        }
+        .locations{
+            padding-bottom: 0;
+            .location-acc{
+                margin-bottom: 0;
+                .loc-address{
+                    width: 100%;
+                    padding: 0;
+                    &:first-child{
+                        .city-name{
+                            margin-top: 0;
+                        }
+                    }
+                    .city-name{                        
+                        margin-bottom: 0;
+                        cursor: pointer;
+                        @include pos-relative();
+
+                            p{
+                                font-weight: $font-weight-medium;
+                            }
+                            
+                            span{
+                                display: block;
+                                width: 18px;
+                                height: 18px;
+                                border: 1px solid #D7D7DA;
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);                                
+                                @include border-radius(50%);
+                                @include border-box();
+                                &::before, &::after{
+                                    content: "";
+                                    position:absolute;   
+                                    left:50%;                             
+                                    top: 50%;                 
+                                    transform: translate(-50%, -50%);               
+                                    background: #D7D7DA;
+                                }
+                                &::before{
+                                    width: 7px;
+                                    height: 1px;                                
+                                }
+                                &::after{
+                                    width: 1px;
+                                    height: 7px;
+                                }
+                        
+                            }
+                        
+                        
+                    }
+                    .city-address{
+                        display: none;  
+                        p{
+                            font-weight: $font-weight-normal;
+                        }                      
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .ls-team{
+        &::after {
+          top: 73%;
+        }
+        
+    }
+}
+
+@media screen and (max-width:390px) {
+    .ls-team{
+        &::after {
+          top: 78%;
+        }
+        
+    }
+}
+
 // @media screen and (max-width:575px) {}
+
+@media screen and (max-width:350px){
+    .recent-jobs {
+     
+        .job-cards {
+    
+            .job-card {
+                height: auto;
+                dl {
+                    padding: 28px 25px;
+                
+                    dt {
+                        font-size: 21px;
+                    }
+                
+                    
+                
+                }
+    
+               
+    
+            }
+        }
+    }
+    
+}
+
 // @media screen and (max-width:320px) {}
