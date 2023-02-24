@@ -24,16 +24,20 @@ li { margin: 0; padding: 0;}
 /* career details end  */
 
 @media screen and (max-width: 1298px) {
-	// .maincnt{max-width: 100%;padding: 0 20px;}
- 
+
 }
 @media screen and (max-width: 991px) {
-	// .maincnt{max-width: 100%;padding: 0 20px;}
+	.career-detail .job-detail .browse {margin-top: 80px;}
+	.career-detail .job-detail h1, .career-detail .job-detail .h1{padding-top: 10px;}
+	.career-detail .job-detail ul {margin-bottom: 30px;	}
+	.career-detail .job-des {
+		padding:30px 0;
+	}
 }
 
 @media screen and (max-width: 767px){
 /* career details start */
-.career-detail .job-detail .browse {margin-top: 90px;}
+
 .career-detail {padding: 20px 0 0 0;}
 /* career details end */
 }
