@@ -20,11 +20,11 @@ header.ldtv-header .menu ul li:hover .nav-link {
   color: #fff;
   border-bottom: 2px solid #fff;
 }
+header.ldtv-header .menu ul li a.nav-link::after {background: transparent url("../img/icons/up-arrow-white.png") scroll no-repeat 50% 50%;  transform: translate(-50%, -50%) rotate(180deg);}
 
 header.ldtv-header .menu ul li:hover .nav-link::after {
-  background: transparent url("../img/icons/up-arrow-white.png") scroll no-repeat 50% 50%;
+  background: transparent url("../img/icons/up-arrow-white.png") scroll no-repeat 50% 50%; transform: translate(-50%, -50%) rotate(0);
 }
-
 header.ldtv-header .menu ul li a.nav-link img {
   display: none;
 }
@@ -123,11 +123,14 @@ header .menu ul li a.nav-link {
 .first-part .Fbcreator {
   font-weight: 700;
   font-size: 48px;
-  line-height: 64px;
+  line-height: 60px;
   letter-spacing: -0.01em;
   color: #FFFFFF;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
+  padding: 30px 0 0;
 }
+
+  
 
 .first-part .watch-txt {
   font-weight: 400;
@@ -1331,6 +1334,7 @@ button {
 
   .web-category .Ytsld .thumbnail {
     margin-right: 0;
+    padding-right: 0;
   }
 
   .ldtvinsigh .second-part .ldtv-txt {
@@ -1540,4 +1544,9 @@ button {
     top: 314px;
   }
 
+}
+@media screen and (max-width: 375px) {
+.Ytsld .thumbnail {
+  width:290px;
+}
 }

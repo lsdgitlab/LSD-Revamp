@@ -4,3 +4,5 @@ package-lock.json
 .DS_Store
 .vscode
 dist.zip
+survey-dist.zip
+shared/
