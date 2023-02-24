@@ -4,11 +4,14 @@
 // // window.Chart = Chart;
 // observer.observe();
 
-import career from './career-job-details'
-import ldtv from './ldtv'
+// import career from './career-job-details'
+// import ldtv from './ldtv'
+
+  //********  on button click append the youtube links to popup ********
 
 
 
+// ;
 
 
 

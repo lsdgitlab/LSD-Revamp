@@ -11,6 +11,10 @@ header {
         @include di-block();
         @include valign-top();        
     }
+    .navbar {
+        position: unset !important;
+        padding: 0;
+    }
 
     .menu {
         @include cf();
@@ -330,7 +334,7 @@ header {
         left: 0;
         right: 0;
         width: 100%;
-        z-index: 1;
+        z-index: 10;
         background: #fff;
         height: 76px;
 
