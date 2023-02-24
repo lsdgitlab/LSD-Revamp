@@ -23,7 +23,7 @@
 }
 
 .top-section {
-    background: linear-gradient(90deg, #202025 26.7%, rgba(32, 32, 37, 0.3) 60.63%), url('../../../img/career/banner-lp.png') scroll no-repeat top left;
+    background: linear-gradient(90deg, #202025 26.7%, rgba(32, 32, 37, 0.3) 60.63%), url('../img/career/banner-lp.png') scroll no-repeat top left;
     -webkit-background-size: cover;
     background-size: cover;
 
@@ -87,13 +87,13 @@
     }
 
     &::before {
-        background-image: url('../../img/career/one-word-left.png');
+        background-image: url('../img/career/one-word-left.png');
         background-position: left top;
         left: 0;
     }
 
     &::after {
-        background-image: url('../../img/career/one-word-right.png');
+        background-image: url('../img/career/one-word-right.png');
         background-position: right top;
         right: 0;
     }
@@ -178,7 +178,7 @@
 
 .ls-team {
     padding: 70px 0 0;
-    background: $neutral-black url('../../../img/career/wires.png') scroll no-repeat top center;
+    background: $neutral-black url('../img/career/wires.png') scroll no-repeat top center;
     background-position-y: 18px;
     @include pos-relative();
     overflow: hidden;
@@ -1022,7 +1022,7 @@
     }
 
     .ls-team {
-        background: $neutral-black url('../../../img/career/wires-mob.svg') scroll no-repeat top center;
+        background: $neutral-black url('../img/career/wires-mob.svg') scroll no-repeat top center;
 
         &::after {
             top: 73%;
