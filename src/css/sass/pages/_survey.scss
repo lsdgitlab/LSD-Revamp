@@ -1,5 +1,12 @@
 /* survey start */
-
+.di-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
 .surveymain{background: #FFFFFF;}
 .survey{margin-bottom: 48px;flex-wrap: nowrap;}
 .survey-heading{font-weight: 700;font-size: 48px;line-height: 150%;color: #202025; margin: 0 auto; margin-bottom: 24px;}
@@ -24,15 +31,19 @@
 .readysecnd {padding-left: 273px;}
 .takebtn{align-items: center;padding: 24px;gap: 8px;border:0; max-width: 278px;width: 100%;  height: 64px;  background: #007BB6;border-radius: 8px;color: #FFFFFF;font-size: 16px;line-height: 16px;}
 .doyoutnk{}
+.srv img {
+  margin: 0;
+}
 .doyousec .doyoufst{background: #034EA2;border-radius: 8px;}
 .doyoufst .top-sec{}
 .top-sec{background: #303035;
-  border-radius: 8px 8px 0px 0px; padding: 0 36px;}
-  .top-txt{padding-left: 12px;font-weight: 500; font-size: 16px;line-height: 19px; letter-spacing: -0.01em;color: #F2F2F3;}
+  border-radius: 8px 8px 0px 0px; padding: 8px 36px;justify-content: space-between;}
+  .top-fst li{ display: inline-block;}
+  .top-txt{padding-left: 12px;font-weight: 500; font-size: 16px;line-height: 19px; letter-spacing: -0.01em;color: #F2F2F3;margin: 0;}
 .doyousec .doyousnd{padding-left: 20px;}
 .doyousec .doyousnd-txt{font-weight: 600;font-size: 24px;line-height: 140%;letter-spacing: -0.01em;color: #202025;margin: 0 auto;}
 .doyousec .date{font-weight: 500; font-size: 16px; line-height: 24px;color: #888891;}
-.top-snd {font-weight: 500;font-size: 16px;line-height: 19px;letter-spacing: -0.01em;color: #F2F2F3;}
+.top-snd p{font-weight: 500;font-size: 16px;line-height: 19px;letter-spacing: -0.01em;color: #F2F2F3; margin-bottom: 0;}
 .btm-sec {padding: 0 36px;}
 .btm-sec .doyou-txt{font-weight: 700;font-size: 32px;line-height: 48px;letter-spacing: -0.01em; color: #F2F2F3;    margin: 0 auto;    padding: 30px 0 11px 0;}
 .rd-btn{    justify-content: flex-start; margin-bottom: 30px;}
@@ -41,7 +52,7 @@
 input[type="radio" ] {width: 22px;height: 22px;vertical-align: middle;}
 .submit{align-items: center; padding: 24px;gap: 8px;width: 170px;height: 64px;background: #F15A22;border-radius: 8px;color: #FFFFFF;font-size: 16px;line-height: 100%;letter-spacing: 0.06em; text-transform: uppercase;  border:none;margin: 0 auto;}
 .btm-sec .date p{font-weight: 500;font-size: 16px;line-height:22px;color: #BDBDC2;}
-.srv {padding: 20px 0 0 0;margin-bottom: 12px;}
+.srv {padding: 0 0 0 0;margin-bottom: 12px;}
 .box{ font-family: 'Signika', sans-serif; text-align: center; overflow: hidden; position: relative;}
 .view-report{font-size: 16px; line-height: 100%; letter-spacing: 0.06em;  text-transform: uppercase;  color: #FFFFFF; background: rgba(32, 32, 37, 0.9); width: 168px; height: 64px; border: 1px solid #FFFFFF; border-radius: 8px; }
 .box:before,
@@ -58,7 +69,10 @@ input[type="radio" ] {width: 22px;height: 22px;vertical-align: middle;}
 /* Survey-details start */
 .w40{width: 40%;}
 .w60{width: 60%;}
-
+.w50{width: 50%;}
+.w-33 {
+  width: 33%;
+}
 .surveydetails{  background-color: #B3E6FF;}
 .back-survey{padding-top: 30px; margin-bottom: 46px;}
 .surveydetails .back-survey .browse{font-size: 16px; color: #007BB6;  text-transform: uppercase; display: block; } 
@@ -81,9 +95,9 @@ input[type="radio" ] {width: 22px;height: 22px;vertical-align: middle;}
 .how{margin-bottom: 114px;}
 .how-txt{font-weight: 700;font-size: 32px;line-height: 42px; letter-spacing: -0.01em;color: #202025;}
 .tct-cart {font-size: 0;}
-.carts {display: inline-block;width: 50%; font-size: initial;position: relative;}
+.carts {display: inline-block;width: 50%; font-size: initial;position: relative;padding-left: 42px; box-sizing: border-box;}
 .carts p{    max-width: 329px;width: 100%;font-weight: 500; font-size: 20px;line-height: 32px;letter-spacing: -0.01em;color: #202025; padding-right: 10px;}
-.carts p::before{content: ""; position: absolute; width: 24px;height: 24px;background: #fff; top: 4px;left: -38px; border-radius: 50%;background-image: url('../img/arrow_circle_right.png');}
+.carts p::before{content: ""; position: absolute; width: 24px;height: 24px;background: #fff; top: 4px;left:0; border-radius: 50%;background-image: url('../img/arrow_circle_right.png');}
 .tackles-snd{ margin-bottom: 32px;}
 .tackles-snd p{font-weight: 500;font-size: 16px;line-height: 180%;letter-spacing: -0.01em;color: #202025;}
 .tackles-snd li{display: inline-block; margin-left: 12px;  vertical-align: middle;}
@@ -99,35 +113,212 @@ input[type="radio" ] {width: 22px;height: 22px;vertical-align: middle;}
 
 @media screen and (max-width: 1298px) {
 	// .maincnt{max-width: 100%;padding: 0 20px;}
- 
+  
 }
+
+@media screen and (max-width: 1229px) {.data-list li {
+  padding-right: 24px;
+}}
+
+@media screen and (max-width: 1024px) {
+  /* Survey start */
+  .w-33 {
+    width: 100%;
+  }
+  .surveybox {padding: 120px 0 0 0;}
+  .di-flex.doyousec {
+    align-items: flex-start;
+  }
+  .readysecnd {
+    padding-left: 0;
+  }
+  
+  .surveybox.surveybox-new {
+    padding: 0;
+  }
+  .surveybox.surveybox-2 {
+    padding: 40px 0 0 0;
+  }
+  .surveybox .srvbox .srv-txt {
+    font-size: 22px;
+    min-height: 99px;
+  }
+/* Survey end */
+
+/* Survey-details Start */
+.concern .concern-txt {
+  font-size: 44px;
+}
+.data-list li {padding-right: 24px;}
+.tackles {padding-top: 31px;margin-bottom: 64px;}
+.otherinsght .otherinsght-txt {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #202025;
+  min-height: 68px;
+  max-width: 398px;
+}
+.otherinsght .survey{flex-wrap: nowrap;}
+
+
+
+
+
+
+
+
+
+/* Survey-details end */
+
+
+
+}
+@media screen and (max-width: 1023px) {
+  /* Survey start */
+  .survey-heading {
+  padding-top: 78px;
+}
+/* Survey end */
+
+}
+
 @media screen and (max-width: 991px) {
+  /* Survey start */
+  .w50.srvsecnd {
+    width: 100%;
+  }
+  .w50.srvfirst{  width: 100%;}
 	// .maincnt{max-width: 100%;padding: 0 20px;}
+  .survey-heading {
+    padding-top: 97px;
+  }
+  .surveybox {padding: 40px 0 0 0}
+  
+  .surveybox .srvbox .srv-txt {
+    font-size: 22px;
+    min-height: 99px;
+  }
+  
+  .srvsecnd {
+    position: initial;
+    padding: 36px 16px;
+  }
+  .survey {
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .surveybox .srvbox {
+    margin-bottom: 30px;
+  }
+  .w-60 {
+    width: 100%;
+  }
+  .w-40 {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .srv {
+    padding: 26px 0 0 0;
+  }
+  srv img {
+    margin: 0 auto;
+  }
+
+  /* Survey end */
+
+/* Survey-details start */
+.w50.concern {
+  width: 100%;
+}
+.w40.how {
+  width: 100%;
+}
+.how {
+  margin-bottom: 32px;
+}
+.how-txt {
+  text-align: center;
+}
+.w60.txt-list {
+  width: 100%;
+}
+.otherinsght .survey{flex-wrap: nowrap;}
+
+
+
+
+
+
+
+/* Survey-details end */
+
+
 }
 
 
 @media screen and (max-width: 767px){
   
   /* Survey start */
-  .rd-btn {justify-content: flex-start;margin-bottom: 10px;flex-direction: column;    align-items: baseline;}
+  .w50 {
+    width: 100%;
+  }
+  .w-40 {
+    width: 100%;
+    margin:0 auto ; 
+  }
+  .w-60 {
+    width: 100%;
+  }
+
+  .rd-btn {justify-content: flex-start;margin-bottom: 10px;flex-direction: row;    align-items: baseline;}
   .di-flex .top-sec{margin-bottom: 16px;flex-direction: row;}
   .di-flex .top-img{flex-direction: row;}
   .di-flex .top-sec{flex-direction: row;}
   .srvsecnd {position: initial;padding: 36px 16px;}
   .srvsecnd .promotional-wht .promotional-heading {font-size: 24px;line-height: 32px;}
   .surveybox .srvbox {max-width: 416px;height: auto;margin-right: 0;margin-bottom: 20px;}
-  .readysecnd {padding-left: 16px;    margin-bottom: 20px;}
+  .readysecnd {padding-left: 0; margin-bottom: 20px;text-align: center;}
   .readyfst .ready-txt {line-height: 38px;}
   .rady { background-size: auto;}
   .readyfst {padding: 28px 26px;}
-  .rd-btn .radiobtn {border: 1px solid #F2F2F3;padding: 16px; margin-right: 0; margin-bottom: 26px;}
+  .rd-btn .radiobtn {border: 1px solid #F2F2F3;padding: 16px;  margin-bottom: 26px;}
   .survey-heading { font-size: 32px; line-height: 48px;}
   .btm-sec .doyou-txt {font-weight: 700;font-size: 24px;line-height: 34px;padding: 0px 0 11px 0;}
   .btm-sec {padding: 0 22px;}
   .top-sec {padding: 0 22px;}
   .surveybox {padding: 0px 0;}
-  .survey {margin-bottom: 20px;}
+  .survey {margin-bottom: 20px;flex-wrap: wrap;justify-content: center;}
+  .doyousec .doyousnd{padding-left: 0;}
+   .srv img {
+    margin: 0 auto;
+  }
+  .doyousec .doyousnd-txt {
+    max-width: 369px;
+  }  
+  .doyousec .date {
+    max-width: 369px;
+    margin: 0 auto;
+  }
+  .doyoufst .date {
+    margin: 0;
+      margin-top: 0px;
+    margin-top: 20px;
+  }
+  .srv {
+    padding: 26px 0 0 0;
+  }
+
+
+
   /* Survey end */
+
+/* Survey-details start */
+ 
+
 
   .concernsndimg {
     text-align: right;
@@ -164,6 +355,37 @@ input[type="radio" ] {width: 22px;height: 22px;vertical-align: middle;}
 }
 .how {margin-bottom: 26px;}
 .tackles {padding-top: 70px; margin-bottom: 64px;}
+.otherinsght .survey{flex-wrap: wrap;}
 
+.otherinsght .otherinsght-txt {
+  min-height:0 ;
+  max-width: 100%;
+  text-align: center;
+}
+.otherinsght .date {
+  text-align: center;
+}
+/* Survey-details end */
+}
+
+
+
+@media screen and (max-width: 480px){
+  .doyousec .doyousnd {
+    padding-top: 20px;
+  }
+/* Survey-details start */
+
+  .tackles {
+    padding-top: 31px;
+    margin-bottom: 32px;
+  }
+  .how-txt {font-size: 24px;}
+  .carts p {margin-bottom: 40px;}
+  .otherinsght h2, .otherinsght .h2 {  font-size: 24px;}
+
+
+
+/* Survey-details end */
 
 }
