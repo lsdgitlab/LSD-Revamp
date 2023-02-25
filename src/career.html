@@ -337,11 +337,14 @@
 
 
     <script>
-   var videoButtons = document.querySelector('.video-button1')
-videoButtons.addEventListener('click', ()=>{
+   var videoButtons = document.querySelectorAll('.video-button1')
+   videoButtons.forEach( (btn)=>{
+    btn.addEventListener('click', ()=>{
     // console.log(videoButtons);
     popup.classList.add('show')
 })
+   });
+
    
    
 // ******** video popup ********
