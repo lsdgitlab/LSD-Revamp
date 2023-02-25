@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <title>Career Job Listing</title>
 </head>
@@ -13,28 +14,54 @@
     <div class="main">
         <header></header>
 
+        <section class="top-section">
+            <div class="maincnt">
+                <div class="content">
+                    <p class="short-title">Curious. Adaptive. intelligent</p>
+                    <h1 class="heading">
+                        Transform your career & grow with us
+                    </h1>
+                    <a href="#" class="join-btn">join our team</a>
+                <!-- <button class="video-button1">click</button> -->
+
+                </div>
+            </div>
+        </section>
+
         <section class="one-word">
+            <div class="border-colored">
+                <div class="brd brd-yellow"></div>
+                <div class="brd brd-graygreen"></div>
+                <div class="brd brd-red"></div>
+                <div class="brd brd-yellow"></div>
+                <div class="brd brd-graygreen"></div>
+                <div class="brd brd-red"></div>
+            </div>
             <div class="maincnt">
                 <p class="short-title">our values</p>
                 <h2 class="heading">Hear our people speaking volumes in 'One Word' - Logicserve Digital</h2>
+                <img src="img/career/one-word-top-mob.png" alt="" class="vis-767">
                 <div class="vid-thumbnail">
-                    <img src="img/career/poster.png" alt="">
-                    <a href="#" class="playBut video-button">
+                    <img src="img/career/our-values-poster.png" alt="">
+                    
+                    <a href="#" class="playBut video-button video-button1">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
                             <polygon class="triangle" id="XMLID_18_" fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
                     73.5,62.5 128.5,95.8 73.5,129.1 "></polygon>
                         </svg>
                     </a>
                 </div>
+                <img src="img/career/one-word-bottom-mob.png" alt="" class="vis-767">
             </div>
-            
-
         </section>
 
 
         <section class="ls-team">
-            <p class="short-title">ls digital</p>
-            <h2 class="heading">Meet our Logiserve <br>Team players</h2>
+            <div class="maincnt">
+                <p class="short-title">ls digital</p>
+                <h2 class="heading">Meet our Logiserve <br>Team players</h2>
+            </div>
+            
             <img src="img/career/LS-team-players.png" alt="">
         </section>
 
@@ -47,7 +74,7 @@
                     <div class="action-row">
                         <div class="vid-thumb w50">
                             <img src="img/career/poster.png" alt="">
-                            <a href="#" class="playBut video-button">
+                            <a href="#" class="playBut video-button video-button1">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
                                     <polygon class="triangle" id="XMLID_18_" fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
                             73.5,62.5 128.5,95.8 73.5,129.1 "></polygon>
@@ -64,8 +91,8 @@
     
                     <div class="action-row f-0">
                         <div class="vid-thumb w50">
-                            <img src="img/career/poster.png" alt="">
-                            <a href="#" class="playBut video-button">
+                            <img src="img/career/poster-2.png" alt="Logimates Lockdown Life">
+                            <a href="#" class="playBut video-button video-button1">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="38px" height="38px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
                                     <polygon class="triangle" id="XMLID_18_" fill="none" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
                             73.5,62.5 128.5,95.8 73.5,129.1 "></polygon>
@@ -290,8 +317,57 @@
             
     </div>
     <footer></footer>
-    
-    
+     <!-- video popup -->
+  <div id="popup-wrapper1" class="popup-container1">
+    <div class="popup-content1">
+        <a id="close1" class="clsbtn">
+            <span class="icon-cross"></span>
+        </a>
+        <div id="video-popup1" class="overlay">
+<video controls>
+    <source src="video/mov_bbb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+    <script>
+   var videoButtons = document.querySelectorAll('.video-button1')
+   videoButtons.forEach( (btn)=>{
+    btn.addEventListener('click', ()=>{
+    // console.log(videoButtons);
+    popup.classList.add('show')
+})
+   });
+
+   
+   
+// ******** video popup ********
+var popup = document.getElementById('popup-wrapper1')
+let clsbtn = document.getElementById('close1')
+var videoPopup = document.getElementById('video-popup1');
+
+clsbtn.onclick = function () {
+popup.classList.remove('show')
+
+}
+window.onclick = function (event) {
+if (event.target == popup) {
+popup.classList.remove('show')
+}
+}
+//******** video popup end  ********
+
+
+
+
+
+    </script>
         
 </body>
 
