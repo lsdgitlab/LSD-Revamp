@@ -1,10 +1,15 @@
 
 /* Start your journey with us start */
-.journey{padding: 20px 0;}
-.journey .browse { font-size: 16px; color: #007BB6; margin-top: 20px; margin-bottom: 10px; text-transform: uppercase; display: block;}
+.journey{/*padding: 20px 0;*/ padding-bottom: 100px; margin-top: 20px; background: #fcfcfc;}
+.journey .browse { font-size: 16px; font-weight: 600; color: #007BB6; margin-top: 20px; margin-bottom: 10px; text-transform: uppercase; 
+  // display: block;
+  display: inline-block;
+  width: 100%;
+}
 .journey .browse img { display: inline-block; font-size: initial; vertical-align: middle; margin-right: 8px;}
 // .journey-form{max-width: 1190px; margin: 0 auto; box-sizing: border-box;}
 .journey .w50 {width: 49%;}
+.journey-form .maincnt { padding: 0 32px;}
 .journey-form .jny-txt{font-weight: 600;font-size: 32px;line-height: 44px;letter-spacing: -0.01em;color: #202025; margin-bottom: 5px;}
 .journey-form .sub-txt{font-style: normal;font-weight: 500;font-size: 16px;line-height: 140%;letter-spacing: -0.01em;color: #888891; margin: 0 auto; margin-bottom: 40px;}
 .journey-form .form{padding: 50px; background: #FFFFFF;box-shadow: 0px 4px 44px rgba(32, 32, 37, 0.08);border-radius: 0px 0px 8px 8px;}
@@ -132,7 +137,13 @@ background: #fff url(../img/expand_more.png) scroll no-repeat right top; backgro
   .journey-form .form li label {font-size: 14px;}
 }
 
+@media screen and (max-width: 1023px) {
+	.journey .browse {/*margin-top: 80px;*/ margin-top: 95px;}
+}
+
 @media screen and (max-width: 991px) {
+  .journey{padding-bottom: 32px;}
+  .journey .browse {margin-top: 80px;}
 	// .maincnt{max-width: 100%;padding: 0 20px;}
 	// .first-part .Fbcreator {font-size: 40px; line-height: 45px;}
 	// .first-part .watch-txt {font-size: 18px;margin-bottom: 90px;}
@@ -167,6 +178,10 @@ background: #fff url(../img/expand_more.png) scroll no-repeat right top; backgro
 
 
 @media screen and (max-width: 767px){
+.journey{ padding-bottom: 0;}
+.journey-form .maincnt {padding: 0;}
+.journey-form .maincnt{ padding: 0;}
+.journey-form .maincnt h1, .journey-form .maincnt .sub-txt{ padding-left: 20px; padding-right: 20px;}
 .journey-form .form .w50 {width: 100%;}
 .journey-form .form li label {font-size: 14px;}
 .journey-form .form ul li {/*padding: 6px 0 6px 0;*/}
