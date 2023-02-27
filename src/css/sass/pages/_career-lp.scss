@@ -1,3 +1,7 @@
+header.career-header{ 
+    -webkit-box-shadow: 0px 4px 44px rgba(32, 32, 37, 0.08); 
+    box-shadow: 0px 4px 44px rgba(32, 32, 37, 0.08);
+}
 .short-title {
     font-family: inherit;
     font-style: normal;
@@ -590,6 +594,107 @@
     height: 100%;
   }
 
+  .playBut {
+    stroke: #f8aa28;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 650;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #007bb6;
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto;
+  }
+  
+  .playBut .triangle {
+    -webkit-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: #fff;
+    transform: translateY(0);
+  }
+  
+  .playBut.sm .triangle {
+    transform: translate(10px, 11px);
+  }
+  
+  .playBut:hover .triangle {
+    stroke-dashoffset: 0;
+    opacity: 1;
+    stroke: #f8aa28;
+    animation: nudge 0.7s ease-in-out;
+  }
+  
+  .clsbtn {    
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background: #000;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 150ms;
+    position: absolute;
+    right: -14px;
+    top: -14px;
+    line-height: 100%;
+    display: none;
+  }
+  .popup-container1.show .clsbtn { 
+    display: flex;
+  }
+  
+  .clsbtn .icon-cross {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: relative;
+    width: 22px;
+    height: 22px;
+  }
+  
+  .clsbtn .icon-cross:before,
+  .clsbtn .icon-cross:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0px;
+    height: 4px;
+    background: #fff;
+    border-radius: 6px;
+  }
+  
+  .clsbtn .icon-cross:before {
+    transform: rotate(45deg);
+  }
+  
+  .clsbtn .icon-cross:after {
+    transform: rotate(-45deg);
+  }
+  
+  .clsbtn .icon-cross span {
+    display: block;
+  }
+  
+  .clsbtn:hover,
+  .clsbtn:focus {
+    transform: rotateZ(90deg);
+    background: #000;
+  }
+
 
 // @media screen and (max-width:1280px) {}
 
@@ -672,102 +777,7 @@
 
 }
 
-.playBut {
-    stroke: #f8aa28;
-    stroke-dasharray: 650;
-    stroke-dashoffset: 650;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #007bb6;
-    border-radius: 50%;
-    width: 68px;
-    height: 68px;
-    margin: 0 auto;
-  }
-  
-  .playBut .triangle {
-    -webkit-transition: all 0.7s ease-in-out;
-    transition: all 0.7s ease-in-out;
-    stroke-dasharray: 240;
-    stroke-dashoffset: 480;
-    stroke: #fff;
-    transform: translateY(0);
-  }
-  
-  .playBut.sm .triangle {
-    transform: translate(10px, 11px);
-  }
-  
-  .playBut:hover .triangle {
-    stroke-dashoffset: 0;
-    opacity: 1;
-    stroke: #f8aa28;
-    animation: nudge 0.7s ease-in-out;
-  }
-  
-.clsbtn {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    background: #000;
-    border-radius: 50%;
-    width: 34px;
-    height: 34px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 150ms;
-    position: absolute;
-    right: -14px;
-    top: -14px;
-    line-height: 100%;
-  }
-  
-  .clsbtn .icon-cross {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: none;
-    position: relative;
-    width: 22px;
-    height: 22px;
-  }
-  
-  .clsbtn .icon-cross:before,
-  .clsbtn .icon-cross:after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0px;
-    height: 4px;
-    background: #fff;
-    border-radius: 6px;
-  }
-  
-  .clsbtn .icon-cross:before {
-    transform: rotate(45deg);
-  }
-  
-  .clsbtn .icon-cross:after {
-    transform: rotate(-45deg);
-  }
-  
-  .clsbtn .icon-cross span {
-    display: block;
-  }
-  
-  .clsbtn:hover,
-  .clsbtn:focus {
-    transform: rotateZ(90deg);
-    background: #000;
-  }
+
 @media screen and (max-width:1140px) {
     .one-word {
         .vid-thumbnail {
@@ -802,6 +812,12 @@
             }
         }
     }
+
+    .popup-content1 {
+        padding: 10px;
+        width: 70%;
+    }
+
 }
 
 @media screen and (max-width:991px) {
@@ -1125,6 +1141,12 @@
         }
 
     }
+
+    .popup-content1 {        
+        width: 80%;
+    }
+
+
 }
 
 @media screen and (max-width:575px) {}

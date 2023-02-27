@@ -1,13 +1,18 @@
 // /* career job list start */
 // 
-#career{background:#f8f8f8;}
+header.career-header{ 
+    -webkit-box-shadow: 0px 4px 44px rgba(32, 32, 37, 0.08); 
+    box-shadow: 0px 4px 44px rgba(32, 32, 37, 0.08);
+}
+#career{/*background:#f8f8f8;*/ background: #fcfcfc;}
+#career header{background: #fff;}
 h1{margin:0;padding:30px 0}
 .ltSec{width:80%;overflow:hidden}
 .rtSec{width:20%}
 .carouselbg{width:100%;padding:15px 0}
 .joblistitem{border-top:1px solid #888891;border-bottom:1px solid #888891;position:relative;display:flex}
 #joblist{color:#fff;list-style-type:none;display:inline-flex;width:100%;-webkit-overflow-scrolling:touch;align-items:center}
-#joblist li{color:#888891;margin:0 30px 0 0;display:inline-block;width:100%;white-space:nowrap;position:relative}
+#joblist li{ cursor: default;color:#888891;margin:0 30px 0 0;display:inline-block;width:100%;white-space:nowrap;position:relative}
 #joblist li:after{content:"";width:0;height:2px;position:absolute;bottom:-15px;left:0;transition:all ease-in 300ms}
 #joblist li.act:after{width:100%;background:#f15a22;transition:all ease-in 300ms}
 #jobcard dl{box-sizing:border-box;width:416px;height:190px;left:0;top:0;background:#FFF;border:1px solid #D7D7DA;border-radius:8px;justify-content:flex-start;display:inline-flex;flex-direction:column;align-items:flex-start;padding:30px;margin-bottom: 20px;}
@@ -47,6 +52,10 @@ h1{margin:0;padding:30px 0}
 		justify-content: space-evenly;
 	}
  
+}
+
+@media screen and (max-width:1023px) {
+    #career{margin-top: 76px;}    
 }
 
 @media screen and (max-width: 767px){
