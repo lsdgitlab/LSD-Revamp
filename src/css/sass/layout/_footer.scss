@@ -334,3 +334,18 @@ footer{
   }
 }
 
+@media screen and (max-width:600px) {
+    footer {
+        .bottom-footer {
+            .social-icons {
+                ul {
+                    li
+                    &:not(:last-child) {
+                        margin-right: 14px;
+                    }
+                }
+
+            }
+        }
+    }
+}
