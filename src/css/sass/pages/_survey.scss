@@ -1,3 +1,4 @@
+.survey-header{-webkit-box-shadow: 0px 4px 44px rgba(32, 32, 37, 0.08); box-shadow: 0px 4px 44px rgba(32, 32, 37, 0.08);}
 /* survey start */
 .di-flex {
   display: flex;
@@ -7,42 +8,52 @@
   margin: 0 auto;
   flex-wrap: wrap;
 }
-.surveymain{background: #FFFFFF;}
+.surveymain{background: #FFFFFF;margin-top: 40px;}
 .survey{margin-bottom: 20px;flex-wrap: nowrap;}
+.survey.survey-top {
+  margin-bottom: 50px;
+}
 .survey-heading{font-weight: 700;font-size: 48px;line-height: 150%;color: #202025; margin: 0 auto; margin-bottom: 24px;}
 .survey .recentsrv{position: relative;}
 .srvsecnd{ position: absolute;right: 75px;background: #FFFFFF;box-shadow: 0px 20px 108px rgba(0, 0, 0, 0.08);border-radius: 8px; padding: 30px;top: 22%;}
-.srvsecnd .promotional-wht .promotional-heading{font-size: 32px;line-height:42px;letter-spacing: -0.01em;color: #202025;margin: 0 auto;}
-.srvsecnd .promotional-wht .promotional-txt{font-size: 16px; line-height: 24px; letter-spacing: -0.01em;color: #202025;}
+.srvsecnd .promotional-wht .promotional-heading{font-size: 32px;font-weight: 700;line-height:41px;letter-spacing: -0.01em;color: #202025;margin: 0 auto 16px;}
+.srvsecnd .promotional-wht .promotional-txt{font-size: 16px; line-height: 24px; letter-spacing: -0.01em;color: #202025; margin-bottom: 16px;}
 .srvsecnd .promotional-wht .date{margin-bottom: 70px;}
 .srvsecnd .promotional-wht .date p{font-weight: 500;font-size: 16px; line-height: 22px;color: #888891;}
 .viewreport{font-weight: 600;font-size: 16px;line-height: 16px;letter-spacing: 0.06em;text-transform: uppercase;color: #007BB6;}
-.surveybox{padding: 40px 0;    }
-.surveybox .srvbox{max-width: 416px; width: 33.33%; height: auto;margin-right: 20px;align-self: start;}
+.promotional-wht .viewreport img { display: inline-block; vertical-align: middle; -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+.surveybox{padding: 40px 0; }
+.surveybox .srvbox{max-width: 416px; width: 33.33%; height: auto;margin-right: 20px;align-self: start; margin-bottom: 20px;}
 .surveybox .srvbox:last-child{ margin-right: 0;}
-.surveybox .srvbox .srv-txt{font-weight: 600;font-size: 24px;line-height: 34px;letter-spacing: -0.01em;color: #202025;max-width: 369px;margin: 0;padding: 10px 0;min-height: 87px; }
+.surveybox .srvbox .srv-txt{font-weight: 600;font-size: 24px;line-height: 34px;letter-spacing: -0.01em;color: #202025;max-width: 369px;margin: 0;margin: 14px 0;min-height: 72px; }
 .surveybox .srvbox .date p { font-weight: 500; font-size: 16px; line-height: 22px; color: #888891; margin: 0 auto;}
 /* .srv {position: relative; display: block;}
  .overrelay{position: absolute;    top: 50%;right: 30%; }
 .srv :hover {  transform: translateX(0); background-color: red;} */
-.Ready{margin-bottom: 40px;}
-.rady{background-image: url(../img/ready-banner-1.png);  background-attachment: scroll;background-repeat: no-repeat;background-position: left top; background-size:contain;overflow: hidden;background-color: #202025;;}
+.Ready{margin-bottom: 20px;}
+.rady{background-image: url(../img/ready-banner-1.png);  background-attachment: scroll;background-repeat: no-repeat;background-position: left top; background-size:contain;overflow: hidden;background-color: #202025;border-radius: 8px;}
 .readyfst{padding: 56px 40px;}
 .readyfst .ready-txt{font-weight: 700;font-size: 32px;line-height: 120%;margin: 0 auto;letter-spacing: -0.01em;color: #F2F2F3;}
-.readysecnd {padding-left: 273px;}
+.readysecnd {padding-left: 273px;padding-right: 40px; text-align: right;}
 .takebtn{align-items: center;padding: 24px;gap: 8px;border:0; max-width: 278px;width: 100%;  height: 64px;  background: #007BB6;border-radius: 8px;color: #FFFFFF;font-size: 16px;line-height: 16px;}
+.takebtn img{ display: inline-block; vertical-align: middle; margin-left: 9px;}
 .doyoutnk{}
+.doyoutnk .doyousec{align-items: self-start;}
 .srv img {
   margin: 0;
+  border-radius: 5px;
 }
-.doyousec .doyoufst{background: #034EA2;border-radius: 8px;}
+.doyousec .doyoufst{background: #034EA2;border-radius: 8px; width: 67%;}
+.doyousec .doyousnd{ width: 33%;}
 .doyoufst .top-sec{}
 .top-sec{background: #303035;
   border-radius: 8px 8px 0px 0px; padding: 8px 36px;justify-content: space-between;}
   .top-fst li{ display: inline-block;}
   .top-txt{padding-left: 12px;font-weight: 500; font-size: 16px;line-height: 19px; letter-spacing: -0.01em;color: #F2F2F3;margin: 0;}
-.doyousec .doyousnd{padding-left: 20px;max-width: 416px;}
+.doyousec .doyousnd{padding-left: 20px;/*max-width: 416px;*/}
 .doyousec .doyousnd-txt{font-weight: 600;font-size: 24px;line-height: 140%;letter-spacing: -0.01em;color: #202025;margin: 0 auto;}
+.doyousec .doyousnd .date{ margin-top: 16px;}
+.doyousec .doyousnd .date p{ margin-bottom: 0;}
 .doyousec .date{font-weight: 500; font-size: 16px; line-height: 24px;color: #888891; margin-top: 46px;}
 .top-snd p{font-weight: 500;font-size: 16px;line-height: 19px;letter-spacing: -0.01em;color: #F2F2F3; margin-bottom: 0;}
 .btm-sec {padding: 0 36px;}
@@ -51,17 +62,17 @@
 .rd-btn .radiobtn{border: 1px solid #F2F2F3;padding: 16px;margin-right: 10px;}
 .rd-btn .radiobtn label{font-weight: 500;font-size: 16px;line-height: 24px;color: #F2F2F3;vertical-align: middle;}
 input[type="radio" ] {width: 22px;height: 22px;vertical-align: middle;}
-.submit{align-items: center; padding: 24px;gap: 8px;width: 170px;height: 64px;background: #F15A22;border-radius: 8px;color: #FFFFFF;font-size: 16px;line-height: 100%;letter-spacing: 0.06em; text-transform: uppercase;  border:none;margin: 0 auto;}
+.submit{align-items: center; padding: 24px;gap: 8px;width: 170px;height: 64px;background: #F15A22;-webkit-border-radius: 8px; border-radius: 8px;color: #FFFFFF;font-size: 16px;line-height: 100%;letter-spacing: 0.06em; text-transform: uppercase;  border:none;margin: 0 auto;}
 .btm-sec .date p{font-weight: 500;font-size: 16px;line-height:22px;color: #BDBDC2;}
 .srv {padding: 0 0 0 0;margin-bottom: 12px;}
-.box{ font-family: 'Signika', sans-serif; text-align: center; overflow: hidden; position: relative;}
+.box{ font-family: 'Signika', sans-serif; text-align: center; overflow: hidden; position: relative;-webkit-border-radius: 5px; border-radius: 5px;}
 .view-report{font-size: 16px; line-height: 100%; letter-spacing: 0.06em;  text-transform: uppercase;  color: #FFFFFF; background: rgba(32, 32, 37, 0.9); width: 168px; height: 64px; border: 1px solid #FFFFFF; border-radius: 8px; }
 .box:before,
 .box:after{ content: ""; background: rgba(32, 32, 37, 0.9);  width: 0;  height: 0; opacity: 0.6;  position: absolute;  top: 0;  left: 0; transition: all 0.4s ease-in-out;}
 .box:after{ top: auto; left: auto; right: 0;  bottom: 0;}
 .box:hover:before,
 .box:hover:after{ width: 100%; height: 100%;}
-.box img{  max-width: 100%;  height: auto;}
+.box img{  max-width: 100%;  height: auto;-webkit-border-radius: 5px; border-radius: 5px;}
 .box .box-content{ color: #fff;width: 85%;opacity: 0;transform: translateX(-50%) translateY(-50%);position: absolute;top: 50%;left: 50%; z-index: 2; transition: all 0.6s ease;}
 .box:hover .box-content{ opacity: 0.9; }
 
@@ -110,7 +121,7 @@ input[type="radio" ] {width: 22px;height: 22px;vertical-align: middle;}
 .otherinsght h2{font-weight: 700;font-size: 40px;line-height:52px;letter-spacing: -0.01em;color: #202025;margin-bottom: 32px;}
 .otherinsght .box-1{margin-bottom: 20px;}
 .otherinsght .otherinsght-txt{font-weight: 600;font-size: 24px; line-height: 34px;letter-spacing: -0.01em;color: #202025;min-height: 68px;max-width: 398px}
-
+.otherinsght .srvbox-text{ color: #888891;}
 canvas.chartjs-render-monitor { 
   width: 415px; 
   height: 415px;
@@ -158,9 +169,18 @@ canvas.chartjs-render-monitor {
   
 }
 
-@media screen and (max-width: 1229px) {.data-list li {
-  padding-right: 24px;
-}}
+@media screen and (max-width: 1229px) {
+  .data-list li {
+    padding-right: 24px;
+  }
+}
+
+@media screen and (max-width:1140px) {
+  .srvsecnd .promotional-wht .date {
+    margin-bottom: 40px;
+  }
+  
+}
 
 @media screen and (max-width: 1024px) {
   /* Survey start */
@@ -176,7 +196,7 @@ canvas.chartjs-render-monitor {
   }
   
   .surveybox.surveybox-new {
-    padding: 0;
+    padding: 20px 0 0 0;
   }
   .surveybox.surveybox-2 {
     padding: 40px 0 0 0;
@@ -218,11 +238,16 @@ canvas.chartjs-render-monitor {
 
 }
 @media screen and (max-width: 1023px) {
+  .surveymain{
+    margin-top: 76px;
+    padding-top: 24px;
+  }
   /* Survey start */
   .surveydetails{ margin-top: 76px;}
   .survey-heading {
-  padding-top: 78px;
+  // padding-top: 78px;
 }
+.doyou{ margin-top: 40px;}
 /* Survey end */
 
 }
@@ -235,19 +260,21 @@ canvas.chartjs-render-monitor {
   .w50.srvfirst{  width: 100%;}
 	// .maincnt{max-width: 100%;padding: 0 20px;}
   .survey-heading {
-    padding-top: 97px;
+    // padding-top: 97px;
   }
   .surveybox {padding: 40px 0 0 0}
   
   .surveybox .srvbox .srv-txt {
     font-size: 22px;
-    min-height: 99px;
+    // min-height: 99px;
+    min-height: auto;
   }
   
   .srvsecnd {
     position: initial;
     padding: 36px 16px;
   }
+  .surveymain .survey-top{margin-bottom: 5px;}
   .survey {
     margin-bottom: 20px;
     flex-wrap: wrap;
@@ -257,7 +284,7 @@ canvas.chartjs-render-monitor {
   }
 
   .surveybox .srvbox {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 100%;
     margin-right: 0
   }
@@ -270,18 +297,29 @@ canvas.chartjs-render-monitor {
     margin: 0 auto;
   }
   .srv {
-    padding: 26px 0 0 0;
+    padding: 45px 0 0 0;
   }
   .srv img {
     margin: 0 auto;
   }
-  .doyousec .doyousnd{ padding-left: 0;}
+  .doyou .maincnt{ padding: 0; border-radius: 0;}  
+  .doyousec .doyoufst{width: 100%;border-radius: 0;}
+  .doyousec .top-sec{ border-radius: 0;padding-top: 10px;padding-bottom: 10px;}
+  .doyousec .doyousnd{ padding-left: 20px; padding-right: 20px; width: 100%; max-width: 416px; box-sizing: border-box;}
   .concern .concern-pra{ margin-bottom: 64px;}
   .concernsnd {
     width: 100%;
   }
   .otherinsght .srvbox{ margin-right: 0;}
-
+  .srvsecnd .promotional-wht .date {
+    margin-bottom: 40px;
+  }
+  .Ready .maincnt{ padding: 0;}
+  .rady{ border-radius: 0; background-image: url('../img/career/assesment-wire-mob.png');}
+  .readyfst {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   /* Survey end */
 
 /* Survey-details start */
@@ -328,6 +366,10 @@ canvas.chartjs-render-monitor {
     width: 100%;
   }
 
+  .survey-top .maincnt{ padding: 0;}
+  .survey-top .survey-heading{ padding-left: 20px; padding-right: 20px;}
+  .survey-top .srvsecnd{ border-radius: 0;}
+  .recentsrv .srvfirst img { width: 100%; }
   .rd-btn {justify-content: flex-start;margin-bottom: 10px;flex-direction: row;    align-items: baseline;}
   .di-flex .top-sec{margin-bottom: 16px;flex-direction: row;}
   .di-flex .top-img{flex-direction: row;}
@@ -335,26 +377,31 @@ canvas.chartjs-render-monitor {
   .srvsecnd {position: initial;padding: 36px 16px;}
   .srvsecnd .promotional-wht .promotional-heading {font-size: 24px;line-height: 32px;}
   .surveybox .srvbox {max-width: 416px;height: auto;margin-right: 0;margin-bottom: 20px;}
-  .readysecnd {padding-left: 0; margin-bottom: 20px;text-align: center;}
+  .surveybox .srvbox:last-child {margin-bottom: 0;}
+  .readysecnd {padding-left: 0; padding-right: 0; margin-bottom: 56px;text-align: center;}
   .readyfst .ready-txt {line-height: 38px;}
   .rady { background-size: auto;}
-  .readyfst {padding: 28px 26px;}
+  .readyfst {padding: 56px 16px;}
   .rd-btn .radiobtn {border: 1px solid #F2F2F3;padding: 16px;  margin-bottom: 26px;}
   .survey-heading { font-size: 32px; line-height: 48px;}
   .btm-sec .doyou-txt {font-weight: 700;font-size: 24px;line-height: 34px;padding: 0px 0 11px 0;}
   .btm-sec {padding: 0 22px;}
   .top-sec {padding: 0 22px;}
-  .surveybox {padding: 0px 0;}
-  .survey {margin-bottom: 20px;flex-wrap: wrap;justify-content: center;}
-  .doyousec .doyousnd{padding-left: 0;}
+  // .surveybox {padding: 0px 0;}  
+  .surveybox.surveybox-2{ padding: 20px 0 0 0;}
+  .survey {margin-bottom: 45px;flex-wrap: wrap;justify-content: center;}
+  .surveybox.surveybox-new .survey {
+    margin-bottom: 20px;
+  }
+  .doyousec .doyousnd{/*padding-left: 0;*/}
    .srv img {
     margin: 0 auto;
   }
   .doyousec .doyousnd-txt {
-    max-width: 369px;
+    // max-width: 369px;
   }  
   .doyousec .date {
-    max-width: 369px;
+    // max-width: 369px;
     margin: 0 auto;
   }
   .doyoufst .date {
@@ -363,7 +410,7 @@ canvas.chartjs-render-monitor {
     margin-top: 20px;
   }
   .srv {
-    padding: 26px 0 0 0;
+    padding: 45px 0 0 0;
   }
 
 
