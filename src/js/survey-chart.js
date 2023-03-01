@@ -1,9 +1,9 @@
 
 var canvas = document.getElementById('survey-piechart')
-var ctx = canvas.getContext('2d')
+var ctxPie = canvas.getContext('2d')
 
 
-var chart = new Chart(ctx, {
+var chart = new Chart(ctxPie, {
   type: 'pie',
   data: {
     labels: ["57", "41", "2"],
@@ -56,10 +56,10 @@ var chart = new Chart(ctx, {
     //     duration: 500,
     //     easing: "easeOutQuart",
     //     onComplete: function () {
-    //     var ctx = this.chart.ctx;
-    //     ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
-    //     ctx.textAlign = 'center';
-    //     ctx.textBaseline = 'bottom';
+    //     var ctxPie = this.chart.ctxPie;
+    //     ctxPie.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
+    //     ctxPie.textAlign = 'center';
+    //     ctxPie.textBaseline = 'bottom';
 
     //     this.data.datasets.forEach(function (dataset) {
 
@@ -74,14 +74,14 @@ var chart = new Chart(ctx, {
     //         var x = mid_radius * Math.cos(mid_angle);
     //         var y = mid_radius * Math.sin(mid_angle);
 
-    //         ctx.fillStyle = '#fff';
+    //         ctxPie.fillStyle = '#fff';
     //         if (i == 3){ // Darker text color for lighter background
-    //             ctx.fillStyle = '#444';
+    //             ctxPie.fillStyle = '#444';
     //         }
     //         var percent = String(Math.round(dataset.data[i]/total*100)) + "%";
-    //         //   ctx.fillText(dataset.data[i], model.x + x, model.y + y);
+    //         //   ctxPie.fillText(dataset.data[i], model.x + x, model.y + y);
     //         // Display percent in another line, line break doesn't work for fillText
-    //         ctx.fillText(percent, model.x + x, model.y + y + 15);
+    //         ctxPie.fillText(percent, model.x + x, model.y + y + 15);
     //         }
     //     });               
     //     }
