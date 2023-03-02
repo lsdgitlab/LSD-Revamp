@@ -5,14 +5,6 @@
 // observer.observe();
 
 //cutom js code start here
-$(document).ready(function () {
-  $('ul.cat-list li').click(function () {
-    var tab_id = $(this).attr('data-tab')
-    $('ul.cat-list li').removeClass('current')
-    $('.tab-content').removeClass('current')
-    $(this).addClass('current')
-    $('#' + tab_id).addClass('current')
-  })
 $(document).ready(function(){
     
   $('ul.cat-list li').click(function(){
