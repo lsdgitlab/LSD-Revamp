@@ -191,7 +191,8 @@ header .menu ul li a.nav-link {
   position: relative;
   align-self: flex-start;
   padding-bottom: 30px;
-  min-width: 25%;
+  // min-width: 25%;
+  width: 25%;
   padding-right: 14px;
 }
 
@@ -467,6 +468,11 @@ header .menu ul li a.nav-link {
 
 .thindustry .industry .industry-second .first-img {
   margin-left: 20px;
+  border-radius: 8px;
+}
+.thindustry .industry .industry-second .first-img img {
+  border-radius: 8px;
+  width: 100%;
 }
 
 .thindustry .btm-img {
@@ -1011,6 +1017,10 @@ button {
   }
 }
 
+@media screen and (max-width: 1023px) {
+  header.ldtv-header:not(.ldtv-cat-header){z-index: 11; background: rgba(0, 0, 0, .2);}
+}
+
 @media screen and (max-width: 996px) {
   .slid {
     justify-content: center;
@@ -1102,6 +1112,10 @@ button {
   .ldtvinsigh .second-part .ldtv-txt {
     font-size: 16px;
     padding-left: 46px;
+  }
+
+  .thindustry .industry .industry-first .dbl-qt {
+    margin-bottom: 24px;
   }
 
   .thindustry .industry .industry-first .indtxt {
@@ -1385,16 +1399,20 @@ button {
     position: relative;
   }
 
-  .thindustry .btm-img {
-    text-align: center;
-    padding: 27px 0;
-    position: absolute;
-    top: 212px;
-  }
+  // .thindustry .btm-img {
+  //   text-align: center;
+  //   padding: 27px 0;
+  //   position: absolute;
+  //   top: 212px;
+  // }
 
-  .first-fold {
-    background-image: linear-gradient(273deg, rgba(0, 0, 0, 0) 0%, #000000 60.82%);
-    padding: 40px 0 0 0;
+  // .first-fold {
+  //   background-image: linear-gradient(273deg, rgba(0, 0, 0, 0) 0%, #000000 60.82%);
+  //   padding: 40px 0 0 0;
+  // }
+
+  .thindustry .industry {
+    padding: 0;
   }
 
   .thindustry .industry .industry-first .indtxt {
@@ -1402,9 +1420,15 @@ button {
     line-height: 32px;
   }
 
+  .thindustry .industry .industry-first span.indbtmtxt {
+    margin-bottom: 110px;
+  }
+
   .ldtvinsights {
     padding: 24px 0;
   }
+
+  .thindustry .industry .industry-second .first-img:first-child{ margin-left: 0;}
 
   /* LDTV end */
 
@@ -1452,13 +1476,15 @@ button {
 
   .thindustry {
     position: relative;
+    padding: 60px 0;
   }
 
   .thindustry .btm-img {
     text-align: center;
     padding: 27px 0;
     position: absolute;
-    top: 282px;
+    // top: 282px;
+    top: 268px;
   }
 
   .first-fold {
@@ -1467,6 +1493,7 @@ button {
     background-position: center top;
     background-size: cover;
     overflow: hidden;
+    padding-top: 120px;
   }
 
   .thindustry .industry .industry-first .indtxt {
@@ -1514,6 +1541,7 @@ button {
     width: 100%;
     height: auto;
     flex-direction: row;
+    justify-content: center;
   }
 
 }
@@ -1535,16 +1563,30 @@ button {
   }
 
   .thindustry .btm-img {
-    top: 285px;
+    // top: 285px;
   }
 }
 
 @media screen and (max-width: 473px) {
   .thindustry .btm-img {
-    top: 314px;
+    // top: 314px;
   }
 
 }
+
+@media screen and (max-width: 441px) {
+  .thindustry .btm-img {
+    top: 296px;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  .thindustry .btm-img {
+    top: 320px;
+  }
+}
+
 @media screen and (max-width: 375px) {
 .Ytsld .thumbnail {
   width:290px;
