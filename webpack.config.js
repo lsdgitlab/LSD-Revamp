@@ -48,8 +48,12 @@ const htmlPageNames = [
     pageName: 'creative-portfolio.html',
     title: 'Creative Portfolio',
   },
+  // {
+  //   pageName: 'survey-1.html',
+  //   title: 'Survey-details',
+  // },
   {
-    pageName: 'survey-1.html',
+    pageName: 'survey-details.html',
     title: 'Survey-details',
   },
 ]

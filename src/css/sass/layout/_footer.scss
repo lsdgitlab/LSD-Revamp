@@ -288,6 +288,9 @@ footer{
               ul{
                   li{
                       margin: 11px 0 11px;
+                      &:not(:last-child){
+                        margin-right: 11px;
+                      }
                       a{
                           img{
                               
@@ -334,3 +337,18 @@ footer{
   }
 }
 
+@media screen and (max-width:600px) {
+    footer {
+        .bottom-footer {
+            .social-icons {
+                ul {
+                    li
+                    &:not(:last-child) {
+                        margin-right: 14px;
+                    }
+                }
+
+            }
+        }
+    }
+}
