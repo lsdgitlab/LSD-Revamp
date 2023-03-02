@@ -56,6 +56,32 @@ $(document).ready(function(){
   $('.transform').show(100);
  });
 //end of mobile menu
+    
+    //start section career LP page address 
+//  var size;
+//  size = $(window).width();   
+ 
+//  if(size < 767) {
+//      $(function() {
+//          $('.city-name').on('click', function (j) {
+     
+//              var dropDown = $(this).closest('.loc-address').find('.city-address');
+//              $(this).closest('.location-acc').find('.city-address').not(dropDown).slideUp();
+     
+//              if ($(this).hasClass('active')) {
+//              $(this).removeClass('active');
+//              } else {
+//              $(this).closest('.location-acc').find('.city-name.active').removeClass('active');
+//              $(this).addClass('active');
+//              }
+     
+//              dropDown.stop(false, true).slideToggle();
+//              j.preventDefault();
+//          });
+//      });
+ 
+//  }
+//end section career LP page address 
 
 });
 //custom js code end here
