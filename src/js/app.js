@@ -4,7 +4,7 @@
 // // window.Chart = Chart;
 // observer.observe();
 
-//cutom js code start here
+//custom js code start here
 $(document).ready(function(){
     
   $('ul.cat-list li').click(function(){
@@ -85,9 +85,9 @@ $(document).ready(function(){
 
 
 });
-//cutom js code end here
+//custom js code end here
 
 // import career from './career-job-details'
-// import ldtv from './ldtv'
+import ldtv from './ldtv'
 
   //********  on button click append the youtube links to popup ********
