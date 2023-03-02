@@ -58,50 +58,36 @@ $(document).ready(function(){
 //end of mobile menu
 
 //start section career LP page address 
- var size;
- size = $(window).width();   
+//  var size;
+//  size = $(window).width();   
  
- if(size < 767) {
-     $(function() {
-         $('.city-name').on('click', function (j) {
+//  if(size < 767) {
+//      $(function() {
+//          $('.city-name').on('click', function (j) {
      
-             var dropDown = $(this).closest('.loc-address').find('.city-address');
-             $(this).closest('.location-acc').find('.city-address').not(dropDown).slideUp();
+//              var dropDown = $(this).closest('.loc-address').find('.city-address');
+//              $(this).closest('.location-acc').find('.city-address').not(dropDown).slideUp();
      
-             if ($(this).hasClass('active')) {
-             $(this).removeClass('active');
-             } else {
-             $(this).closest('.location-acc').find('.city-name.active').removeClass('active');
-             $(this).addClass('active');
-             }
+//              if ($(this).hasClass('active')) {
+//              $(this).removeClass('active');
+//              } else {
+//              $(this).closest('.location-acc').find('.city-name.active').removeClass('active');
+//              $(this).addClass('active');
+//              }
      
-             dropDown.stop(false, true).slideToggle();
-             j.preventDefault();
-         });
-     });
+//              dropDown.stop(false, true).slideToggle();
+//              j.preventDefault();
+//          });
+//      });
  
- }
+//  }
 //end section career LP page address 
 
 
 });
 //cutom js code end here
 
-import career from './career-job-details'
+// import career from './career-job-details'
 // import ldtv from './ldtv'
 
   //********  on button click append the youtube links to popup ********
-
-
-
-// ;
-
-
-
-
-
-
-
-
-
-
