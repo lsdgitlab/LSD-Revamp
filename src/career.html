@@ -8,12 +8,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <title>Career</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
 </head>
 
 <body data-barba="wrapper">
     <div class="main">
         <header class="career-header"></header>
-
         <section class="top-section">
             <div class="maincnt">
                 <div class="content">
@@ -243,9 +245,11 @@
             <div class="maincnt">
                 <h2>Our presence around the globe</h2>
                 <p class="short-info">We have offices and teams all around the world</p>
-                <div class="world-map">
+                <!-- <div class="world-map">
                     <img src="img/career/map.png" alt="">
-                </div>
+                </div> -->
+
+                <div id="map"></div>
                 <div class="locations">
                     <div class="location-acc">
                         <div class="loc-address">
@@ -317,7 +321,7 @@
             
     </div>
     <footer></footer>
-     <!-- video popup -->
+      <!-- video popup -->
   <div id="popup-wrapper1" class="popup-container1">
     <div class="popup-content1">
         <a id="close1" class="clsbtn">
@@ -328,8 +332,6 @@
     <source src="video/mov_bbb.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
-
-
         </div>
 
     </div>
@@ -366,6 +368,76 @@ popup.classList.remove('show')
 
 
 
+
+    </script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script> -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+
+    
+
+    <script>
+var grayscaleFilter = 'grayscale(100%)';
+var map = L.map('map', {
+    // Set latitude and longitude of the map center (required)
+    center: [22.9734, 78.6569],
+    // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
+    zoom: 4,
+    filter: grayscaleFilter
+});
+var customIcon = L.icon({
+    iconUrl: 'img/icons/marker-icon.png',
+    iconSize: [16, 16],
+    iconAnchor: [8, 16],
+    popupAnchor: [1, -34],
+});
+// var iconHtml = '<div class="circle-ripple"></div>';
+// var customIcon = new L.Icon({
+//     iconUrl: encodeURIComponent(iconHtml),
+//     iconSize: [30, 30],
+//     iconAnchor: [15, 15]
+// });
+
+// Create a Tile Layer and add it to the map
+// var tiles = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?
+var tiles = new L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+    attribution: '',
+  minZoom: '4',
+  opacity:0.8
+  
+}).addTo(map);
+
+markers = [
+    {
+        position:[19.0760, 72.8777],
+        popupText :'<p1><b>LS Digital </b><br>Incuspaze, 203,2nd Floor, Ackruti Star, MIDC Central Road,Andheri (East), Mumbai- 400093</p1>'
+    },
+    {
+        position:[19.118623321959888, 72.87045172622184],
+        popupText :'<p1><b>LS Digital </b><br>B-201, 601 & 701, Technocity, Plot No. X-4/1 and X-4/2, Mahape,  Navi Mumbai, Maharashtra 400701</p1>'
+    },
+    {
+        position:[12.973805417601998, 77.60927964163282],
+        popupText :'<p1><b>LS Digital </b><br>91 Springboard,Gopala Krishna Complex 45/3,Residency Road, Mahatma Gandhi Rd,Bengaluru, Karnataka 560025</p1>'
+    },
+    {
+        position:[28.480037792005064, 77.09074265466433],
+        popupText :'<p1><b>LS Digital </b><br>4th Floor AltF,JMD Empire Square, Mehrauli-Gurgaon Rd,Gurugram, Haryana 122001</p1>'
+    },
+    {
+        position:[25.105020338070002, 55.154001190874624],
+        popupText :'<p1><b>LS Digital </b><br>Office 105, Building 1 - Dubai Media City - Dubai - United Arab Emirates</p1>'
+    }
+]
+markers.forEach((markerObj)=>{
+    var marker = L.marker(markerObj.position,{
+        draggable: true,
+    title: "",
+    opacity: 0.75,
+    icon: customIcon // Apply custom marker image
+    }).addTo(map).bindPopup(markerObj.popupText).openPopup
+});
 
     </script>
         
