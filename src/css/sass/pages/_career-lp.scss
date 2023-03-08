@@ -695,6 +695,35 @@ header.career-header{
     background: #000;
   }
 
+  //css for map tooltip
+  .leaflet-container{ margin-bottom: 75px;}
+  .leaflet-popup-content {
+    max-width: 222px;
+    margin: 0 auto;
+    padding: 10px; 
+     p1 {
+        font-family: inherit;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: normal;
+        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+        color: rgba(0, 0, 0, 0.6);
+        b {
+            font-family: inherit;
+            font-size: $base-font-size;
+            line-height: 18.4px;
+            margin: 0 0 10px;
+            display: inline-block;
+            vertical-align: top;
+            font-weight: $font-weight-SemiBold;
+            text-align: center;
+            color: #000;
+          }
+     }
+  }
+  
 
 // @media screen and (max-width:1280px) {}
 
@@ -1147,6 +1176,11 @@ $color: #65ff78;
                 }
             }
         }
+    }
+
+    //css for map tooltip
+    .leaflet-container{ 
+        margin-bottom: 55px;
     }
 }
 
